@@ -114,7 +114,7 @@ const Home = () => {
             }`}
           >
             <div className="h-0.5 w-16 bg-amber-500"></div>
-            <span className="text-amber-500 italic text-lg">We Supply Protection</span>
+            <span className="text-amber-500 italic text-lg">Your Safety, Our Priority</span>
           </div>
 
           {/* Main Heading - Slide from Right */}
@@ -123,7 +123,7 @@ const Home = () => {
               isLoaded ? 'animate-slide-right delay-200' : 'opacity-0'
             }`}
           >
-            EXPERIENCED SECURE<br />SERVICES
+            PROFESSIONAL SECURITY<br />& FACILITY SOLUTIONS
           </h1>
 
           {/* Description - Slide from Left */}
@@ -132,9 +132,9 @@ const Home = () => {
               isLoaded ? 'animate-slide-left delay-400' : 'opacity-0'
             }`}
           >
-            Sodales tincidunt nam ridiculus feugiat quisque eleifend eros hac. Tincidunt ligula 
-            per feugiat nullam nibh magnis ex orci ad in scelerisque. Parturient elementum 
-            lorem praesent etiam placerat rhoncus inceptos.
+            Cadman Security Service delivers comprehensive security solutions, facility management, 
+            and maintenance services tailored to your needs. With highly trained personnel and 
+            cutting-edge technology, we ensure the safety and efficiency of your premises 24/7.
           </p>
 
           {/* CTA Buttons - Fade In */}

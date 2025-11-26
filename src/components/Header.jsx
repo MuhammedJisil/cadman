@@ -1,17 +1,36 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Phone, Mail, Facebook, Twitter, Youtube, Instagram, Menu, X, ChevronDown } from 'lucide-react';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
   const [activeMenu, setActiveMenu] = useState('HOME');
+  const location = useLocation();
+
+  // Update active menu based on current route
+  useEffect(() => {
+    const path = location.pathname;
+    if (path === '/') {
+      setActiveMenu('HOME');
+    } else if (path === '/about') {
+      setActiveMenu('ABOUT US');
+    } else if (path.startsWith('/services/')) {
+      setActiveMenu('SERVICES');
+    } else if (path === '/training') {
+      setActiveMenu('TRAINING');
+    } else if (path === '/operations') {
+      setActiveMenu('OPERATIONS');
+    } else if (path === '/contact') {
+      setActiveMenu('CONTACT');
+    }
+  }, [location]);
 
   const toggleDropdown = (menu) => {
     setOpenDropdown(openDropdown === menu ? null : menu);
   };
 
- return (
+  return (
     <header className="absolute top-0 left-0 right-0 z-50">
       <style>
         {`
@@ -89,24 +108,24 @@ const Header = () => {
           <div className="bg-gray-900 flex items-center justify-between shadow-lg">
             {/* Navigation Links */}
             <nav className="flex items-center">
-              <a 
-                href="#" 
+              <Link 
+                to="/" 
                 onClick={() => setActiveMenu('HOME')}
                 className={`px-8 py-6 font-semibold transition ${
                   activeMenu === 'HOME' ? 'bg-amber-500 text-white' : 'text-white hover:bg-gray-800'
                 }`}
               >
                 HOME
-              </a>
-              <a 
-                href="#" 
+              </Link>
+              <Link 
+                to="/about" 
                 onClick={() => setActiveMenu('ABOUT US')}
                 className={`px-6 py-6 font-semibold transition ${
                   activeMenu === 'ABOUT US' ? 'bg-amber-500 text-white' : 'text-white hover:bg-gray-800'
                 }`}
               >
                 ABOUT US
-              </a>
+              </Link>
               
               {/* Services Dropdown */}
               <div className="relative group">
@@ -118,49 +137,44 @@ const Header = () => {
                 >
                   SERVICES <ChevronDown size={16} />
                 </button>
-                <div className="absolute top-full left-0 bg-white shadow-lg min-w-[220px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  <a href="#" className="block px-6 py-4 text-gray-800 hover:bg-gray-100 border-b">Single Service</a>
-                  <a href="#" className="block px-6 py-4 text-gray-800 hover:bg-gray-100">Pricing Plan</a>
+                <div className="absolute top-full left-0 bg-white shadow-lg min-w-[280px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                  <Link to="/services/security" className="block px-6 py-4 text-gray-800 hover:bg-gray-100 border-b">Security Services</Link>
+                  <Link to="/services/facility-management" className="block px-6 py-4 text-gray-800 hover:bg-gray-100 border-b">Complete Facility Management</Link>
+                  <Link to="/services/pest-control" className="block px-6 py-4 text-gray-800 hover:bg-gray-100 border-b">Pest Control Services</Link>
+                  <Link to="/services/cctv-security" className="block px-6 py-4 text-gray-800 hover:bg-gray-100 border-b">CCTV & Electronic Security</Link>
+                  <Link to="/services/mep" className="block px-6 py-4 text-gray-800 hover:bg-gray-100 border-b">MEP Services</Link>
+                  <Link to="/services/fire-safety" className="block px-6 py-4 text-gray-800 hover:bg-gray-100">Fire & Safety Services</Link>
                 </div>
               </div>
 
-              <a 
-                href="#" 
-                onClick={() => setActiveMenu('CASE STUDY')}
+              <Link 
+                to="/training" 
+                onClick={() => setActiveMenu('TRAINING')}
                 className={`px-6 py-6 font-semibold transition ${
-                  activeMenu === 'CASE STUDY' ? 'bg-amber-500 text-white' : 'text-white hover:bg-gray-800'
+                  activeMenu === 'TRAINING' ? 'bg-amber-500 text-white' : 'text-white hover:bg-gray-800'
                 }`}
               >
-                CASE STUDY
-              </a>
-              <a 
-                href="#" 
+                TRAINING
+              </Link>
+              <Link 
+                to="/operations" 
+                onClick={() => setActiveMenu('OPERATIONS')}
+                className={`px-6 py-6 font-semibold transition ${
+                  activeMenu === 'OPERATIONS' ? 'bg-amber-500 text-white' : 'text-white hover:bg-gray-800'
+                }`}
+              >
+                OPERATIONS
+              </Link>
+              
+               <Link 
+                to="/contact" 
                 onClick={() => setActiveMenu('CONTACT')}
                 className={`px-6 py-6 font-semibold transition ${
                   activeMenu === 'CONTACT' ? 'bg-amber-500 text-white' : 'text-white hover:bg-gray-800'
                 }`}
               >
                 CONTACT
-              </a>
-              
-              {/* Pages Dropdown */}
-              <div className="relative group">
-                <button 
-                  onClick={() => setActiveMenu('PAGES')}
-                  className={`px-6 py-6 font-semibold transition flex items-center gap-1 ${
-                    activeMenu === 'PAGES' ? 'bg-amber-500 text-white' : 'text-white hover:bg-gray-800'
-                  }`}
-                >
-                  PAGES <ChevronDown size={16} />
-                </button>
-                <div className="absolute top-full left-0 bg-white shadow-lg min-w-[220px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                  <a href="#" className="block px-6 py-4 text-gray-800 hover:bg-gray-100 border-b">Our Team</a>
-                  <a href="#" className="block px-6 py-4 text-gray-800 hover:bg-gray-100 border-b">FAQ</a>
-                  <a href="#" className="block px-6 py-4 text-gray-800 hover:bg-gray-100 border-b">Blog</a>
-                  <a href="#" className="block px-6 py-4 text-gray-800 hover:bg-gray-100 border-b">Single Blog</a>
-                  <a href="#" className="block px-6 py-4 text-gray-800 hover:bg-gray-100">404 Page</a>
-                </div>
-              </div>
+              </Link>
             </nav>
 
             {/* Social Media Links */}
@@ -178,24 +192,24 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-gray-900">
           <nav className="flex flex-col">
-            <a 
-              href="#" 
+            <Link 
+              to="/" 
               onClick={() => { setActiveMenu('HOME'); setIsMobileMenuOpen(false); }}
               className={`px-6 py-4 font-semibold ${
                 activeMenu === 'HOME' ? 'bg-amber-500 text-white' : 'text-white'
               }`}
             >
               HOME
-            </a>
-            <a 
-              href="#" 
+            </Link>
+            <Link 
+              to="/about" 
               onClick={() => { setActiveMenu('ABOUT US'); setIsMobileMenuOpen(false); }}
               className={`px-6 py-4 font-semibold ${
                 activeMenu === 'ABOUT US' ? 'bg-amber-500 text-white' : 'text-white'
               }`}
             >
               ABOUT US
-            </a>
+            </Link>
             
             {/* Services Mobile Dropdown */}
             <div>
@@ -209,51 +223,44 @@ const Header = () => {
               </button>
               {openDropdown === 'SERVICES' && (
                 <div className="bg-white">
-                  <a href="#" className="block px-8 py-3 text-gray-800 border-b">Single Service</a>
-                  <a href="#" className="block px-8 py-3 text-gray-800">Pricing Plan</a>
+                  <Link to="/services/security" className="block px-8 py-3 text-gray-800 border-b">Security Services</Link>
+                  <Link to="/services/facility-management" className="block px-8 py-3 text-gray-800 border-b">Complete Facility Management</Link>
+                  <Link to="/services/pest-control" className="block px-8 py-3 text-gray-800 border-b">Pest Control Services</Link>
+                  <Link to="/services/cctv-security" className="block px-8 py-3 text-gray-800 border-b">CCTV & Electronic Security</Link>
+                  <Link to="/services/mep" className="block px-8 py-3 text-gray-800 border-b">MEP Services</Link>
+                  <Link to="/services/fire-safety" className="block px-8 py-3 text-gray-800">Fire & Safety Services</Link>
                 </div>
               )}
             </div>
 
-            <a 
-              href="#" 
-              onClick={() => { setActiveMenu('CASE STUDY'); setIsMobileMenuOpen(false); }}
+            <Link 
+              to="/training" 
+              onClick={() => { setActiveMenu('TRAINING'); setIsMobileMenuOpen(false); }}
               className={`px-6 py-4 font-semibold ${
-                activeMenu === 'CASE STUDY' ? 'bg-amber-500 text-white' : 'text-white'
+                activeMenu === 'TRAINING' ? 'bg-amber-500 text-white' : 'text-white'
               }`}
             >
-              CASE STUDY
-            </a>
-            <a 
-              href="#" 
+              TRAINING
+            </Link>
+            <Link 
+              to="/operations" 
+              onClick={() => { setActiveMenu('OPERATIONS'); setIsMobileMenuOpen(false); }}
+              className={`px-6 py-4 font-semibold ${
+                activeMenu === 'OPERATIONS' ? 'bg-amber-500 text-white' : 'text-white'
+              }`}
+            >
+              OPERATIONS
+            </Link>
+            
+            <Link 
+              to="/contact" 
               onClick={() => { setActiveMenu('CONTACT'); setIsMobileMenuOpen(false); }}
               className={`px-6 py-4 font-semibold ${
                 activeMenu === 'CONTACT' ? 'bg-amber-500 text-white' : 'text-white'
               }`}
             >
               CONTACT
-            </a>
-            
-            {/* Pages Mobile Dropdown */}
-            <div>
-              <button 
-                onClick={() => toggleDropdown('PAGES')}
-                className={`w-full text-left px-6 py-4 font-semibold flex items-center justify-between ${
-                  activeMenu === 'PAGES' ? 'bg-amber-500 text-white' : 'text-white'
-                }`}
-              >
-                PAGES <ChevronDown size={16} className={openDropdown === 'PAGES' ? 'rotate-180 transition-transform' : 'transition-transform'} />
-              </button>
-              {openDropdown === 'PAGES' && (
-                <div className="bg-white">
-                  <a href="#" className="block px-8 py-3 text-gray-800 border-b">Our Team</a>
-                  <a href="#" className="block px-8 py-3 text-gray-800 border-b">FAQ</a>
-                  <a href="#" className="block px-8 py-3 text-gray-800 border-b">Blog</a>
-                  <a href="#" className="block px-8 py-3 text-gray-800 border-b">Single Blog</a>
-                  <a href="#" className="block px-8 py-3 text-gray-800">404 Page</a>
-                </div>
-              )}
-            </div>
+            </Link>
           </nav>
 
           {/* Mobile Social Media */}
@@ -268,6 +275,5 @@ const Header = () => {
     </header>
   );
 };
-
 
 export default Header;
