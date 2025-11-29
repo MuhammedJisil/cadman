@@ -67,7 +67,23 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormStatus("success");
+
+    // Create email body with form data
+    const emailSubject = encodeURIComponent(
+      `Contact Form Submission - ${formData.service}`
+    );
+    const emailBody = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+        `Email: ${formData.email}\n` +
+        `Phone: ${formData.phone}\n` +
+        `Company: ${formData.company || "N/A"}\n` +
+        `Service Interested In: ${formData.service}\n\n` +
+        `Message:\n${formData.message}`
+    );
+
+    // Open default email client
+    window.location.href = `mailto:info@cadmansecurity.com?subject=${emailSubject}&body=${emailBody}`;
+
     // Reset form
     setFormData({
       name: "",
@@ -77,8 +93,6 @@ const ContactUs = () => {
       service: "",
       message: "",
     });
-    // Clear success message after 5 seconds
-    setTimeout(() => setFormStatus(null), 5000);
   };
 
   const contactInfo = [
@@ -87,30 +101,24 @@ const ContactUs = () => {
       title: "Head Office",
       details: [
         "Cadman Security Services Pvt. Ltd.",
-        "123 Business Park, Sector 18",
-        "Gurugram, Haryana - 122015",
-        "India",
+        "106, 1st Floor, 40 Feet Road",
+        "Manjunathnagar, West of Chord Road",
+        "Bangalore -560010",
       ],
     },
     {
       icon: Phone,
       title: "Phone Numbers",
       details: [
-        "Toll Free: 1800-XXX-XXXX",
-        "Office: +91-124-XXXXXXX",
-        "Mobile: +91-98XXX-XXXXX",
-        "Emergency: +91-99XXX-XXXXX",
+        "Office: +91-9945230206",
+        "Mobile: +91-9945230206",
+        "Emergency: +91-9945230206",
       ],
     },
     {
       icon: Mail,
-      title: "Email Addresses",
-      details: [
-        "info@cadmansecurity.com",
-        "sales@cadmansecurity.com",
-        "hr@cadmansecurity.com",
-        "support@cadmansecurity.com",
-      ],
+      title: "Email Address",
+      details: ["info@cadmansecurity.com"],
     },
     {
       icon: Clock,
@@ -133,28 +141,12 @@ const ContactUs = () => {
     "Other",
   ];
 
-  const branches = [
-    {
-      city: "Delhi NCR",
-      address: "Plot 45, Okhla Industrial Area, New Delhi - 110020",
-      phone: "+91-11-XXXXXXXX",
-    },
-    {
-      city: "Mumbai",
-      address: "Office 302, Andheri East, Mumbai - 400069",
-      phone: "+91-22-XXXXXXXX",
-    },
-    {
-      city: "Bangalore",
-      address: "Building 7, Electronic City, Bangalore - 560100",
-      phone: "+91-80-XXXXXXXX",
-    },
-    {
-      city: "Chennai",
-      address: "Anna Salai Complex, Chennai - 600002",
-      phone: "+91-44-XXXXXXXX",
-    },
-  ];
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <div className="relative w-full overflow-hidden bg-gray-50">
@@ -199,17 +191,16 @@ const ContactUs = () => {
       </style>
 
       {/* Hero Section */}
-      <div className="relative h-96 w-full mt-20">
+      <div className="relative h-[560px] w-full">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1423666639041-f56000c27a9a?w=1920&q=80)",
+            backgroundImage: "url('/contact-us-hero.jpeg')",
           }}
         ></div>
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="relative max-w-7xl mx-auto px-6 h-full flex items-center">
+        <div className="relative max-w-7xl mx-auto px-6 pt-48 pb-32 lg:pt-56 lg:pb-40 md:pt-44 md:pb-24">
           <div className="max-w-3xl">
             <div
               className={`flex items-center gap-3 mb-4 ${
@@ -235,8 +226,8 @@ const ContactUs = () => {
                 isLoaded ? "animate-fade delay-400" : "opacity-0"
               }`}
             >
-              Have questions about our services? Want to discuss your security needs? 
-              Our team is ready to assist you with customized solutions.
+              Have questions about our services? Want to discuss your security
+              needs? Our team is ready to assist you with customized solutions.
             </p>
           </div>
         </div>
@@ -265,7 +256,10 @@ const ContactUs = () => {
                 </h3>
                 <div className="space-y-2">
                   {info.details.map((detail, idx) => (
-                    <p key={idx} className="text-gray-600 text-sm leading-relaxed">
+                    <p
+                      key={idx}
+                      className="text-gray-600 text-sm leading-relaxed"
+                    >
                       {detail}
                     </p>
                   ))}
@@ -295,7 +289,7 @@ const ContactUs = () => {
                 </h2>
                 <div className="w-full h-96 bg-gray-200 rounded-lg overflow-hidden">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.2958716653505!2d77.08493931508045!3d28.459497982491224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d18d3e63b0001%3A0x8b068cbb2d9d77c5!2sSector%2018%2C%20Gurugram%2C%20Haryana!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.630230151733!2d77.54737797447478!3d12.995486187322085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d90f0086fff%3A0xac48757e9022ad6!2sCadman%20Security%20Servies%20Pvt.Ltd!5e0!3m2!1sen!2sin!4v1764422136920!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -306,9 +300,11 @@ const ContactUs = () => {
                   ></iframe>
                 </div>
                 <div className="mt-6 p-4 bg-amber-50 border-l-4 border-amber-500">
-                  <h3 className="font-bold text-gray-900 mb-2">Visit Our Office</h3>
+                  <h3 className="font-bold text-gray-900 mb-2">
+                    Visit Our Office
+                  </h3>
                   <p className="text-gray-600 text-sm">
-                    123 Business Park, Sector 18, Gurugram, Haryana - 122015, India
+                    Manjunathnagar, West of Chord Road Banglore - 5600010, India
                   </p>
                 </div>
               </div>
@@ -333,7 +329,8 @@ const ContactUs = () => {
                     <div>
                       <h4 className="font-bold text-green-900">Success!</h4>
                       <p className="text-green-700 text-sm">
-                        Your message has been sent successfully. We'll get back to you soon!
+                        Your message has been sent successfully. We'll get back
+                        to you soon!
                       </p>
                     </div>
                   </div>
@@ -470,65 +467,6 @@ const ContactUs = () => {
         </div>
       </div>
 
-      {/* Branch Offices */}
-      <div
-        ref={(el) => (sectionRefs.current["branches"] = el)}
-        className="py-20 bg-white"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <MapPin className="w-8 h-8 text-amber-500" />
-              <span className="text-amber-500 font-semibold">
-                OUR PRESENCE
-              </span>
-            </div>
-            <h2
-              className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
-                visibleSections["branches"] ? "animate-fade" : "opacity-0"
-              }`}
-            >
-              Branch Offices Across India
-            </h2>
-            <p
-              className={`text-gray-600 max-w-2xl mx-auto ${
-                visibleSections["branches"]
-                  ? "animate-fade delay-200"
-                  : "opacity-0"
-              }`}
-            >
-              We serve clients across major cities with dedicated offices and support teams
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {branches.map((branch, index) => (
-              <div
-                key={index}
-                className={`bg-gray-50 p-6 hover:shadow-xl transition-all duration-300 border-l-4 border-amber-500 ${
-                  visibleSections["branches"] ? "animate-slide-up" : "opacity-0"
-                }`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900">
-                    {branch.city}
-                  </h3>
-                </div>
-                <p className="text-gray-600 text-sm mb-3">{branch.address}</p>
-                <div className="flex items-center gap-2 text-amber-600">
-                  <Phone className="w-4 h-4" />
-                  <span className="text-sm font-medium">{branch.phone}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* Social Media & Connect */}
       <div className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
@@ -537,7 +475,8 @@ const ContactUs = () => {
               Connect With Us
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Follow us on social media for updates, industry insights, and company news
+              Follow us on social media for updates, industry insights, and
+              company news
             </p>
           </div>
 
@@ -581,8 +520,7 @@ const ContactUs = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1920&q=80)",
+            backgroundImage: "url('/contact-us-footer.jpeg')",
           }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>
@@ -592,14 +530,20 @@ const ContactUs = () => {
             Ready to Secure Your Business?
           </h2>
           <p className="text-gray-300 text-lg mb-8">
-            Get in touch with our team today for customized security and facility 
-            management solutions tailored to your needs.
+            Get in touch with our team today for customized security and
+            facility management solutions tailored to your needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg">
+            <button
+              onClick={scrollToTop}
+              className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg"
+            >
               REQUEST A QUOTE
             </button>
-            <button className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg">
+            <button
+              onClick={scrollToTop}
+              className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg"
+            >
               SCHEDULE A MEETING
             </button>
           </div>

@@ -40,6 +40,13 @@ const Header = () => {
     setOpenDropdown(openDropdown === menu ? null : menu);
   };
 
+  // Close dropdowns when mobile menu closes
+  useEffect(() => {
+    if (!isMobileMenuOpen) {
+      setOpenDropdown(null);
+    }
+  }, [isMobileMenuOpen]);
+
   return (
     <header className="absolute top-0 left-0 right-0 z-50">
       <style>
@@ -96,28 +103,57 @@ const Header = () => {
       </div>
 
       {/* Mobile Header */}
-      <div className="lg:hidden bg-gray-900 flex items-center justify-between px-4 py-3">
-        <div className="flex items-center gap-3">
-          <img
-            src="/logo.png"
-            alt="Cadman Security Service"
-            className="h-10 w-auto"
-          />
-          <div>
-            <div className="text-white text-lg font-bold tracking-tight">
-              CADMAN
-            </div>
-            <div className="text-amber-500 text-xs tracking-widest">
-              SECURITY SERVICE
+      <div className="lg:hidden">
+        {/* Blue Section with Logo */}
+        <div className="bg-gradient-to-r from-blue-900 to-blue-800 pt-3 pb-6">
+          <div className="flex items-center justify-center gap-3">
+            <img
+              src="/logo.png"
+              alt="Cadman Security Service"
+              className="h-10 w-auto"
+            />
+            <div>
+              <div className="text-white text-lg font-bold tracking-tight">
+                CADMAN
+              </div>
+              <div className="text-amber-500 text-xs tracking-widest">
+                SECURITY SERVICE
+              </div>
             </div>
           </div>
         </div>
-        <button
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="text-white p-2"
-        >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+
+        {/* Navy Blue Navigation Bar with Hamburger and Social Icons */}
+        <div className="-mt-4 px-4">
+          <div className="bg-gray-900 flex items-center justify-between px-4 py-2.5 shadow-lg">
+            <button
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="text-white p-2 hover:text-amber-500 transition"
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+
+            {/* Social Media Icons */}
+            <div className="flex gap-4">
+              <Facebook
+                size={18}
+                className="text-white cursor-pointer hover:text-amber-500 transition"
+              />
+              <Twitter
+                size={18}
+                className="text-white cursor-pointer hover:text-amber-500 transition"
+              />
+              <Youtube
+                size={18}
+                className="text-white cursor-pointer hover:text-amber-500 transition"
+              />
+              <Instagram
+                size={18}
+                className="text-white cursor-pointer hover:text-amber-500 transition"
+              />
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Navigation Bar - Desktop */}
@@ -349,36 +385,42 @@ const Header = () => {
                 <div className="bg-white">
                   <Link
                     to="/services/security"
+                    onClick={() => setIsMobileMenuOpen(false)}
                     className="block px-8 py-3 text-gray-800 border-b"
                   >
                     Security Services
                   </Link>
                   <Link
                     to="/services/facility-management"
+                    onClick={() => setIsMobileMenuOpen(false)}
                     className="block px-8 py-3 text-gray-800 border-b"
                   >
                     Complete Facility Management
                   </Link>
                   <Link
                     to="/services/pest-control"
+                    onClick={() => setIsMobileMenuOpen(false)}
                     className="block px-8 py-3 text-gray-800 border-b"
                   >
                     Pest Control Services
                   </Link>
                   <Link
                     to="/services/cctv-security"
+                    onClick={() => setIsMobileMenuOpen(false)}
                     className="block px-8 py-3 text-gray-800 border-b"
                   >
                     CCTV & Electronic Security
                   </Link>
                   <Link
                     to="/services/mep"
+                    onClick={() => setIsMobileMenuOpen(false)}
                     className="block px-8 py-3 text-gray-800 border-b"
                   >
                     MEP Services
                   </Link>
                   <Link
                     to="/services/fire-safety"
+                    onClick={() => setIsMobileMenuOpen(false)}
                     className="block px-8 py-3 text-gray-800"
                   >
                     Fire & Safety Services
@@ -425,30 +467,35 @@ const Header = () => {
                 <div className="bg-white">
                   <Link
                     to="/operations/how-we-work"
+                    onClick={() => setIsMobileMenuOpen(false)}
                     className="block px-6 py-4 text-gray-800 hover:bg-gray-100 border-b"
                   >
                     How We Work
                   </Link>
                   <Link
                     to="/operations/recruitment"
+                    onClick={() => setIsMobileMenuOpen(false)}
                     className="block px-6 py-4 text-gray-800 hover:bg-gray-100 border-b"
                   >
                     Recruitment Process
                   </Link>
                   <Link
                     to="/operations/emergency-escalation"
+                    onClick={() => setIsMobileMenuOpen(false)}
                     className="block px-6 py-4 text-gray-800 hover:bg-gray-100 border-b"
                   >
                     Emergency Escalation Matrix
                   </Link>
                   <Link
                     to="/operations/compliance"
+                    onClick={() => setIsMobileMenuOpen(false)}
                     className="block px-6 py-4 text-gray-800 hover:bg-gray-100 border-b"
                   >
                     Statutory Compliance
                   </Link>
                   <Link
                     to="/operations/service-guarantee"
+                    onClick={() => setIsMobileMenuOpen(false)}
                     className="block px-6 py-4 text-gray-800 hover:bg-gray-100"
                   >
                     Service Guarantee
@@ -472,26 +519,6 @@ const Header = () => {
               CONTACT
             </Link>
           </nav>
-
-          {/* Mobile Social Media */}
-          <div className="flex gap-6 px-6 py-4 border-t border-gray-700">
-            <Facebook
-              size={24}
-              className="text-white cursor-pointer hover:text-amber-500 transition"
-            />
-            <Twitter
-              size={24}
-              className="text-white cursor-pointer hover:text-amber-500 transition"
-            />
-            <Youtube
-              size={24}
-              className="text-white cursor-pointer hover:text-amber-500 transition"
-            />
-            <Instagram
-              size={24}
-              className="text-white cursor-pointer hover:text-amber-500 transition"
-            />
-          </div>
         </div>
       )}
     </header>
