@@ -23,6 +23,7 @@ import {
   UserCog,
   Crown,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const EmergencyEscalation = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -341,17 +342,16 @@ const EmergencyEscalation = () => {
       </style>
 
       {/* Hero Section */}
-      <div className="relative h-120 w-full mt-20">
+      <div className="relative h-[560px] w-full">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?w=1920&q=80)",
+            backgroundImage: "url('/ee-hero.jpeg')",
           }}
         ></div>
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="relative max-w-7xl mx-auto px-6 h-full flex items-center">
+        <div className="relative max-w-7xl mx-auto px-6 pt-48 pb-32 lg:pt-56 lg:pb-40 md:pt-44 md:pb-24">
           <div className="max-w-3xl">
             <div
               className={`flex items-center gap-3 mb-4 ${
@@ -377,9 +377,9 @@ const EmergencyEscalation = () => {
                 isLoaded ? "animate-fade delay-400" : "opacity-0"
               }`}
             >
-              Our structured escalation system ensures every incident is handled with
-              speed, precision, and accountability—from the first responder to top
-              management.
+              Our structured escalation system ensures every incident is handled
+              with speed, precision, and accountability—from the first responder
+              to top management.
             </p>
           </div>
         </div>
@@ -412,8 +412,8 @@ const EmergencyEscalation = () => {
                   : "opacity-0"
               }`}
             >
-              A systematic approach ensuring safety, service continuity, and timely
-              resolution at every level
+              A systematic approach ensuring safety, service continuity, and
+              timely resolution at every level
             </p>
           </div>
 
@@ -468,8 +468,8 @@ const EmergencyEscalation = () => {
                   : "opacity-0"
               }`}
             >
-              From ground-level response to executive oversight—each tier with defined
-              roles and timelines
+              From ground-level response to executive oversight—each tier with
+              defined roles and timelines
             </p>
           </div>
 
@@ -564,7 +564,11 @@ const EmergencyEscalation = () => {
             {severityLevels.map((severity, index) => (
               <div
                 key={index}
-                className={`${severity.bgColor} p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 ${severity.borderColor} ${
+                className={`${
+                  severity.bgColor
+                } p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 ${
+                  severity.borderColor
+                } ${
                   visibleSections["severity"] ? "animate-slide-up" : "opacity-0"
                 }`}
                 style={{ animationDelay: `${index * 0.2}s` }}
@@ -576,7 +580,9 @@ const EmergencyEscalation = () => {
                 </div>
 
                 <div className="mb-6">
-                  <h3 className={`text-2xl font-bold ${severity.textColor} mb-2`}>
+                  <h3
+                    className={`text-2xl font-bold ${severity.textColor} mb-2`}
+                  >
                     {severity.level}
                   </h3>
                   <p className="text-xl font-semibold text-gray-900">
@@ -637,9 +643,9 @@ const EmergencyEscalation = () => {
                 Time-Bound Action Protocol
               </h2>
               <p className="text-gray-300 mb-8 leading-relaxed">
-                Every second counts in an emergency. Our escalation matrix ensures
-                immediate action with clear timelines from first response to executive
-                involvement.
+                Every second counts in an emergency. Our escalation matrix
+                ensures immediate action with clear timelines from first
+                response to executive involvement.
               </p>
 
               <div className="space-y-4">
@@ -652,7 +658,8 @@ const EmergencyEscalation = () => {
                       5-Minute Initial Response
                     </h3>
                     <p className="text-gray-400 text-sm">
-                      Site supervisor takes immediate control and initiates documentation
+                      Site supervisor takes immediate control and initiates
+                      documentation
                     </p>
                   </div>
                 </div>
@@ -666,7 +673,8 @@ const EmergencyEscalation = () => {
                       30-Minute Management Activation
                     </h3>
                     <p className="text-gray-400 text-sm">
-                      Operations manager coordinates emergency response and resources
+                      Operations manager coordinates emergency response and
+                      resources
                     </p>
                   </div>
                 </div>
@@ -680,8 +688,8 @@ const EmergencyEscalation = () => {
                       Executive Oversight for Critical Cases
                     </h3>
                     <p className="text-gray-400 text-sm">
-                      Senior leadership engagement within 60 minutes for high-severity
-                      incidents
+                      Senior leadership engagement within 60 minutes for
+                      high-severity incidents
                     </p>
                   </div>
                 </div>
@@ -696,7 +704,7 @@ const EmergencyEscalation = () => {
               }`}
             >
               <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80"
+                src="/howwework-3.jpeg"
                 alt="Emergency Response Team"
                 className="w-full h-full object-cover shadow-2xl"
               />
@@ -720,7 +728,7 @@ const EmergencyEscalation = () => {
               }`}
             >
               <img
-                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=800&q=80"
+                src="/contact-us-footer.jpeg"
                 alt="Team Communication"
                 className="w-full h-full object-cover shadow-2xl"
               />
@@ -743,8 +751,8 @@ const EmergencyEscalation = () => {
                 Continuous Communication Chain
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Real-time information flow ensures every stakeholder stays informed and
-                coordinated throughout the incident response.
+                Real-time information flow ensures every stakeholder stays
+                informed and coordinated throughout the incident response.
               </p>
 
               <div className="space-y-4">
@@ -757,7 +765,8 @@ const EmergencyEscalation = () => {
                       Instant Alerts
                     </h3>
                     <p className="text-gray-600 text-sm">
-                      Automated notification system alerts relevant personnel immediately
+                      Automated notification system alerts relevant personnel
+                      immediately
                     </p>
                   </div>
                 </div>
@@ -771,7 +780,8 @@ const EmergencyEscalation = () => {
                       Documentation at Every Stage
                     </h3>
                     <p className="text-gray-600 text-sm">
-                      Comprehensive incident reporting and verification trail maintained
+                      Comprehensive incident reporting and verification trail
+                      maintained
                     </p>
                   </div>
                 </div>
@@ -785,7 +795,8 @@ const EmergencyEscalation = () => {
                       Multi-Channel Communication
                     </h3>
                     <p className="text-gray-600 text-sm">
-                      Phone, radio, and digital channels ensure no communication gaps
+                      Phone, radio, and digital channels ensure no communication
+                      gaps
                     </p>
                   </div>
                 </div>
@@ -803,15 +814,18 @@ const EmergencyEscalation = () => {
               Emergency Response Flow
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              A systematic process ensuring every incident is managed efficiently from
-              detection to resolution
+              A systematic process ensuring every incident is managed
+              efficiently from detection to resolution
             </p>
-          </div><div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="text-center">
               <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <AlertTriangle className="w-8 h-8 text-white" />
               </div>
-              <h3 className="font-bold text-gray-900 mb-2">Incident Detection</h3>
+              <h3 className="font-bold text-gray-900 mb-2">
+                Incident Detection
+              </h3>
               <p className="text-gray-600 text-sm">
                 Immediate identification and assessment of emergency situations
               </p>
@@ -823,7 +837,8 @@ const EmergencyEscalation = () => {
               </div>
               <h3 className="font-bold text-gray-900 mb-2">Alert & Escalate</h3>
               <p className="text-gray-600 text-sm">
-                Automated notification system activates appropriate response levels
+                Automated notification system activates appropriate response
+                levels
               </p>
             </div>
 
@@ -831,7 +846,9 @@ const EmergencyEscalation = () => {
               <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <h3 className="font-bold text-gray-900 mb-2">Team Mobilization</h3>
+              <h3 className="font-bold text-gray-900 mb-2">
+                Team Mobilization
+              </h3>
               <p className="text-gray-600 text-sm">
                 Rapid deployment of personnel and resources to incident location
               </p>
@@ -841,9 +858,12 @@ const EmergencyEscalation = () => {
               <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="w-8 h-8 text-white" />
               </div>
-              <h3 className="font-bold text-gray-900 mb-2">Resolution & Report</h3>
+              <h3 className="font-bold text-gray-900 mb-2">
+                Resolution & Report
+              </h3>
               <p className="text-gray-600 text-sm">
-                Incident resolution with comprehensive documentation and analysis
+                Incident resolution with comprehensive documentation and
+                analysis
               </p>
             </div>
           </div>
@@ -865,7 +885,7 @@ const EmergencyEscalation = () => {
               }
             >
               <img
-                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80"
+                src="/howwework-hero.jpeg"
                 alt="Emergency Command Center"
                 className="w-full h-full object-cover shadow-2xl"
               />
@@ -888,8 +908,9 @@ const EmergencyEscalation = () => {
                 Tested in Real Emergencies
               </h2>
               <p className="text-gray-300 mb-8 leading-relaxed">
-                Our escalation matrix has been successfully deployed across hundreds
-                of incidents, ensuring minimal impact and maximum safety outcomes.
+                Our escalation matrix has been successfully deployed across
+                hundreds of incidents, ensuring minimal impact and maximum
+                safety outcomes.
               </p>
 
               <div className="space-y-6">
@@ -902,7 +923,8 @@ const EmergencyEscalation = () => {
                       Average Response Time: 4 Minutes
                     </h3>
                     <p className="text-gray-400 text-sm">
-                      Site supervisors respond within 5 minutes in 95% of incidents
+                      Site supervisors respond within 5 minutes in 95% of
+                      incidents
                     </p>
                   </div>
                 </div>
@@ -930,7 +952,8 @@ const EmergencyEscalation = () => {
                       Complete Documentation Trail
                     </h3>
                     <p className="text-gray-400 text-sm">
-                      Every incident documented with photos, reports, and timelines
+                      Every incident documented with photos, reports, and
+                      timelines
                     </p>
                   </div>
                 </div>
@@ -1094,8 +1117,8 @@ const EmergencyEscalation = () => {
                     Initial Incident Report
                   </h3>
                   <p className="text-gray-600 text-sm mb-3">
-                    Site supervisor documents incident details, location, time, and
-                    immediate actions taken
+                    Site supervisor documents incident details, location, time,
+                    and immediate actions taken
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <span className="px-3 py-1 bg-amber-50 text-amber-700 text-xs font-medium">
@@ -1115,8 +1138,8 @@ const EmergencyEscalation = () => {
                     Verification Reports
                   </h3>
                   <p className="text-gray-600 text-sm mb-3">
-                    Field officers verify incident details with additional photos and
-                    on-ground assessment
+                    Field officers verify incident details with additional
+                    photos and on-ground assessment
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium">
@@ -1133,8 +1156,8 @@ const EmergencyEscalation = () => {
                     Resolution Documentation
                   </h3>
                   <p className="text-gray-600 text-sm mb-3">
-                    Final report with actions taken, resources deployed, and outcome
-                    analysis
+                    Final report with actions taken, resources deployed, and
+                    outcome analysis
                   </p>
                   <div className="flex flex-wrap gap-2">
                     <span className="px-3 py-1 bg-green-50 text-green-700 text-xs font-medium">
@@ -1159,7 +1182,7 @@ const EmergencyEscalation = () => {
               }`}
             >
               <img
-                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80"
+                src="/recruitment-1.jpeg"
                 alt="Documentation Process"
                 className="w-full h-full object-cover shadow-2xl"
               />
@@ -1265,7 +1288,8 @@ const EmergencyEscalation = () => {
                 Performance Review
               </h3>
               <p className="text-gray-600 text-sm">
-                Regular assessment and feedback on emergency response performance
+                Regular assessment and feedback on emergency response
+                performance
               </p>
             </div>
           </div>
@@ -1277,8 +1301,7 @@ const EmergencyEscalation = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1920&q=80)",
+            backgroundImage: "url('/ee-footer.jpeg')",
           }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>
@@ -1288,18 +1311,16 @@ const EmergencyEscalation = () => {
             Experience World-Class Emergency Response
           </h2>
           <p className="text-gray-300 text-lg mb-8">
-            Our 10-level escalation matrix ensures every incident is handled with
-            precision, accountability, and the right level of expertise—from ground
-            response to executive oversight.
+            Our 10-level escalation matrix ensures every incident is handled
+            with precision, accountability, and the right level of
+            expertise—from ground response to executive oversight.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg">
-              GET CONSULTATION
-            </button>
-            <button className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg">
-              DOWNLOAD MATRIX PDF
-            </button>
-          </div>
+          <Link
+            to="/contact"
+            className="inline-block px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg"
+          >
+            GET CONSULTATION
+          </Link>
         </div>
       </div>
     </div>

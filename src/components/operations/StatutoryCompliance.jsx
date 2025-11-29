@@ -21,6 +21,7 @@ import {
   Building2,
   UserCheck,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const StatutoryCompliance = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -60,7 +61,8 @@ const StatutoryCompliance = () => {
     {
       icon: Heart,
       title: "ESI (Employees' State Insurance)",
-      description: "Complete ESI compliance under ESIC Act, 1948 with timely contributions and medical benefits",
+      description:
+        "Complete ESI compliance under ESIC Act, 1948 with timely contributions and medical benefits",
       features: [
         "All eligible employees enrolled under ESIC Act, 1948",
         "Monthly ESI contributions deposited on time",
@@ -72,7 +74,8 @@ const StatutoryCompliance = () => {
     {
       icon: Wallet,
       title: "EPFO (Employees Provident Fund)",
-      description: "Full PF compliance under EPF & MP Act, 1952 with digital access and regular audits",
+      description:
+        "Full PF compliance under EPF & MP Act, 1952 with digital access and regular audits",
       features: [
         "All employees covered under EPF & MP Act, 1952",
         "Monthly PF contributions deposited within statutory timeline",
@@ -84,7 +87,8 @@ const StatutoryCompliance = () => {
     {
       icon: DollarSign,
       title: "Labour Wages Compliance",
-      description: "Strict adherence to wage laws including minimum wages, bonus, and gratuity payments",
+      description:
+        "Strict adherence to wage laws including minimum wages, bonus, and gratuity payments",
       features: [
         "Minimum Wages Act compliance",
         "Payment of Wages Act & Payment of Bonus Act",
@@ -96,7 +100,8 @@ const StatutoryCompliance = () => {
     {
       icon: Shield,
       title: "Insurance Coverage",
-      description: "Comprehensive insurance protection including workmen compensation and accident coverage",
+      description:
+        "Comprehensive insurance protection including workmen compensation and accident coverage",
       features: [
         "Workmen Compensation Policy",
         "Group Personal Accident Policy",
@@ -178,7 +183,8 @@ const StatutoryCompliance = () => {
     {
       icon: CheckCircle,
       title: "100% Transparency",
-      description: "Complete transparency in all statutory payments and contributions",
+      description:
+        "Complete transparency in all statutory payments and contributions",
     },
     {
       icon: Clock,
@@ -250,17 +256,16 @@ const StatutoryCompliance = () => {
       </style>
 
       {/* Hero Section */}
-      <div className="relative h-120 w-full mt-20">
+      <div className="relative h-[560px] w-full">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80)",
+            backgroundImage: "url('/recruitment-1.jpeg')",
           }}
         ></div>
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="relative max-w-7xl mx-auto px-6 h-full flex items-center">
+        <div className="relative max-w-7xl mx-auto px-6 pt-48 pb-32 lg:pt-56 lg:pb-40 md:pt-44 md:pb-24">
           <div className="max-w-3xl">
             <div
               className={`flex items-center gap-3 mb-4 ${
@@ -286,9 +291,10 @@ const StatutoryCompliance = () => {
                 isLoaded ? "animate-fade delay-400" : "opacity-0"
               }`}
             >
-              At Cadman Security Services Pvt. Ltd., we strictly follow all statutory, 
-              legal, and regulatory frameworks mandated by the Government of India. 
-              We ensure 100% compliance for every employee deployed under our services.
+              At Cadman Security Services Pvt. Ltd., we strictly follow all
+              statutory, legal, and regulatory frameworks mandated by the
+              Government of India. We ensure 100% compliance for every employee
+              deployed under our services.
             </p>
           </div>
         </div>
@@ -321,8 +327,8 @@ const StatutoryCompliance = () => {
                   : "opacity-0"
               }`}
             >
-              Full compliance with ESI, EPFO, labour wages, and insurance regulations 
-              ensuring employee welfare and legal protection
+              Full compliance with ESI, EPFO, labour wages, and insurance
+              regulations ensuring employee welfare and legal protection
             </p>
           </div>
 
@@ -387,7 +393,8 @@ const StatutoryCompliance = () => {
                   : "opacity-0"
               }`}
             >
-              Guaranteed benefits and timely payments as per statutory requirements
+              Guaranteed benefits and timely payments as per statutory
+              requirements
             </p>
           </div>
 
@@ -439,8 +446,9 @@ const StatutoryCompliance = () => {
                 Documents We Provide to Clients
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Complete documentation and records maintained for full transparency 
-                and audit readiness. All documents provided on time for client review.
+                Complete documentation and records maintained for full
+                transparency and audit readiness. All documents provided on time
+                for client review.
               </p>
 
               <div className="grid grid-cols-2 gap-4">
@@ -470,7 +478,7 @@ const StatutoryCompliance = () => {
               }`}
             >
               <img
-                src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80"
+                src="/sc.jpeg"
                 alt="Compliance Documentation"
                 className="w-full h-full object-cover shadow-2xl"
               />
@@ -506,8 +514,8 @@ const StatutoryCompliance = () => {
                   : "opacity-0"
               }`}
             >
-              Beyond core requirements, we ensure compliance across all applicable 
-              laws and regulations
+              Beyond core requirements, we ensure compliance across all
+              applicable laws and regulations
             </p>
           </div>
 
@@ -564,8 +572,8 @@ const StatutoryCompliance = () => {
                   : "opacity-0"
               }`}
             >
-              Complete legal protection and compliance guarantee with zero tolerance 
-              for non-compliance
+              Complete legal protection and compliance guarantee with zero
+              tolerance for non-compliance
             </p>
           </div>
 
@@ -574,9 +582,7 @@ const StatutoryCompliance = () => {
               <div
                 key={index}
                 className={`bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group ${
-                  visibleSections["commitments"]
-                    ? "animate-scale"
-                    : "opacity-0"
+                  visibleSections["commitments"] ? "animate-scale" : "opacity-0"
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -603,7 +609,7 @@ const StatutoryCompliance = () => {
               Our Compliance Management Process
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              A systematic approach ensuring complete statutory compliance and 
+              A systematic approach ensuring complete statutory compliance and
               employee welfare at every step
             </p>
           </div>
@@ -613,7 +619,9 @@ const StatutoryCompliance = () => {
               <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">1</span>
               </div>
-              <h3 className="font-bold text-gray-900 mb-2">Employee Enrollment</h3>
+              <h3 className="font-bold text-gray-900 mb-2">
+                Employee Enrollment
+              </h3>
               <p className="text-gray-600 text-sm">
                 Complete registration under ESI, EPFO, and all statutory bodies
               </p>
@@ -623,7 +631,9 @@ const StatutoryCompliance = () => {
               <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">2</span>
               </div>
-              <h3 className="font-bold text-gray-900 mb-2">Monthly Processing</h3>
+              <h3 className="font-bold text-gray-900 mb-2">
+                Monthly Processing
+              </h3>
               <p className="text-gray-600 text-sm">
                 Timely salary, PF, ESI payments and documentation maintenance
               </p>
@@ -645,7 +655,8 @@ const StatutoryCompliance = () => {
               </div>
               <h3 className="font-bold text-gray-900 mb-2">Client Reporting</h3>
               <p className="text-gray-600 text-sm">
-                Monthly compliance reports and documentation sharing with clients
+                Monthly compliance reports and documentation sharing with
+                clients
               </p>
             </div>
           </div>
@@ -657,8 +668,7 @@ const StatutoryCompliance = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1920&q=80)",
+            backgroundImage: "url('/ee-footer.jpeg')",
           }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>
@@ -668,17 +678,16 @@ const StatutoryCompliance = () => {
             Partner with 100% Compliant Services
           </h2>
           <p className="text-gray-300 text-lg mb-8">
-            Get complete statutory compliance protection with transparent documentation, 
-            timely payments, and zero legal risks for your organization.
+            Get complete statutory compliance protection with transparent
+            documentation, timely payments, and zero legal risks for your
+            organization.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg">
-              REQUEST COMPLIANCE AUDIT
-            </button>
-            <button className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg">
-              DOWNLOAD COMPLIANCE GUIDE
-            </button>
-          </div>
+          <Link
+            to="/contact"
+            className="inline-block px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg"
+          >
+            REQUEST COMPLIANCE AUDIT
+          </Link>
         </div>
       </div>
     </div>

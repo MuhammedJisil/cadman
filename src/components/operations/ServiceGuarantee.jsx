@@ -28,6 +28,7 @@ import {
   BadgeCheck,
   Sparkles,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ServiceGuarantee = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -63,19 +64,13 @@ const ServiceGuarantee = () => {
     return () => observers.forEach((observer) => observer.disconnect());
   }, []);
 
-  const coreValues = [
-    { label: "Reliable", icon: Shield },
-    { label: "Responsive", icon: Zap },
-    { label: "Responsible", icon: UserCheck },
-    { label: "Result-Driven", icon: Target },
-  ];
-
   const serviceGuarantees = [
     {
       number: "1",
       icon: Radio,
       title: "24/7 Centralized Control Room Support",
-      description: "Fully equipped command center operating round-the-clock with real-time coordination",
+      description:
+        "Fully equipped command center operating round-the-clock with real-time coordination",
       features: [
         "Fully equipped command center operating 24/7",
         "Real-time coordination with sites, supervisors, and field officers",
@@ -87,7 +82,8 @@ const ServiceGuarantee = () => {
       number: "2",
       icon: Zap,
       title: "Quick Response Team (QRT) & Rapid Response Team (RRT)",
-      description: "Immediate deployment during emergencies, incidents, conflicts, or manpower shortages",
+      description:
+        "Immediate deployment during emergencies, incidents, conflicts, or manpower shortages",
       features: [
         "Immediate deployment of QRT/RRT during emergencies",
         "Skilled officers trained in emergency handling, fire safety, evacuation",
@@ -99,7 +95,8 @@ const ServiceGuarantee = () => {
       number: "3",
       icon: Users,
       title: "Event Support from Backend Team",
-      description: "Dedicated manpower & supervision for corporate events, functions, and VIP visits",
+      description:
+        "Dedicated manpower & supervision for corporate events, functions, and VIP visits",
       features: [
         "Dedicated manpower for corporate events and functions",
         "VIP visits and emergency requirements handling",
@@ -111,7 +108,8 @@ const ServiceGuarantee = () => {
       number: "4",
       icon: Eye,
       title: "Periodic Site Visits (Routine Supervision)",
-      description: "Multi-level supervision ensuring quality, discipline, and operational excellence",
+      description:
+        "Multi-level supervision ensuring quality, discipline, and operational excellence",
       features: [
         "Weekly visits by Field Officers/Area Manager/GM/Sr GM",
         "Bi-weekly supervision by Operations Manager",
@@ -123,7 +121,8 @@ const ServiceGuarantee = () => {
       number: "5",
       icon: AlertCircle,
       title: "Periodic Night Checking",
-      description: "Surprise night visits to ensure alertness, discipline, and proper deployment",
+      description:
+        "Surprise night visits to ensure alertness, discipline, and proper deployment",
       features: [
         "Surprise night visits for alertness verification",
         "Documentation of findings and corrective actions",
@@ -135,7 +134,8 @@ const ServiceGuarantee = () => {
       number: "6",
       icon: GraduationCap,
       title: "Periodic Training Programs",
-      description: "Comprehensive training calendar with on-site refresher programs and skill development",
+      description:
+        "Comprehensive training calendar with on-site refresher programs and skill development",
       features: [
         "On-site refresher training programs",
         "Fire & safety drills and customer service training",
@@ -147,7 +147,8 @@ const ServiceGuarantee = () => {
       number: "7",
       icon: MessageSquare,
       title: "Monthly Review Meetings",
-      description: "Regular performance reviews covering KPIs, SLAs, and continuous improvement plans",
+      description:
+        "Regular performance reviews covering KPIs, SLAs, and continuous improvement plans",
       features: [
         "Discussion on performance, manpower strength, and improvements",
         "Review of KPI, SLA, attendance, discipline, and quality audits",
@@ -159,7 +160,8 @@ const ServiceGuarantee = () => {
       number: "8",
       icon: FileText,
       title: "Timely Billing & Documentation",
-      description: "Punctual invoicing with complete statutory documentation and compliance reports",
+      description:
+        "Punctual invoicing with complete statutory documentation and compliance reports",
       features: [
         "Invoices submitted on or before agreed date",
         "All statutory documents (ESI, EPF, Wage Register, OT, LWF, PT, Insurance)",
@@ -171,7 +173,8 @@ const ServiceGuarantee = () => {
       number: "9",
       icon: Calendar,
       title: "Quarterly Meeting with Client & CEO",
-      description: "High-level strategic discussions on improvements, innovations, and new requirements",
+      description:
+        "High-level strategic discussions on improvements, innovations, and new requirements",
       features: [
         "High-level strategic discussions and planning",
         "Improvements, innovations, and new requirements",
@@ -183,7 +186,8 @@ const ServiceGuarantee = () => {
       number: "10",
       icon: BookOpen,
       title: "SOP-Based Work Assurance",
-      description: "Every task executed strictly as per approved Standard Operating Procedures",
+      description:
+        "Every task executed strictly as per approved Standard Operating Procedures",
       features: [
         "Strict adherence to approved Standard Operating Procedures",
         "Daily checklist, logbooks, and PPM schedules maintained",
@@ -195,7 +199,8 @@ const ServiceGuarantee = () => {
       number: "11",
       icon: Target,
       title: "SLA-Based Service Delivery",
-      description: "Clear service-level commitments with proactive management and penalty avoidance",
+      description:
+        "Clear service-level commitments with proactive management and penalty avoidance",
       features: [
         "Clear service-level commitments and targets",
         "Monitoring of uptime, response time, quality, and manpower",
@@ -207,7 +212,8 @@ const ServiceGuarantee = () => {
       number: "12",
       icon: BarChart3,
       title: "KPI Reporting (Periodic)",
-      description: "Site-specific KPI measurement with performance, discipline, and quality indices",
+      description:
+        "Site-specific KPI measurement with performance, discipline, and quality indices",
       features: [
         "Site-specific KPI measurement and analysis",
         "Performance score, discipline score & quality index",
@@ -219,7 +225,8 @@ const ServiceGuarantee = () => {
       number: "13",
       icon: ClipboardCheck,
       title: "MMR (Monthly Management Report) Submission",
-      description: "Comprehensive monthly reports covering all operational aspects and compliance data",
+      description:
+        "Comprehensive monthly reports covering all operational aspects and compliance data",
       features: [
         "Training data and snag list documentation",
         "Attendance records and night checking reports",
@@ -309,8 +316,7 @@ const ServiceGuarantee = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=1920&q=80)",
+            backgroundImage: "url('/sg-hero.jpeg')",
           }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>
@@ -336,30 +342,15 @@ const ServiceGuarantee = () => {
               SERVICE GUARANTEE
             </h1>
 
-            <div
-              className={`flex flex-wrap gap-4 mb-6 ${
-                isLoaded ? "animate-fade delay-400" : "opacity-0"
-              }`}
-            >
-              {coreValues.map((value, index) => (
-                <div
-                  key={index}
-                  className="flex items-center gap-2 bg-amber-500/20 backdrop-blur-sm px-4 py-2 border border-amber-500/50"
-                >
-                  <value.icon className="w-5 h-5 text-amber-500" />
-                  <span className="text-white font-semibold">{value.label}</span>
-                </div>
-              ))}
-            </div>
-
             <p
               className={`text-gray-300 text-lg md:text-xl leading-relaxed ${
                 isLoaded ? "animate-fade delay-600" : "opacity-0"
               }`}
             >
-              At Cadman Security Services Pvt. Ltd., we guarantee high-quality service 
-              delivery backed by strong supervision, technology, and a disciplined workforce. 
-              Our commitment ensures seamless operations, zero downtime, and complete client satisfaction.
+              At Cadman Security Services Pvt. Ltd., we guarantee high-quality
+              service delivery backed by strong supervision, technology, and a
+              disciplined workforce. Our commitment ensures seamless operations,
+              zero downtime, and complete client satisfaction.
             </p>
           </div>
         </div>
@@ -392,8 +383,9 @@ const ServiceGuarantee = () => {
                   : "opacity-0"
               }`}
             >
-              Comprehensive service guarantees covering every aspect of security operations, 
-              from 24/7 support to detailed reporting and continuous improvement
+              Comprehensive service guarantees covering every aspect of security
+              operations, from 24/7 support to detailed reporting and continuous
+              improvement
             </p>
           </div>
 
@@ -461,7 +453,9 @@ const ServiceGuarantee = () => {
                       {guarantee.features.map((feature, fIndex) => (
                         <div key={fIndex} className="flex items-start gap-2">
                           <CheckCircle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-700 text-sm">{feature}</span>
+                          <span className="text-gray-700 text-sm">
+                            {feature}
+                          </span>
                         </div>
                       ))}
                     </div>
@@ -486,7 +480,7 @@ const ServiceGuarantee = () => {
               }
             >
               <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
+                src="/howwework.jpeg"
                 alt="Technology Control Room"
                 className="w-full h-full object-cover shadow-2xl"
               />
@@ -509,8 +503,9 @@ const ServiceGuarantee = () => {
                 24/7 Command Center Operations
               </h2>
               <p className="text-gray-300 mb-8 leading-relaxed">
-                Our state-of-the-art control room ensures continuous monitoring, 
-                instant response, and seamless coordination across all deployment sites.
+                Our state-of-the-art control room ensures continuous monitoring,
+                instant response, and seamless coordination across all
+                deployment sites.
               </p>
 
               <div className="space-y-4">
@@ -523,7 +518,8 @@ const ServiceGuarantee = () => {
                       Real-Time Communication
                     </h3>
                     <p className="text-gray-400 text-sm">
-                      Instant coordination with all sites, supervisors, and field officers
+                      Instant coordination with all sites, supervisors, and
+                      field officers
                     </p>
                   </div>
                 </div>
@@ -535,7 +531,8 @@ const ServiceGuarantee = () => {
                   <div>
                     <h3 className="font-bold text-white mb-1">GPS Tracking</h3>
                     <p className="text-gray-400 text-sm">
-                      Live location monitoring of key personnel and response teams
+                      Live location monitoring of key personnel and response
+                      teams
                     </p>
                   </div>
                 </div>
@@ -583,14 +580,16 @@ const ServiceGuarantee = () => {
                 Comprehensive Quality Control
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Our multi-tier supervision structure ensures consistent quality, 
+                Our multi-tier supervision structure ensures consistent quality,
                 discipline, and operational excellence at every level.
               </p>
 
               <div className="space-y-4">
                 <div className="flex items-center gap-4 p-4 bg-amber-50 border-l-4 border-amber-500">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-amber-600">Weekly</div>
+                    <div className="text-2xl font-bold text-amber-600">
+                      Weekly
+                    </div>
                     <div className="text-xs text-gray-600">Visits</div>
                   </div>
                   <div>
@@ -602,7 +601,9 @@ const ServiceGuarantee = () => {
 
                 <div className="flex items-center gap-4 p-4 bg-amber-50 border-l-4 border-amber-500">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-amber-600">Bi-Weekly</div>
+                    <div className="text-2xl font-bold text-amber-600">
+                      Bi-Weekly
+                    </div>
                     <div className="text-xs text-gray-600">Supervision</div>
                   </div>
                   <div>
@@ -614,7 +615,9 @@ const ServiceGuarantee = () => {
 
                 <div className="flex items-center gap-4 p-4 bg-amber-50 border-l-4 border-amber-500">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-amber-600">Monthly</div>
+                    <div className="text-2xl font-bold text-amber-600">
+                      Monthly
+                    </div>
                     <div className="text-xs text-gray-600">Audits</div>
                   </div>
                   <div>
@@ -626,7 +629,9 @@ const ServiceGuarantee = () => {
 
                 <div className="flex items-center gap-4 p-4 bg-amber-50 border-l-4 border-amber-500">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-amber-600">Quarterly</div>
+                    <div className="text-2xl font-bold text-amber-600">
+                      Quarterly
+                    </div>
                     <div className="text-xs text-gray-600">Inspections</div>
                   </div>
                   <div>
@@ -646,7 +651,7 @@ const ServiceGuarantee = () => {
               }`}
             >
               <img
-                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&q=80"
+                src="/sg.jpeg"
                 alt="Quality Supervision"
                 className="w-full h-full object-cover shadow-2xl"
               />
@@ -682,8 +687,8 @@ const ServiceGuarantee = () => {
                   : "opacity-0"
               }`}
             >
-              Detailed monthly reports covering all operational aspects, KPIs, compliance, 
-              and continuous improvement initiatives
+              Detailed monthly reports covering all operational aspects, KPIs,
+              compliance, and continuous improvement initiatives
             </p>
           </div>
 
@@ -700,7 +705,8 @@ const ServiceGuarantee = () => {
                 KPI Reporting
               </h3>
               <p className="text-gray-600 mb-4">
-                Performance score, discipline score, and quality index measured monthly
+                Performance score, discipline score, and quality index measured
+                monthly
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-amber-50 text-amber-700 text-sm font-medium">
@@ -726,7 +732,8 @@ const ServiceGuarantee = () => {
                 Monthly Management Report
               </h3>
               <p className="text-gray-600 mb-4">
-                Comprehensive MMR with training data, attendance, and compliance updates
+                Comprehensive MMR with training data, attendance, and compliance
+                updates
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-amber-50 text-amber-700 text-sm font-medium">
@@ -748,10 +755,12 @@ const ServiceGuarantee = () => {
               <div className="bg-amber-500 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
                 <Target className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">SLA Compliance
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                SLA Compliance
               </h3>
               <p className="text-gray-600 mb-4">
-                Clear service-level commitments with uptime and response time monitoring
+                Clear service-level commitments with uptime and response time
+                monitoring
               </p>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-amber-50 text-amber-700 text-sm font-medium">
@@ -775,13 +784,11 @@ const ServiceGuarantee = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div
               className={`${
-                visibleSections["training"]
-                  ? "animate-slide-left"
-                  : "opacity-0"
+                visibleSections["training"] ? "animate-slide-left" : "opacity-0"
               }`}
             >
               <img
-                src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&q=80"
+                src="/sg-2.jpeg"
                 alt="Training Programs"
                 className="w-full h-full object-cover shadow-2xl"
               />
@@ -804,8 +811,9 @@ const ServiceGuarantee = () => {
                 52-Week Training Calendar
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Comprehensive training programs covering fire safety, customer service, 
-                equipment handling, and professional development throughout the year.
+                Comprehensive training programs covering fire safety, customer
+                service, equipment handling, and professional development
+                throughout the year.
               </p>
 
               <div className="space-y-4">
@@ -818,7 +826,8 @@ const ServiceGuarantee = () => {
                       On-Site Refresher Training
                     </h3>
                     <p className="text-gray-600 text-sm">
-                      Regular skill enhancement programs conducted at deployment sites
+                      Regular skill enhancement programs conducted at deployment
+                      sites
                     </p>
                   </div>
                 </div>
@@ -832,7 +841,8 @@ const ServiceGuarantee = () => {
                       Fire & Safety Drills
                     </h3>
                     <p className="text-gray-600 text-sm">
-                      Mandatory emergency response and evacuation training sessions
+                      Mandatory emergency response and evacuation training
+                      sessions
                     </p>
                   </div>
                 </div>
@@ -846,7 +856,8 @@ const ServiceGuarantee = () => {
                       Soft Skills Development
                     </h3>
                     <p className="text-gray-600 text-sm">
-                      Customer service training and professional communication skills
+                      Customer service training and professional communication
+                      skills
                     </p>
                   </div>
                 </div>
@@ -860,7 +871,8 @@ const ServiceGuarantee = () => {
                       Equipment Handling
                     </h3>
                     <p className="text-gray-600 text-sm">
-                      Proper usage and maintenance of security and safety equipment
+                      Proper usage and maintenance of security and safety
+                      equipment
                     </p>
                   </div>
                 </div>
@@ -878,8 +890,8 @@ const ServiceGuarantee = () => {
               Our Service Excellence Process
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              A systematic approach ensuring quality at every touchpoint from deployment 
-              to continuous improvement
+              A systematic approach ensuring quality at every touchpoint from
+              deployment to continuous improvement
             </p>
           </div>
 
@@ -898,7 +910,9 @@ const ServiceGuarantee = () => {
               <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">2</span>
               </div>
-              <h3 className="font-bold text-gray-900 mb-2">Train & Supervise</h3>
+              <h3 className="font-bold text-gray-900 mb-2">
+                Train & Supervise
+              </h3>
               <p className="text-gray-600 text-sm">
                 Continuous training programs and multi-level supervision
               </p>
@@ -943,23 +957,30 @@ const ServiceGuarantee = () => {
               Our Ironclad Service Guarantee
             </h2>
             <p className="text-gray-700 text-lg leading-relaxed max-w-3xl mx-auto mb-8">
-              We stand behind every commitment with complete transparency, proactive management, 
-              and unwavering dedication to your security needs. Our multi-layered supervision, 
-              advanced technology, and disciplined workforce ensure zero downtime and 100% 
-              client satisfaction.
+              We stand behind every commitment with complete transparency,
+              proactive management, and unwavering dedication to your security
+              needs. Our multi-layered supervision, advanced technology, and
+              disciplined workforce ensure zero downtime and 100% client
+              satisfaction.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <div className="flex items-center gap-2 bg-white px-6 py-3 shadow-md">
                 <Sparkles className="w-5 h-5 text-amber-500" />
-                <span className="font-semibold text-gray-900">Zero Downtime</span>
+                <span className="font-semibold text-gray-900">
+                  Zero Downtime
+                </span>
               </div>
               <div className="flex items-center gap-2 bg-white px-6 py-3 shadow-md">
                 <Star className="w-5 h-5 text-amber-500" />
-                <span className="font-semibold text-gray-900">100% SOP Compliance</span>
+                <span className="font-semibold text-gray-900">
+                  100% SOP Compliance
+                </span>
               </div>
               <div className="flex items-center gap-2 bg-white px-6 py-3 shadow-md">
                 <Award className="w-5 h-5 text-amber-500" />
-                <span className="font-semibold text-gray-900">Complete Satisfaction</span>
+                <span className="font-semibold text-gray-900">
+                  Complete Satisfaction
+                </span>
               </div>
             </div>
           </div>
@@ -971,8 +992,7 @@ const ServiceGuarantee = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&q=80)",
+            backgroundImage: "url('/howwework-3.jpeg')",
           }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>
@@ -982,17 +1002,16 @@ const ServiceGuarantee = () => {
             Experience Service Excellence with Cadman
           </h2>
           <p className="text-gray-300 text-lg mb-8">
-            Partner with us for guaranteed service delivery backed by 13 comprehensive 
-            service pillars, advanced technology, and a commitment to your complete satisfaction.
+            Partner with us for guaranteed service delivery backed by 13
+            comprehensive service pillars, advanced technology, and a commitment
+            to your complete satisfaction.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg">
-              REQUEST SERVICE PROPOSAL
-            </button>
-            <button className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg">
-              SCHEDULE CONSULTATION
-            </button>
-          </div>
+          <Link
+            to="/contact"
+            className="inline-block px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg"
+          >
+            REQUEST SERVICE PROPOSAL
+          </Link>
         </div>
       </div>
     </div>

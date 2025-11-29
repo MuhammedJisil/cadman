@@ -25,6 +25,7 @@ import {
   Lightbulb,
   Search,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HowWeWork = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -74,7 +75,8 @@ const HowWeWork = () => {
     {
       icon: Eye,
       title: "Transparent",
-      description: "Complete visibility through regular reporting and documentation",
+      description:
+        "Complete visibility through regular reporting and documentation",
     },
     {
       icon: TrendingUp,
@@ -88,7 +90,8 @@ const HowWeWork = () => {
       number: "01",
       icon: Search,
       title: "Pre-Quote Survey & Site Audit",
-      description: "Comprehensive site assessment including manpower requirements, risk analysis, compliance study, and operational gap identification",
+      description:
+        "Comprehensive site assessment including manpower requirements, risk analysis, compliance study, and operational gap identification",
       points: [
         "Manpower requirement assessment",
         "Quality & compliance study",
@@ -100,7 +103,8 @@ const HowWeWork = () => {
       number: "02",
       icon: Users,
       title: "Understanding Client Requirements",
-      description: "Detailed discussion to understand scope, SOP/KPI/SLA requirements, performance expectations, and operational challenges",
+      description:
+        "Detailed discussion to understand scope, SOP/KPI/SLA requirements, performance expectations, and operational challenges",
       points: [
         "Scope of work definition",
         "SOP/KPI/SLA requirements",
@@ -112,7 +116,8 @@ const HowWeWork = () => {
       number: "03",
       icon: ClipboardCheck,
       title: "Pre-Transition Planning",
-      description: "Complete preparation including manpower structure finalization, document collection, background verification, and training scheduling",
+      description:
+        "Complete preparation including manpower structure finalization, document collection, background verification, and training scheduling",
       points: [
         "Manpower deployment structure",
         "Background verification",
@@ -124,7 +129,8 @@ const HowWeWork = () => {
       number: "04",
       icon: Shield,
       title: "Deploying the Right Manpower",
-      description: "Deployment only after recruitment verification, medical clearance, PASARA training, and site-specific orientation",
+      description:
+        "Deployment only after recruitment verification, medical clearance, PASARA training, and site-specific orientation",
       points: [
         "Qualification verification",
         "Medical fitness clearance",
@@ -136,7 +142,8 @@ const HowWeWork = () => {
       number: "05",
       icon: Settings,
       title: "Transition Execution",
-      description: "Complete site takeover with equipment handover, asset register preparation, and daily reporting structure setup",
+      description:
+        "Complete site takeover with equipment handover, asset register preparation, and daily reporting structure setup",
       points: [
         "Complete site takeover",
         "Equipment & asset handover",
@@ -148,7 +155,8 @@ const HowWeWork = () => {
       number: "06",
       icon: GraduationCap,
       title: "Site-Specific Training",
-      description: "Structured induction covering client SOPs, KPI expectations, emergency response, and professional behavior norms",
+      description:
+        "Structured induction covering client SOPs, KPI expectations, emergency response, and professional behavior norms",
       points: [
         "Client SOP training",
         "KPI & SLA expectations",
@@ -160,7 +168,8 @@ const HowWeWork = () => {
       number: "07",
       icon: FileText,
       title: "Documentation & Systems Setup",
-      description: "Complete documentation including SOPs, 52-week calendars, KPI standards, checklists, and reporting formats",
+      description:
+        "Complete documentation including SOPs, 52-week calendars, KPI standards, checklists, and reporting formats",
       points: [
         "Standard Operating Procedures",
         "52-Week Work & Training Calendar",
@@ -172,7 +181,8 @@ const HowWeWork = () => {
       number: "08",
       icon: CheckCircle,
       title: "SOP-Based Operations",
-      description: "Strict adherence to approved SOPs covering security protocols, facility management, housekeeping, MEP operations, and safety compliance",
+      description:
+        "Strict adherence to approved SOPs covering security protocols, facility management, housekeeping, MEP operations, and safety compliance",
       points: [
         "Security protocols",
         "Facility management workflows",
@@ -184,7 +194,8 @@ const HowWeWork = () => {
       number: "09",
       icon: Activity,
       title: "Technology-Enabled Processes",
-      description: "Advanced technology integration for HRMS attendance, digital reporting, GPS patrolling, and real-time monitoring",
+      description:
+        "Advanced technology integration for HRMS attendance, digital reporting, GPS patrolling, and real-time monitoring",
       points: [
         "HRMS attendance system",
         "Digital activity reports",
@@ -196,7 +207,8 @@ const HowWeWork = () => {
       number: "10",
       icon: Eye,
       title: "Strong Supervision & Monitoring",
-      description: "Multi-layer supervision with site supervisors, field officers, area managers, and dedicated audit teams",
+      description:
+        "Multi-layer supervision with site supervisors, field officers, area managers, and dedicated audit teams",
       points: [
         "Site supervisors & field officers",
         "Operations managers",
@@ -208,7 +220,8 @@ const HowWeWork = () => {
       number: "11",
       icon: Truck,
       title: "24/7 Quick Response Team",
-      description: "Dedicated QRT with emergency vehicle, replacement manpower, and support within 30-90 minutes",
+      description:
+        "Dedicated QRT with emergency vehicle, replacement manpower, and support within 30-90 minutes",
       points: [
         "Exclusive emergency vehicle",
         "Replacement manpower",
@@ -220,7 +233,8 @@ const HowWeWork = () => {
       number: "12",
       icon: BookOpen,
       title: "Regular Training & Skill Upgradation",
-      description: "Continuous training programs including monthly refreshers, quarterly skill training, and annual re-certification",
+      description:
+        "Continuous training programs including monthly refreshers, quarterly skill training, and annual re-certification",
       points: [
         "Monthly refresher training",
         "Quarterly skill training",
@@ -232,7 +246,8 @@ const HowWeWork = () => {
       number: "13",
       icon: BarChart3,
       title: "Transparent Documentation & Reporting",
-      description: "Complete documentation delivery including MMR reports, daily activity sheets, incident reports, and compliance tracking",
+      description:
+        "Complete documentation delivery including MMR reports, daily activity sheets, incident reports, and compliance tracking",
       points: [
         "Monthly Management Reports",
         "Daily activity sheets",
@@ -244,7 +259,8 @@ const HowWeWork = () => {
       number: "14",
       icon: Target,
       title: "Performance Measurement",
-      description: "KPI & SLA management evaluating response time, operation quality, compliance, and customer satisfaction",
+      description:
+        "KPI & SLA management evaluating response time, operation quality, compliance, and customer satisfaction",
       points: [
         "Response time tracking",
         "Quality of operations",
@@ -256,7 +272,8 @@ const HowWeWork = () => {
       number: "15",
       icon: Headphones,
       title: "Client Relationship & Support",
-      description: "Strong relationships through weekly reviews, monthly performance assessments, and immediate escalation handling",
+      description:
+        "Strong relationships through weekly reviews, monthly performance assessments, and immediate escalation handling",
       points: [
         "Weekly review meetings",
         "Monthly performance reviews",
@@ -268,7 +285,8 @@ const HowWeWork = () => {
       number: "16",
       icon: Lightbulb,
       title: "Continuous Improvement",
-      description: "System upgrades through new technologies, updated training modules, audit feedback, and industry standards",
+      description:
+        "System upgrades through new technologies, updated training modules, audit feedback, and industry standards",
       points: [
         "New technology adoption",
         "Updated training modules",
@@ -282,32 +300,38 @@ const HowWeWork = () => {
     {
       icon: CheckCircle,
       title: "Proven Methodology",
-      description: "Systematic approach tested across hundreds of successful deployments",
+      description:
+        "Systematic approach tested across hundreds of successful deployments",
     },
     {
       icon: Shield,
       title: "Expert Leadership",
-      description: "Strong leadership from security industry experts with decades of experience",
+      description:
+        "Strong leadership from security industry experts with decades of experience",
     },
     {
       icon: Activity,
       title: "Technology-Driven",
-      description: "Advanced technology integration for efficiency and transparency",
+      description:
+        "Advanced technology integration for efficiency and transparency",
     },
     {
       icon: Clock,
       title: "24/7 QRT Support",
-      description: "Round-the-clock monitoring with dedicated quick response team",
+      description:
+        "Round-the-clock monitoring with dedicated quick response team",
     },
     {
       icon: FileText,
       title: "Transparent Reporting",
-      description: "Complete documentation and regular reporting for full visibility",
+      description:
+        "Complete documentation and regular reporting for full visibility",
     },
     {
       icon: Award,
       title: "Trained Manpower",
-      description: "Fully verified, trained, and certified personnel for all services",
+      description:
+        "Fully verified, trained, and certified personnel for all services",
     },
     {
       icon: Target,
@@ -317,7 +341,8 @@ const HowWeWork = () => {
     {
       icon: TrendingUp,
       title: "Quality & Compliance",
-      description: "Unwavering focus on quality, safety, and regulatory compliance",
+      description:
+        "Unwavering focus on quality, safety, and regulatory compliance",
     },
   ];
 
@@ -364,17 +389,16 @@ const HowWeWork = () => {
       </style>
 
       {/* Hero Section */}
-      <div className="relative h-120 w-full mt-20">
+      <div className="relative h-[560px] w-full">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1920&q=80)",
+            backgroundImage: "url('/howwework-hero.jpeg')",
           }}
         ></div>
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="relative max-w-7xl mx-auto px-6 h-full flex items-center">
+        <div className="relative max-w-7xl mx-auto px-6 pt-48 pb-32 lg:pt-56 lg:pb-40 md:pt-44 md:pb-24">
           <div className="max-w-3xl">
             <div
               className={`flex items-center gap-3 mb-4 ${
@@ -400,10 +424,11 @@ const HowWeWork = () => {
                 isLoaded ? "animate-fade delay-400" : "opacity-0"
               }`}
             >
-              Our operational model is built on discipline, strong leadership, advanced 
-              technology, rigorous supervision, and continuous improvement. Experience 
-              seamless service delivery across Security, Facility Management, MEP, 
-              Soft Services, Pest Control, and Fire & Safety.
+              Our operational model is built on discipline, strong leadership,
+              advanced technology, rigorous supervision, and continuous
+              improvement. Experience seamless service delivery across Security,
+              Facility Management, MEP, Soft Services, Pest Control, and Fire &
+              Safety.
             </p>
           </div>
         </div>
@@ -430,7 +455,8 @@ const HowWeWork = () => {
                   : "opacity-0"
               }`}
             >
-              Four core principles that define our approach to service excellence
+              Four core principles that define our approach to service
+              excellence
             </p>
           </div>
 
@@ -439,7 +465,9 @@ const HowWeWork = () => {
               <div
                 key={index}
                 className={`bg-gray-50 p-8 hover:shadow-xl transition-all duration-300 border-t-4 border-amber-500 group ${
-                  visibleSections["principles"] ? "animate-slide-up" : "opacity-0"
+                  visibleSections["principles"]
+                    ? "animate-slide-up"
+                    : "opacity-0"
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -467,9 +495,7 @@ const HowWeWork = () => {
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-4">
               <Settings className="w-8 h-8 text-amber-500" />
-              <span className="text-amber-500 font-semibold">
-                OUR PROCESS
-              </span>
+              <span className="text-amber-500 font-semibold">OUR PROCESS</span>
             </div>
             <h2
               className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
@@ -485,7 +511,8 @@ const HowWeWork = () => {
                   : "opacity-0"
               }`}
             >
-              A systematic approach ensuring quality service delivery from day one
+              A systematic approach ensuring quality service delivery from day
+              one
             </p>
           </div>
 
@@ -543,11 +570,13 @@ const HowWeWork = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div
               className={
-                visibleSections["technology"] ? "animate-slide-left" : "opacity-0"
+                visibleSections["technology"]
+                  ? "animate-slide-left"
+                  : "opacity-0"
               }
             >
               <img
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80"
+                src="/howwework.jpeg"
                 alt="Technology Systems"
                 className="w-full h-full object-cover shadow-2xl rounded-lg"
               />
@@ -570,8 +599,9 @@ const HowWeWork = () => {
                 Advanced Technology for Seamless Operations
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                We leverage cutting-edge technology to enhance efficiency, ensure 
-                transparency, and provide real-time visibility across all operations.
+                We leverage cutting-edge technology to enhance efficiency,
+                ensure transparency, and provide real-time visibility across all
+                operations.
               </p>
 
               <div className="space-y-4">
@@ -598,7 +628,8 @@ const HowWeWork = () => {
                       GPS & QR-Based Monitoring
                     </h3>
                     <p className="text-gray-600 text-sm">
-                      GPS-enabled patrolling with QR/APP-based checklist monitoring
+                      GPS-enabled patrolling with QR/APP-based checklist
+                      monitoring
                     </p>
                   </div>
                 </div>
@@ -612,7 +643,8 @@ const HowWeWork = () => {
                       Real-Time Dashboard
                     </h3>
                     <p className="text-gray-600 text-sm">
-                      Live supervisor dashboard with CCTV-based monitoring support
+                      Live supervisor dashboard with CCTV-based monitoring
+                      support
                     </p>
                   </div>
                 </div>
@@ -697,8 +729,8 @@ const HowWeWork = () => {
                 Quick Response Team Always Ready
               </h2>
               <p className="text-gray-300 mb-8 leading-relaxed">
-                Our dedicated QRT ensures uninterrupted service with rapid response 
-                capabilities and comprehensive emergency support.
+                Our dedicated QRT ensures uninterrupted service with rapid
+                response capabilities and comprehensive emergency support.
               </p>
 
               <div className="space-y-4">
@@ -743,17 +775,16 @@ const HowWeWork = () => {
                     </p>
                   </div>
                 </div>
-              </div></div>
+              </div>
+            </div>
 
             <div
               className={`${
-                visibleSections["qrt"]
-                  ? "animate-slide-left"
-                  : "opacity-0"
+                visibleSections["qrt"] ? "animate-slide-left" : "opacity-0"
               }`}
             >
               <img
-                src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?w=800&q=80"
+                src="/howwework-2.png"
                 alt="Quick Response Team"
                 className="w-full h-full object-cover shadow-2xl rounded-lg"
               />
@@ -775,7 +806,7 @@ const HowWeWork = () => {
               }
             >
               <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80"
+                src="/howwework-3.jpeg"
                 alt="Training Programs"
                 className="w-full h-full object-cover shadow-2xl rounded-lg"
               />
@@ -798,8 +829,8 @@ const HowWeWork = () => {
                 Continuous Skill Enhancement
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Regular training programs ensuring our personnel stay updated with 
-                latest industry standards and best practices.
+                Regular training programs ensuring our personnel stay updated
+                with latest industry standards and best practices.
               </p>
 
               <div className="grid md:grid-cols-2 gap-4">
@@ -871,7 +902,7 @@ const HowWeWork = () => {
                   : "opacity-0"
               }`}
             >
-              Trusted by leading organizations for our systematic approach and 
+              Trusted by leading organizations for our systematic approach and
               commitment to excellence
             </p>
           </div>
@@ -925,9 +956,7 @@ const HowWeWork = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div
               className={`bg-gray-50 p-8 hover:shadow-xl transition-all ${
-                visibleSections["documentation"]
-                  ? "animate-scale"
-                  : "opacity-0"
+                visibleSections["documentation"] ? "animate-scale" : "opacity-0"
               }`}
             >
               <div className="bg-amber-500 w-16 h-16 rounded-lg flex items-center justify-center mb-4">
@@ -1030,8 +1059,7 @@ const HowWeWork = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&q=80)",
+            backgroundImage: "url('/howwework-footer.jpeg')",
           }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>
@@ -1041,16 +1069,24 @@ const HowWeWork = () => {
             Experience Professional Service Excellence
           </h2>
           <p className="text-gray-300 text-lg mb-8">
-            Partner with Cadman Security Services for systematic, transparent, and 
-            result-driven solutions across all your security and facility management needs.
+            Partner with Cadman Security Services for systematic, transparent,
+            and result-driven solutions across all your security and facility
+            management needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg">
+            <Link
+              to="/contact"
+              className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg flex items-center justify-center"
+            >
               REQUEST SITE AUDIT
-            </button>
-            <button className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg">
-              CALL NOW: 1800-XXX-XXXX
-            </button>
+            </Link>
+
+            <a
+              href="tel:9945230206"
+              className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg flex items-center justify-center"
+            >
+              CALL NOW: 9945230206
+            </a>
           </div>
         </div>
       </div>

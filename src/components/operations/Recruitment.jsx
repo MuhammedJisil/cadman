@@ -23,6 +23,7 @@ import {
   Zap,
   Star,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Recruitment = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -238,7 +239,8 @@ const Recruitment = () => {
     {
       icon: Star,
       title: "Professionalism",
-      description: "Highest standards of professional conduct and service delivery",
+      description:
+        "Highest standards of professional conduct and service delivery",
     },
     {
       icon: Target,
@@ -248,7 +250,8 @@ const Recruitment = () => {
     {
       icon: CheckCircle,
       title: "Loyalty",
-      description: "Committed and dedicated workforce for long-term partnerships",
+      description:
+        "Committed and dedicated workforce for long-term partnerships",
     },
     {
       icon: Users,
@@ -310,17 +313,16 @@ const Recruitment = () => {
       </style>
 
       {/* Hero Section */}
-      <div className="relative h-120 w-full mt-20">
+      <div className="relative h-[560px] w-full">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=80)",
+            backgroundImage: "url('/recruitment-hero.jpeg')",
           }}
         ></div>
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="relative max-w-7xl mx-auto px-6 h-full flex items-center">
+        <div className="relative max-w-7xl mx-auto px-6 pt-48 pb-32 lg:pt-56 lg:pb-40 md:pt-44 md:pb-24">
           <div className="max-w-3xl">
             <div
               className={`flex items-center gap-3 mb-4 ${
@@ -346,9 +348,10 @@ const Recruitment = () => {
                 isLoaded ? "animate-fade delay-400" : "opacity-0"
               }`}
             >
-              Our commitment to quality manpower begins from selection, screening, and 
-              training to ensure every deployed personnel meets the highest standards of 
-              discipline, professionalism, and service excellence.
+              Our commitment to quality manpower begins from selection,
+              screening, and training to ensure every deployed personnel meets
+              the highest standards of discipline, professionalism, and service
+              excellence.
             </p>
           </div>
         </div>
@@ -381,7 +384,7 @@ const Recruitment = () => {
                   : "opacity-0"
               }`}
             >
-              Every candidate undergoes a rigorous evaluation process to ensure 
+              Every candidate undergoes a rigorous evaluation process to ensure
               we deploy only the best qualified and trained personnel
             </p>
           </div>
@@ -404,7 +407,10 @@ const Recruitment = () => {
                 <p className="text-gray-600 mb-4">{step.description}</p>
                 <ul className="space-y-2">
                   {step.details.map((detail, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-sm text-gray-600">
+                    <li
+                      key={idx}
+                      className="flex items-start gap-2 text-sm text-gray-600"
+                    >
                       <CheckCircle className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
                       <span>{detail}</span>
                     </li>
@@ -438,9 +444,10 @@ const Recruitment = () => {
                 Specialized Training Module
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Before deployment, every candidate undergoes comprehensive training 
-                covering site-specific duties, safety protocols, monitoring systems, 
-                and professional conduct to ensure complete readiness.
+                Before deployment, every candidate undergoes comprehensive
+                training covering site-specific duties, safety protocols,
+                monitoring systems, and professional conduct to ensure complete
+                readiness.
               </p>
 
               <div className="space-y-6">
@@ -459,7 +466,10 @@ const Recruitment = () => {
                         </h3>
                         <ul className="space-y-1">
                           {module.items.map((item, idx) => (
-                            <li key={idx} className="flex items-center gap-2 text-sm text-gray-600">
+                            <li
+                              key={idx}
+                              className="flex items-center gap-2 text-sm text-gray-600"
+                            >
                               <div className="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
                               <span>{item}</span>
                             </li>
@@ -480,7 +490,7 @@ const Recruitment = () => {
               }`}
             >
               <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80"
+                src="/howwework-3.jpeg"
                 alt="Training Session"
                 className="w-full h-full object-cover shadow-2xl"
               />
@@ -516,8 +526,8 @@ const Recruitment = () => {
                   : "opacity-0"
               }`}
             >
-              Our comprehensive screening process ensures we select only the best 
-              candidates through multiple evaluation stages
+              Our comprehensive screening process ensures we select only the
+              best candidates through multiple evaluation stages
             </p>
           </div>
 
@@ -526,7 +536,9 @@ const Recruitment = () => {
               <div
                 key={index}
                 className={`text-center ${
-                  visibleSections["screening"] ? "animate-slide-up" : "opacity-0"
+                  visibleSections["screening"]
+                    ? "animate-slide-up"
+                    : "opacity-0"
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -540,7 +552,9 @@ const Recruitment = () => {
                     <div className="hidden md:block absolute top-10 left-1/2 w-full h-0.5 bg-amber-200"></div>
                   )}
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2">{process.title}</h3>
+                <h3 className="font-bold text-gray-900 mb-2">
+                  {process.title}
+                </h3>
                 <p className="text-gray-600 text-sm">{process.description}</p>
               </div>
             ))}
@@ -563,7 +577,7 @@ const Recruitment = () => {
               }`}
             >
               <img
-                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80"
+                src="/recruitment-1.jpeg"
                 alt="Document Verification"
                 className="w-full h-full object-cover shadow-2xl"
               />
@@ -571,7 +585,9 @@ const Recruitment = () => {
 
             <div
               className={
-                visibleSections["documents"] ? "animate-slide-right delay-200" : "opacity-0"
+                visibleSections["documents"]
+                  ? "animate-slide-right delay-200"
+                  : "opacity-0"
               }
             >
               <div className="flex items-center gap-3 mb-4">
@@ -584,8 +600,9 @@ const Recruitment = () => {
                 Complete Documentation
               </h2>
               <p className="text-gray-300 mb-8 leading-relaxed">
-                We maintain strict documentation standards with complete verification 
-                of all credentials before deployment. No incomplete documentation is accepted.
+                We maintain strict documentation standards with complete
+                verification of all credentials before deployment. No incomplete
+                documentation is accepted.
               </p>
 
               <div className="space-y-3">
@@ -638,7 +655,7 @@ const Recruitment = () => {
                   : "opacity-0"
               }`}
             >
-              Continuous monitoring, training, and support systems to maintain 
+              Continuous monitoring, training, and support systems to maintain
               the highest service standards
             </p>
           </div>
@@ -676,9 +693,7 @@ const Recruitment = () => {
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-4">
               <Star className="w-8 h-8 text-amber-500" />
-              <span className="text-amber-500 font-semibold">
-                OUR VALUES
-              </span>
+              <span className="text-amber-500 font-semibold">OUR VALUES</span>
             </div>
             <h2
               className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
@@ -694,7 +709,7 @@ const Recruitment = () => {
                   : "opacity-0"
               }`}
             >
-              Every personnel deployed carries these core values that define 
+              Every personnel deployed carries these core values that define
               Cadman Security Services
             </p>
           </div>
@@ -728,8 +743,7 @@ const Recruitment = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1920&q=80)",
+            backgroundImage: "url('/howwework-footer.jpeg')",
           }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>
@@ -739,16 +753,27 @@ const Recruitment = () => {
             Join Our Team of Professionals
           </h2>
           <p className="text-gray-300 text-lg mb-8">
-            Be part of one of India's most trusted security and facility management 
-            companies with comprehensive training, career growth, and professional development.
+            Be part of one of India's most trusted security and facility
+            management companies with comprehensive training, career growth, and
+            professional development.
           </p>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg">
+            {/* APPLY NOW → redirect */}
+            <Link
+              to="/contact"
+              className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg flex items-center justify-center"
+            >
               APPLY NOW
-            </button>
-            <button className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg">
-              CONTACT HR: 1800-XXX-XXXX
-            </button>
+            </Link>
+
+            {/* CONTACT HR → dial pad */}
+            <a
+              href="tel:9945230206"
+              className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg flex items-center justify-center"
+            >
+              CONTACT HR: 9945230206
+            </a>
           </div>
         </div>
       </div>
