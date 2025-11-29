@@ -7,7 +7,6 @@ import Footer from './components/Footer';
 import Home from "./components/pages/Home";
 import AboutUs from "./components/pages/AboutUs";
 import Training from "./components/pages/Training";
-import Operations from "./components/pages/Operations";
 import ContactUs from "./components/pages/ContactUs";
 
 
@@ -18,6 +17,13 @@ import PestControl from './components/services/PestControl';
 import CCTVSecurity from './components/services/CCTVSecurity';
 import MEPServices from './components/services/MEPServices';
 import FireSafety from './components/services/FireSafety';
+
+//operations
+import EmergencyEscalation from './components/operations/EmergencyEscalation'
+import HowWeWork from './components/operations/HowWeWork'
+import Recruitment from './components/operations/Recruitment'
+import ServiceGuarantee from './components/operations/ServiceGuarantee'
+import StatutoryCompliance from './components/operations/StatutoryCompliance'
 
 
 import NotFound from './components/NotFound';
@@ -33,7 +39,6 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/training" element={<Training />} />
-          <Route path="/operations" element={<Operations />} />
            <Route path="/contact" element={<ContactUs />} />
 
           
@@ -45,6 +50,14 @@ function App() {
           <Route path="/services/cctv-security" element={<CCTVSecurity />} />
           <Route path="/services/mep" element={<MEPServices />} />
           <Route path="/services/fire-safety" element={<FireSafety />} />
+
+
+          {/* Operations Routes */}
+          <Route path="/operations/how-we-work" element={<HowWeWork />} />
+          <Route path="/operations/recruitment" element={<Recruitment />} />
+          <Route path="/operations/emergency-escalation" element={<EmergencyEscalation />} />
+          <Route path="/operations/compliance" element={<StatutoryCompliance />} />
+          <Route path="/operations/service-guarantee" element={<ServiceGuarantee />} />
     
     {/* 404 Route */}
           <Route path="/404" element={<NotFound />} />

@@ -20,8 +20,8 @@ const Home = () => {
   const sectionRefs = useRef({});
 
   const backgroundImages = [
-    "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=1920&q=80",
-    "https://images.unsplash.com/photo-1590692995776-8f37ae5323e5?w=1920&q=80",
+    "/security.jpg",
+    "/security_hero_1.jpg",
     "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1920&q=80",
     "https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=1920&q=80",
   ];
@@ -33,7 +33,7 @@ const Home = () => {
       description:
         "Comprehensive protection with trained guards, armed security, rapid response teams, and 24/7 surveillance.",
       image:
-        "https://images.unsplash.com/photo-1571624436279-b272aff752b5?w=800&q=80",
+        "security_card.jpg",
       path: "/services/security",
     },
     {
@@ -42,7 +42,7 @@ const Home = () => {
       description:
         "Complete soft and technical facility services including housekeeping, MEP operations, and integrated property management.",
       image:
-        "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+        "/fm_footer.jpg",
       path: "/services/facility-management",
     },
     {
@@ -51,7 +51,7 @@ const Home = () => {
       description:
         "Government-approved pest management solutions for cockroaches, termites, rodents, and all types of pests.",
       image:
-        "https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80",
+        "pest_control.jpg",
       path: "/services/pest-control",
     },
     {
@@ -60,7 +60,7 @@ const Home = () => {
       description:
         "Smart surveillance systems with IP cameras, access control, and remote monitoring solutions.",
       image:
-        "https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=800&q=80",
+        "/cctv.png",
       path: "/services/cctv-security",
     },
     {
@@ -83,12 +83,7 @@ const Home = () => {
     },
   ];
 
-  const stats = [
-    { number: "10,000+", label: "Trained Personnel" },
-    { number: "6", label: "ISO Certifications" },
-    { number: "5+", label: "States Coverage" },
-    { number: "24/7", label: "Operations" },
-  ];
+  
 
   const certifications = [
     "ISO 9001:2008 – Quality Management",
@@ -266,32 +261,7 @@ const Home = () => {
         <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-gradient-to-l from-black/40 to-transparent hidden lg:block pointer-events-none"></div>
       </div>
 
-      {/* Stats Section */}
-      <div
-        ref={(el) => (sectionRefs.current["stats"] = el)}
-        className="bg-gray-900 py-16"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div
-                key={index}
-                className={`text-center ${
-                  visibleSections["stats"] ? "animate-slide-up" : "opacity-0"
-                }`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="text-4xl md:text-5xl font-bold text-amber-500 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-300 text-sm md:text-base">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+
 
       {/* About Section */}
       <div
@@ -366,7 +336,7 @@ const Home = () => {
               }`}
             >
               <img
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=80"
+                src="/security_hero_1.jpg"
                 alt="Security Team"
                 className="w-full h-96 object-cover shadow-2xl"
               />

@@ -375,7 +375,7 @@ const FacilityManagement = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url(https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1920&q=80)",
+              "url('/support_staff_hero.jpg')",
           }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>
@@ -794,7 +794,7 @@ const FacilityManagement = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url(https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&q=80)",
+              "url('/fm_footer.jpg')",
           }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>

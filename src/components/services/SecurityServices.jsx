@@ -293,7 +293,7 @@ const SecurityServices = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url(https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?w=1920&q=80)",
+              "url('/security_hero.jpg')",
           }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>
@@ -513,7 +513,7 @@ const SecurityServices = () => {
               }`}
             >
               <img
-                src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=800&q=80"
+                src="/security.jpg"
                 alt="Access Control"
                 className="w-full h-full object-cover shadow-2xl"
               />
@@ -717,7 +717,7 @@ const SecurityServices = () => {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url(https://images.unsplash.com/photo-1590595906931-81f04f0ccebb?w=1920&q=80)",
+              "url('/security_footer.jpg')",
           }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>
