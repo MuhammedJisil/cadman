@@ -29,6 +29,7 @@ import {
   Megaphone,
   CircuitBoard,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const FireSafety = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -68,22 +69,26 @@ const FireSafety = () => {
     {
       icon: HardHat,
       title: "Fire Guards",
-      description: "Trained fire watch personnel for continuous monitoring and immediate response to fire hazards",
+      description:
+        "Trained fire watch personnel for continuous monitoring and immediate response to fire hazards",
     },
     {
       icon: UserCheck,
       title: "Fire Supervisors",
-      description: "Experienced supervisors managing fire safety operations and coordinating emergency response",
+      description:
+        "Experienced supervisors managing fire safety operations and coordinating emergency response",
     },
     {
       icon: Settings,
       title: "Fire Technicians",
-      description: "Certified technicians for fire system maintenance, testing, and repair services",
+      description:
+        "Certified technicians for fire system maintenance, testing, and repair services",
     },
     {
       icon: Siren,
       title: "Emergency Response Team (ERT)",
-      description: "Specialized teams trained in fire suppression, evacuation, and emergency medical response",
+      description:
+        "Specialized teams trained in fire suppression, evacuation, and emergency medical response",
     },
   ];
 
@@ -91,26 +96,38 @@ const FireSafety = () => {
     {
       icon: Bell,
       title: "Fire Alarm & Hydrant System Maintenance",
-      description: "Complete maintenance of fire alarm panels, detection systems, and hydrant networks",
+      description:
+        "Complete maintenance of fire alarm panels, detection systems, and hydrant networks",
       features: ["Panel Servicing", "Hydrant Testing", "Valve Inspection"],
     },
     {
       icon: Droplets,
       title: "Sprinkler System Testing",
-      description: "Comprehensive testing and maintenance of automatic sprinkler systems for optimal performance",
+      description:
+        "Comprehensive testing and maintenance of automatic sprinkler systems for optimal performance",
       features: ["Flow Testing", "Pressure Checks", "Nozzle Inspection"],
     },
     {
       icon: Eye,
       title: "Smoke Detector Installation & Calibration",
-      description: "Professional installation, calibration, and maintenance of smoke detection systems",
-      features: ["Detector Installation", "Sensitivity Testing", "Battery Replacement"],
+      description:
+        "Professional installation, calibration, and maintenance of smoke detection systems",
+      features: [
+        "Detector Installation",
+        "Sensitivity Testing",
+        "Battery Replacement",
+      ],
     },
     {
       icon: Lightbulb,
       title: "Emergency Light & PA System Checks",
-      description: "Regular testing of emergency lighting and public address systems for emergency readiness",
-      features: ["Lighting Tests", "PA System Checks", "Battery Backup Verification"],
+      description:
+        "Regular testing of emergency lighting and public address systems for emergency readiness",
+      features: [
+        "Lighting Tests",
+        "PA System Checks",
+        "Battery Backup Verification",
+      ],
     },
   ];
 
@@ -118,22 +135,26 @@ const FireSafety = () => {
     {
       icon: FileCheck,
       title: "Fire Safety Audit",
-      description: "Comprehensive fire safety audits to ensure compliance with regulations and identify vulnerabilities",
+      description:
+        "Comprehensive fire safety audits to ensure compliance with regulations and identify vulnerabilities",
     },
     {
       icon: Users,
       title: "Mock Drills & Evacuation Training",
-      description: "Regular fire drills and evacuation training programs for staff preparedness and safety awareness",
+      description:
+        "Regular fire drills and evacuation training programs for staff preparedness and safety awareness",
     },
     {
       icon: Flame,
       title: "Fire Extinguishers Refilling & AMC",
-      description: "Complete fire extinguisher services including refilling, maintenance, and annual maintenance contracts",
+      description:
+        "Complete fire extinguisher services including refilling, maintenance, and annual maintenance contracts",
     },
     {
       icon: ClipboardCheck,
       title: "Fire NOC Assistance",
-      description: "Expert assistance in obtaining Fire No Objection Certificates from authorities",
+      description:
+        "Expert assistance in obtaining Fire No Objection Certificates from authorities",
     },
   ];
 
@@ -141,32 +162,38 @@ const FireSafety = () => {
     {
       icon: Award,
       title: "Certified Professionals",
-      description: "Trained and certified fire safety personnel with extensive emergency response experience",
+      description:
+        "Trained and certified fire safety personnel with extensive emergency response experience",
     },
     {
       icon: Clock,
       title: "24/7 Availability",
-      description: "Round-the-clock fire safety services and emergency response team availability",
+      description:
+        "Round-the-clock fire safety services and emergency response team availability",
     },
     {
       icon: ShieldCheck,
       title: "Compliance Assured",
-      description: "100% compliance with fire safety regulations and statutory requirements",
+      description:
+        "100% compliance with fire safety regulations and statutory requirements",
     },
     {
       icon: Activity,
       title: "Regular Inspections",
-      description: "Scheduled maintenance and testing programs ensuring system reliability",
+      description:
+        "Scheduled maintenance and testing programs ensuring system reliability",
     },
     {
       icon: Zap,
       title: "Rapid Response",
-      description: "Quick emergency response with trained ERT teams for fire incidents",
+      description:
+        "Quick emergency response with trained ERT teams for fire incidents",
     },
     {
       icon: CheckCircle,
       title: "Quality Standards",
-      description: "Adherence to national and international fire safety standards and protocols",
+      description:
+        "Adherence to national and international fire safety standards and protocols",
     },
   ];
 
@@ -189,7 +216,8 @@ const FireSafety = () => {
     {
       icon: Store,
       title: "Retail & Hospitality",
-      description: "Shopping malls, hotels, restaurants, and service establishments",
+      description:
+        "Shopping malls, hotels, restaurants, and service establishments",
     },
   ];
 
@@ -236,17 +264,16 @@ const FireSafety = () => {
       </style>
 
       {/* Hero Section */}
-      <div className="relative h-120 w-full mt-20">
+      <div className="relative h-[560px] w-full">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1592806088932-05058af0ad8d?w=1920&q=80)",
+            backgroundImage: "url('/fireandsafety.jpg')",
           }}
         ></div>
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="relative max-w-7xl mx-auto px-6 h-full flex items-center">
+        <div className="relative max-w-7xl mx-auto px-6 pt-48 pb-32 lg:pt-56 lg:pb-40 md:pt-44 md:pb-24">
           <div className="max-w-3xl">
             <div
               className={`flex items-center gap-3 mb-4 ${
@@ -272,8 +299,9 @@ const FireSafety = () => {
                 isLoaded ? "animate-fade delay-400" : "opacity-0"
               }`}
             >
-              Comprehensive fire safety solutions with certified personnel, advanced 
-              fire systems, emergency response teams, and complete compliance management.
+              Comprehensive fire safety solutions with certified personnel,
+              advanced fire systems, emergency response teams, and complete
+              compliance management.
             </p>
           </div>
         </div>
@@ -306,8 +334,9 @@ const FireSafety = () => {
                   : "opacity-0"
               }`}
             >
-              Certified fire safety professionals including guards, supervisors, technicians, 
-              and emergency response teams for comprehensive protection
+              Certified fire safety professionals including guards, supervisors,
+              technicians, and emergency response teams for comprehensive
+              protection
             </p>
           </div>
 
@@ -362,8 +391,8 @@ const FireSafety = () => {
                   : "opacity-0"
               }`}
             >
-              Complete maintenance and testing of fire alarm systems, sprinklers, 
-              smoke detectors, and emergency equipment
+              Complete maintenance and testing of fire alarm systems,
+              sprinklers, smoke detectors, and emergency equipment
             </p>
           </div>
 
@@ -372,9 +401,7 @@ const FireSafety = () => {
               <div
                 key={index}
                 className={`bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-amber-500 ${
-                  visibleSections["systems"]
-                    ? "animate-scale"
-                    : "opacity-0"
+                  visibleSections["systems"] ? "animate-scale" : "opacity-0"
                 }`}
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
@@ -427,8 +454,9 @@ const FireSafety = () => {
                 Comprehensive Safety Compliance
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Complete fire safety support including audits, training programs, 
-                extinguisher services, and Fire NOC assistance for regulatory compliance.
+                Complete fire safety support including audits, training
+                programs, extinguisher services, and Fire NOC assistance for
+                regulatory compliance.
               </p>
 
               <div className="space-y-4">
@@ -461,7 +489,7 @@ const FireSafety = () => {
               }`}
             >
               <img
-                src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=800&q=80"
+                src="/fireandsafety-1.jpg"
                 alt="Fire Safety Training"
                 className="w-full h-full object-cover shadow-2xl"
               />
@@ -485,7 +513,7 @@ const FireSafety = () => {
               }`}
             >
               <img
-                src="https://images.unsplash.com/photo-1582139329536-e7284fece509?w=800&q=80"
+                src="/fireandsafety-2.png"
                 alt="Emergency Response"
                 className="w-full h-full object-cover shadow-2xl"
               />
@@ -493,7 +521,9 @@ const FireSafety = () => {
 
             <div
               className={
-                visibleSections["emergency"] ? "animate-slide-right delay-200" : "opacity-0"
+                visibleSections["emergency"]
+                  ? "animate-slide-right delay-200"
+                  : "opacity-0"
               }
             >
               <div className="flex items-center gap-3 mb-4">
@@ -506,8 +536,9 @@ const FireSafety = () => {
                 Ready for Any Emergency
               </h2>
               <p className="text-gray-300 mb-8 leading-relaxed">
-                Our Emergency Response Teams (ERT) are trained to handle fire incidents, 
-                evacuations, and emergency situations with precision and efficiency.
+                Our Emergency Response Teams (ERT) are trained to handle fire
+                incidents, evacuations, and emergency situations with precision
+                and efficiency.
               </p>
 
               <div className="space-y-4">
@@ -520,7 +551,8 @@ const FireSafety = () => {
                       Rapid Response Protocol
                     </h3>
                     <p className="text-gray-400 text-sm">
-                      Immediate deployment of ERT teams with coordinated emergency response
+                      Immediate deployment of ERT teams with coordinated
+                      emergency response
                     </p>
                   </div>
                 </div>
@@ -534,7 +566,8 @@ const FireSafety = () => {
                       Evacuation Management
                     </h3>
                     <p className="text-gray-400 text-sm">
-                      Systematic evacuation procedures with trained personnel and clear protocols
+                      Systematic evacuation procedures with trained personnel
+                      and clear protocols
                     </p>
                   </div>
                 </div>
@@ -548,7 +581,8 @@ const FireSafety = () => {
                       24/7 Communication
                     </h3>
                     <p className="text-gray-400 text-sm">
-                      Continuous communication channels for immediate alert and coordination
+                      Continuous communication channels for immediate alert and
+                      coordination
                     </p>
                   </div>
                 </div>
@@ -585,7 +619,7 @@ const FireSafety = () => {
                   : "opacity-0"
               }`}
             >
-              Comprehensive fire safety solutions across commercial, industrial, 
+              Comprehensive fire safety solutions across commercial, industrial,
               residential, and hospitality sectors
             </p>
           </div>
@@ -595,9 +629,7 @@ const FireSafety = () => {
               <div
                 key={index}
                 className={`bg-white p-6 hover:shadow-xl transition-all duration-300 border-l-4 border-amber-500 ${
-                  visibleSections["areas"]
-                    ? "animate-slide-up"
-                    : "opacity-0"
+                  visibleSections["areas"] ? "animate-slide-up" : "opacity-0"
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -605,12 +637,8 @@ const FireSafety = () => {
                   <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mb-4">
                     <area.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 mb-2">
-                    {area.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm">
-                    {area.description}
-                  </p>
+                  <h3 className="font-bold text-gray-900 mb-2">{area.title}</h3>
+                  <p className="text-gray-600 text-sm">{area.description}</p>
                 </div>
               </div>
             ))}
@@ -627,7 +655,9 @@ const FireSafety = () => {
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-4">
               <ShieldCheck className="w-8 h-8 text-amber-500" />
-              <span className="text-amber-500 font-semibold">WHY CHOOSE US</span>
+              <span className="text-amber-500 font-semibold">
+                WHY CHOOSE US
+              </span>
             </div>
             <h2
               className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
@@ -641,8 +671,8 @@ const FireSafety = () => {
                 visibleSections["why"] ? "animate-fade delay-200" : "opacity-0"
               }`}
             >
-              Experience professional fire safety management with certified personnel, 
-              advanced systems, and guaranteed compliance
+              Experience professional fire safety management with certified
+              personnel, advanced systems, and guaranteed compliance
             </p>
           </div>
 
@@ -678,7 +708,8 @@ const FireSafety = () => {
               Our Safety Management Process
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              A systematic approach ensuring complete fire safety compliance and emergency preparedness
+              A systematic approach ensuring complete fire safety compliance and
+              emergency preparedness
             </p>
           </div>
 
@@ -699,7 +730,8 @@ const FireSafety = () => {
               </div>
               <h3 className="font-bold text-gray-900 mb-2">System Setup</h3>
               <p className="text-gray-600 text-sm">
-                Installation and configuration of fire detection and suppression systems
+                Installation and configuration of fire detection and suppression
+                systems
               </p>
             </div>
 
@@ -707,7 +739,9 @@ const FireSafety = () => {
               <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">3</span>
               </div>
-              <h3 className="font-bold text-gray-900 mb-2">Training & Drills</h3>
+              <h3 className="font-bold text-gray-900 mb-2">
+                Training & Drills
+              </h3>
               <p className="text-gray-600 text-sm">
                 Regular mock drills and comprehensive staff training programs
               </p>
@@ -731,8 +765,7 @@ const FireSafety = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1615493140208-e7a5a08b5c5b?w=1920&q=80)",
+            backgroundImage: "url('/fireandsafety-2.png')",
           }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>
@@ -742,16 +775,24 @@ const FireSafety = () => {
             Ensure Complete Fire Safety Compliance
           </h2>
           <p className="text-gray-300 text-lg mb-8">
-            Get comprehensive fire safety solutions with certified personnel, advanced 
-            systems, emergency response teams, and complete regulatory compliance.
+            Get comprehensive fire safety solutions with certified personnel,
+            advanced systems, emergency response teams, and complete regulatory
+            compliance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg">
+            <Link
+              to="/contact"
+              className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg flex items-center justify-center"
+            >
               REQUEST FIRE AUDIT
-            </button>
-            <button className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg">
-              CALL NOW: 1800-XXX-XXXX
-            </button>
+            </Link>
+
+            <a
+              href="tel:9945230206"
+              className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg flex items-center justify-center"
+            >
+              CALL NOW: 9945230206
+            </a>
           </div>
         </div>
       </div>

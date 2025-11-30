@@ -25,6 +25,7 @@ import {
   CircuitBoard,
   Thermometer,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const MEPServices = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -64,32 +65,38 @@ const MEPServices = () => {
     {
       icon: Zap,
       title: "Licensed Electricians",
-      description: "Certified electricians available for shift-based and general electrical operations",
+      description:
+        "Certified electricians available for shift-based and general electrical operations",
     },
     {
       icon: CircuitBoard,
       title: "LT/HT Panel Operations",
-      description: "Professional operation and maintenance of low tension and high tension electrical panels",
+      description:
+        "Professional operation and maintenance of low tension and high tension electrical panels",
     },
     {
       icon: Power,
       title: "DG & UPS Management",
-      description: "Diesel generator and uninterruptible power supply systems operation and maintenance",
+      description:
+        "Diesel generator and uninterruptible power supply systems operation and maintenance",
     },
     {
       icon: Settings,
       title: "Transformer Maintenance",
-      description: "ACB, VCB, and transformer servicing for optimal electrical infrastructure",
+      description:
+        "ACB, VCB, and transformer servicing for optimal electrical infrastructure",
     },
     {
       icon: Lightbulb,
       title: "Lighting & Wiring Works",
-      description: "Complete lighting installation, cabling, and electrical wiring solutions",
+      description:
+        "Complete lighting installation, cabling, and electrical wiring solutions",
     },
     {
       icon: Gauge,
       title: "Energy Management Systems",
-      description: "Advanced energy monitoring and management for efficiency optimization",
+      description:
+        "Advanced energy monitoring and management for efficiency optimization",
     },
   ];
 
@@ -97,26 +104,38 @@ const MEPServices = () => {
     {
       icon: Wind,
       title: "HVAC Maintenance",
-      description: "Comprehensive heating, ventilation, and air conditioning system servicing",
-      features: ["Preventive Maintenance", "Emergency Repairs", "Performance Optimization"],
+      description:
+        "Comprehensive heating, ventilation, and air conditioning system servicing",
+      features: [
+        "Preventive Maintenance",
+        "Emergency Repairs",
+        "Performance Optimization",
+      ],
     },
     {
       icon: Thermometer,
       title: "Chiller & AHU Operations",
-      description: "Expert management of chillers, air handling units, and VRV/VRF systems",
+      description:
+        "Expert management of chillers, air handling units, and VRV/VRF systems",
       features: ["Chiller Operations", "AHU Servicing", "VRV/VRF Systems"],
     },
     {
       icon: Settings,
       title: "Pump & Motor Service",
-      description: "Complete maintenance and repair of pumps, motors, and mechanical equipment",
+      description:
+        "Complete maintenance and repair of pumps, motors, and mechanical equipment",
       features: ["Motor Repairs", "Pump Servicing", "Equipment Calibration"],
     },
     {
       icon: Boxes,
       title: "Lift Coordination & Support",
-      description: "Lift maintenance coordination and comprehensive support services",
-      features: ["Routine Inspections", "Breakdown Support", "Safety Compliance"],
+      description:
+        "Lift maintenance coordination and comprehensive support services",
+      features: [
+        "Routine Inspections",
+        "Breakdown Support",
+        "Safety Compliance",
+      ],
     },
   ];
 
@@ -124,17 +143,20 @@ const MEPServices = () => {
     {
       icon: Droplets,
       title: "Plumbing Maintenance",
-      description: "Complete plumbing repairs, installation, and preventive maintenance services",
+      description:
+        "Complete plumbing repairs, installation, and preventive maintenance services",
     },
     {
       icon: Droplets,
       title: "Water Supply Systems",
-      description: "Pump room operations and water distribution system management",
+      description:
+        "Pump room operations and water distribution system management",
     },
     {
       icon: Database,
       title: "Water Treatment Plants",
-      description: "STP, WTP, and RO plant operations for clean and safe water supply",
+      description:
+        "STP, WTP, and RO plant operations for clean and safe water supply",
     },
     {
       icon: Droplets,
@@ -144,12 +166,14 @@ const MEPServices = () => {
     {
       icon: Wrench,
       title: "Drain Line Services",
-      description: "High-pressure jetting and comprehensive drain line maintenance",
+      description:
+        "High-pressure jetting and comprehensive drain line maintenance",
     },
     {
       icon: Flame,
       title: "Boiler Operations",
-      description: "Boiler and pressure vessel operations with safety compliance",
+      description:
+        "Boiler and pressure vessel operations with safety compliance",
     },
   ];
 
@@ -157,7 +181,8 @@ const MEPServices = () => {
     {
       icon: Award,
       title: "Certified Technicians",
-      description: "Licensed and certified MEP professionals with extensive industry experience",
+      description:
+        "Licensed and certified MEP professionals with extensive industry experience",
     },
     {
       icon: Clock,
@@ -167,22 +192,26 @@ const MEPServices = () => {
     {
       icon: ShieldCheck,
       title: "Safety Compliance",
-      description: "100% adherence to safety standards and regulatory requirements",
+      description:
+        "100% adherence to safety standards and regulatory requirements",
     },
     {
       icon: Settings,
       title: "Preventive Maintenance",
-      description: "Scheduled maintenance programs to prevent breakdowns and extend equipment life",
+      description:
+        "Scheduled maintenance programs to prevent breakdowns and extend equipment life",
     },
     {
       icon: Activity,
       title: "Energy Efficiency",
-      description: "Optimized operations for reduced energy consumption and cost savings",
+      description:
+        "Optimized operations for reduced energy consumption and cost savings",
     },
     {
       icon: CheckCircle,
       title: "Quality Assurance",
-      description: "Rigorous quality checks and performance monitoring at every stage",
+      description:
+        "Rigorous quality checks and performance monitoring at every stage",
     },
   ];
 
@@ -252,17 +281,16 @@ const MEPServices = () => {
       </style>
 
       {/* Hero Section */}
-      <div className="relative h-120 w-full mt-20">
+      <div className="relative h-[560px] w-full">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&q=80)",
+            backgroundImage: "url('/mep.jpg')",
           }}
         ></div>
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="relative max-w-7xl mx-auto px-6 h-full flex items-center">
+        <div className="relative max-w-7xl mx-auto px-6 pt-48 pb-32 lg:pt-56 lg:pb-40 md:pt-44 md:pb-24">
           <div className="max-w-3xl">
             <div
               className={`flex items-center gap-3 mb-4 ${
@@ -288,8 +316,9 @@ const MEPServices = () => {
                 isLoaded ? "animate-fade delay-400" : "opacity-0"
               }`}
             >
-              Comprehensive Mechanical, Electrical & Plumbing solutions with 
-              certified technicians, preventive maintenance, and 24/7 emergency support.
+              Comprehensive Mechanical, Electrical & Plumbing solutions with
+              certified technicians, preventive maintenance, and 24/7 emergency
+              support.
             </p>
           </div>
         </div>
@@ -322,7 +351,7 @@ const MEPServices = () => {
                   : "opacity-0"
               }`}
             >
-              Expert electrical services with licensed technicians for all your 
+              Expert electrical services with licensed technicians for all your
               power distribution and energy management needs
             </p>
           </div>
@@ -332,7 +361,9 @@ const MEPServices = () => {
               <div
                 key={index}
                 className={`bg-gray-50 p-6 hover:shadow-xl transition-all duration-300 border-l-4 border-transparent hover:border-amber-500 group ${
-                  visibleSections["electrical"] ? "animate-slide-up" : "opacity-0"
+                  visibleSections["electrical"]
+                    ? "animate-slide-up"
+                    : "opacity-0"
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -378,8 +409,8 @@ const MEPServices = () => {
                   : "opacity-0"
               }`}
             >
-              Complete mechanical equipment maintenance including HVAC, chillers, 
-              pumps, and critical building systems
+              Complete mechanical equipment maintenance including HVAC,
+              chillers, pumps, and critical building systems
             </p>
           </div>
 
@@ -388,9 +419,7 @@ const MEPServices = () => {
               <div
                 key={index}
                 className={`bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-amber-500 ${
-                  visibleSections["mechanical"]
-                    ? "animate-scale"
-                    : "opacity-0"
+                  visibleSections["mechanical"] ? "animate-scale" : "opacity-0"
                 }`}
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
@@ -443,8 +472,9 @@ const MEPServices = () => {
                 Complete Plumbing & Water Management
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Comprehensive plumbing solutions including water treatment plants, 
-                pump operations, and drainage systems for optimal water management.
+                Comprehensive plumbing solutions including water treatment
+                plants, pump operations, and drainage systems for optimal water
+                management.
               </p>
 
               <div className="space-y-4">
@@ -477,7 +507,7 @@ const MEPServices = () => {
               }`}
             >
               <img
-                src="https://images.unsplash.com/photo-1607400201889-565b1ee75f8e?w=800&q=80"
+                src="/mep-1.jpg"
                 alt="Plumbing Services"
                 className="w-full h-full object-cover shadow-2xl"
               />
@@ -513,8 +543,8 @@ const MEPServices = () => {
                   : "opacity-0"
               }`}
             >
-              Comprehensive MEP solutions across commercial, industrial, residential, 
-              and hospitality sectors
+              Comprehensive MEP solutions across commercial, industrial,
+              residential, and hospitality sectors
             </p>
           </div>
 
@@ -523,9 +553,7 @@ const MEPServices = () => {
               <div
                 key={index}
                 className={`bg-gray-800 p-6 hover:bg-gray-750 transition-all duration-300 border-l-4 border-amber-500 ${
-                  visibleSections["areas"]
-                    ? "animate-slide-up"
-                    : "opacity-0"
+                  visibleSections["areas"] ? "animate-slide-up" : "opacity-0"
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -533,12 +561,8 @@ const MEPServices = () => {
                   <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mb-4">
                     <area.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="font-bold text-white mb-2">
-                    {area.title}
-                  </h3>
-                  <p className="text-gray-400 text-sm">
-                    {area.description}
-                  </p>
+                  <h3 className="font-bold text-white mb-2">{area.title}</h3>
+                  <p className="text-gray-400 text-sm">{area.description}</p>
                 </div>
               </div>
             ))}
@@ -555,7 +579,9 @@ const MEPServices = () => {
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-4">
               <ShieldCheck className="w-8 h-8 text-amber-500" />
-              <span className="text-amber-500 font-semibold">WHY CHOOSE US</span>
+              <span className="text-amber-500 font-semibold">
+                WHY CHOOSE US
+              </span>
             </div>
             <h2
               className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
@@ -569,7 +595,7 @@ const MEPServices = () => {
                 visibleSections["why"] ? "animate-fade delay-200" : "opacity-0"
               }`}
             >
-              Experience professional MEP management with certified technicians, 
+              Experience professional MEP management with certified technicians,
               preventive maintenance, and guaranteed operational excellence
             </p>
           </div>
@@ -606,7 +632,8 @@ const MEPServices = () => {
               Our Service Approach
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              A systematic methodology ensuring optimal performance and minimal downtime
+              A systematic methodology ensuring optimal performance and minimal
+              downtime
             </p>
           </div>
 
@@ -617,7 +644,8 @@ const MEPServices = () => {
               </div>
               <h3 className="font-bold text-gray-900 mb-2">Assessment</h3>
               <p className="text-gray-600 text-sm">
-                Comprehensive evaluation of existing MEP systems and requirements
+                Comprehensive evaluation of existing MEP systems and
+                requirements
               </p>
             </div>
 
@@ -659,8 +687,7 @@ const MEPServices = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1920&q=80)",
+            backgroundImage: "url('/mep-footer.jpeg')",
           }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>
@@ -670,16 +697,24 @@ const MEPServices = () => {
             Optimize Your MEP Operations Today
           </h2>
           <p className="text-gray-300 text-lg mb-8">
-            Get expert MEP solutions with certified technicians, preventive maintenance 
-            programs, and 24/7 emergency support for uninterrupted operations.
+            Get expert MEP solutions with certified technicians, preventive
+            maintenance programs, and 24/7 emergency support for uninterrupted
+            operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg">
+            <Link
+              to="/contact"
+              className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg flex items-center justify-center"
+            >
               REQUEST CONSULTATION
-            </button>
-            <button className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg">
-              CALL NOW: 1800-XXX-XXXX
-            </button>
+            </Link>
+
+            <a
+              href="tel:9945230206"
+              className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg flex items-center justify-center"
+            >
+              CALL NOW: 9945230206
+            </a>
           </div>
         </div>
       </div>

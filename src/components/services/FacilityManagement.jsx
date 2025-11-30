@@ -29,6 +29,7 @@ import {
   Workflow,
   PieChart,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const FacilityManagement = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -68,32 +69,38 @@ const FacilityManagement = () => {
     {
       icon: Building2,
       title: "Corporate & Commercial Housekeeping",
-      description: "Professional cleaning for offices, corporate buildings, and commercial spaces",
+      description:
+        "Professional cleaning for offices, corporate buildings, and commercial spaces",
     },
     {
       icon: Home,
       title: "Residential Apartment Housekeeping",
-      description: "Comprehensive maintenance for residential complexes and apartments",
+      description:
+        "Comprehensive maintenance for residential complexes and apartments",
     },
     {
       icon: Settings,
       title: "Industrial Housekeeping",
-      description: "Specialized cleaning for factories, warehouses, and industrial facilities",
+      description:
+        "Specialized cleaning for factories, warehouses, and industrial facilities",
     },
     {
       icon: Activity,
       title: "Hospital, Hotel & Mall Housekeeping",
-      description: "Expert cleaning services for healthcare, hospitality, and retail sectors",
+      description:
+        "Expert cleaning services for healthcare, hospitality, and retail sectors",
     },
     {
       icon: Clock,
       title: "Daily, Weekly & Monthly Maintenance",
-      description: "Scheduled cleaning programs tailored to your facility needs",
+      description:
+        "Scheduled cleaning programs tailored to your facility needs",
     },
     {
       icon: Sparkles,
       title: "Deep Cleaning & Spring Cleaning",
-      description: "Intensive cleaning services for thorough facility sanitization",
+      description:
+        "Intensive cleaning services for thorough facility sanitization",
     },
     {
       icon: Sparkles,
@@ -103,7 +110,8 @@ const FacilityManagement = () => {
     {
       icon: Building2,
       title: "Glass, Façade & High-Rise Cleaning",
-      description: "Specialized exterior cleaning for tall buildings and glass structures",
+      description:
+        "Specialized exterior cleaning for tall buildings and glass structures",
     },
   ];
 
@@ -298,12 +306,14 @@ const FacilityManagement = () => {
     {
       icon: Award,
       title: "MEP Experts",
-      description: "Technical services managed by qualified mechanical, electrical, and plumbing specialists",
+      description:
+        "Technical services managed by qualified mechanical, electrical, and plumbing specialists",
     },
     {
       icon: Shield,
       title: "One Contract Solution",
-      description: "Single integrated contract covering all facility management needs",
+      description:
+        "Single integrated contract covering all facility management needs",
     },
     {
       icon: Target,
@@ -313,7 +323,8 @@ const FacilityManagement = () => {
     {
       icon: CheckCircle,
       title: "Quality Improvement",
-      description: "Continuous improvement programs for superior service delivery",
+      description:
+        "Continuous improvement programs for superior service delivery",
     },
     {
       icon: Workflow,
@@ -370,17 +381,16 @@ const FacilityManagement = () => {
       </style>
 
       {/* Hero Section */}
-      <div className="relative h-120 w-full mt-20">
+      <div className="relative h-[560px] w-full">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url('/support_staff_hero.jpg')",
+            backgroundImage: "url('/support_staff_hero.jpg')",
           }}
         ></div>
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="relative max-w-7xl mx-auto px-6 h-full flex items-center">
+        <div className="relative max-w-7xl mx-auto px-6 pt-48 pb-32 lg:pt-56 lg:pb-40 md:pt-44 md:pb-24">
           <div className="max-w-3xl">
             <div
               className={`flex items-center gap-3 mb-4 ${
@@ -406,7 +416,7 @@ const FacilityManagement = () => {
                 isLoaded ? "animate-fade delay-400" : "opacity-0"
               }`}
             >
-              End-to-end soft and technical facility services to maintain the 
+              End-to-end soft and technical facility services to maintain the
               cleanliness, functionality, and efficiency of your properties.
             </p>
           </div>
@@ -440,7 +450,7 @@ const FacilityManagement = () => {
                   : "opacity-0"
               }`}
             >
-              Professional cleaning and maintenance services for every type of 
+              Professional cleaning and maintenance services for every type of
               facility and property
             </p>
           </div>
@@ -450,7 +460,9 @@ const FacilityManagement = () => {
               <div
                 key={index}
                 className={`bg-gray-50 p-6 hover:shadow-xl transition-all duration-300 border-l-4 border-transparent hover:border-amber-500 group ${
-                  visibleSections["housekeeping"] ? "animate-slide-up" : "opacity-0"
+                  visibleSections["housekeeping"]
+                    ? "animate-slide-up"
+                    : "opacity-0"
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -496,7 +508,7 @@ const FacilityManagement = () => {
                   : "opacity-0"
               }`}
             >
-              Comprehensive manpower solutions for all facility operations and 
+              Comprehensive manpower solutions for all facility operations and
               administrative needs
             </p>
           </div>
@@ -506,9 +518,7 @@ const FacilityManagement = () => {
               <div
                 key={index}
                 className={`bg-white p-6 shadow-lg hover:shadow-2xl transition-all duration-300 group ${
-                  visibleSections["support"]
-                    ? "animate-scale"
-                    : "opacity-0"
+                  visibleSections["support"] ? "animate-scale" : "opacity-0"
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -558,7 +568,7 @@ const FacilityManagement = () => {
                   : "opacity-0"
               }`}
             >
-              Expert services for waste management, landscaping, and specialized 
+              Expert services for waste management, landscaping, and specialized
               facility maintenance
             </p>
           </div>
@@ -616,7 +626,7 @@ const FacilityManagement = () => {
                   : "opacity-0"
               }`}
             >
-              Managed by MEP Experts - Comprehensive technical maintenance for 
+              Managed by MEP Experts - Comprehensive technical maintenance for
               all building systems
             </p>
             <p
@@ -680,12 +690,10 @@ const FacilityManagement = () => {
             </h2>
             <p
               className={`text-gray-600 max-w-2xl mx-auto ${
-                visibleSections["ifm"]
-                  ? "animate-fade delay-200"
-                  : "opacity-0"
+                visibleSections["ifm"] ? "animate-fade delay-200" : "opacity-0"
               }`}
             >
-              Cadman's IFM model ensures cost control, quality improvement, and 
+              Cadman's IFM model ensures cost control, quality improvement, and
               seamless coordination across all services
             </p>
           </div>
@@ -719,17 +727,17 @@ const FacilityManagement = () => {
                 The Cadman IFM Advantage
               </h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Our Integrated Facility Management model consolidates all your 
-                facility services under a single, comprehensive contract. This 
-                unified approach eliminates the complexity of managing multiple 
-                vendors, reduces administrative overhead, and ensures consistent 
+                Our Integrated Facility Management model consolidates all your
+                facility services under a single, comprehensive contract. This
+                unified approach eliminates the complexity of managing multiple
+                vendors, reduces administrative overhead, and ensures consistent
                 quality across all operations.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                With centralized management, digital monitoring, and performance-driven 
-                service delivery, Cadman's IFM solution delivers superior cost efficiency, 
-                operational excellence, and complete peace of mind for facility owners 
-                and managers.
+                With centralized management, digital monitoring, and
+                performance-driven service delivery, Cadman's IFM solution
+                delivers superior cost efficiency, operational excellence, and
+                complete peace of mind for facility owners and managers.
               </p>
             </div>
           </div>
@@ -745,7 +753,9 @@ const FacilityManagement = () => {
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-4">
               <Award className="w-8 h-8 text-amber-500" />
-              <span className="text-amber-500 font-semibold">WHY CHOOSE US</span>
+              <span className="text-amber-500 font-semibold">
+                WHY CHOOSE US
+              </span>
             </div>
             <h2
               className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
@@ -759,7 +769,7 @@ const FacilityManagement = () => {
                 visibleSections["why"] ? "animate-fade delay-200" : "opacity-0"
               }`}
             >
-              Experience the difference that integrated management, technical 
+              Experience the difference that integrated management, technical
               expertise, and quality service can make
             </p>
           </div>
@@ -793,8 +803,7 @@ const FacilityManagement = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url('/fm_footer.jpg')",
+            backgroundImage: "url('/fm_footer.jpg')",
           }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>
@@ -804,16 +813,23 @@ const FacilityManagement = () => {
             Transform Your Facility Management
           </h2>
           <p className="text-gray-300 text-lg mb-8">
-            Get a customized integrated facility management solution with 
-            MEP expertise, 24/7 support, and complete operational control.
+            Get a customized integrated facility management solution with MEP
+            expertise, 24/7 support, and complete operational control.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg">
+            <Link
+              to="/contact"
+              className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg flex items-center justify-center"
+            >
               REQUEST A FACILITY AUDIT
-            </button>
-            <button className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg">
-              CALL NOW: 1800-XXX-XXXX
-            </button>
+            </Link>
+
+            <a
+              href="tel:9945230206"
+              className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg flex items-center justify-center"
+            >
+              CALL NOW: 9945230206
+            </a>
           </div>
         </div>
       </div>

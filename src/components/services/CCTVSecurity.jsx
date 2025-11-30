@@ -26,6 +26,7 @@ import {
   Video,
   HardDrive,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CCTVSecurity = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -65,32 +66,38 @@ const CCTVSecurity = () => {
     {
       icon: Camera,
       title: "CCTV Supply, Installation & AMC",
-      description: "Complete CCTV solutions with supply, professional installation, and comprehensive annual maintenance contracts",
+      description:
+        "Complete CCTV solutions with supply, professional installation, and comprehensive annual maintenance contracts",
     },
     {
       icon: Video,
       title: "IP Cameras, NVR, DVR Setup",
-      description: "Advanced IP camera systems with network video recorders and digital video recorders for optimal surveillance",
+      description:
+        "Advanced IP camera systems with network video recorders and digital video recorders for optimal surveillance",
     },
     {
       icon: Lock,
       title: "Access Control System & Biometrics",
-      description: "Secure access management with biometric authentication, card readers, and advanced entry control systems",
+      description:
+        "Secure access management with biometric authentication, card readers, and advanced entry control systems",
     },
     {
       icon: Smartphone,
       title: "Video Door Phones",
-      description: "Modern video intercom systems for enhanced entrance security and visitor management",
+      description:
+        "Modern video intercom systems for enhanced entrance security and visitor management",
     },
     {
       icon: Shield,
       title: "Boom Barriers & Gate Automation",
-      description: "Automated gate and barrier systems for controlled vehicle access and parking management",
+      description:
+        "Automated gate and barrier systems for controlled vehicle access and parking management",
     },
     {
       icon: Bell,
       title: "Fire Alarm Panel Integration",
-      description: "Integrated fire alarm systems with central monitoring and emergency response coordination",
+      description:
+        "Integrated fire alarm systems with central monitoring and emergency response coordination",
     },
   ];
 
@@ -98,26 +105,38 @@ const CCTVSecurity = () => {
     {
       icon: Home,
       title: "Home & Office Automation",
-      description: "Smart automation solutions for lighting, climate control, and appliance management",
-      features: ["Smart Lighting Control", "Climate Management", "Voice Integration"],
+      description:
+        "Smart automation solutions for lighting, climate control, and appliance management",
+      features: [
+        "Smart Lighting Control",
+        "Climate Management",
+        "Voice Integration",
+      ],
     },
     {
       icon: Wifi,
       title: "IT Networking & Wi-Fi Setup",
-      description: "Professional network infrastructure with high-speed Wi-Fi deployment and management",
+      description:
+        "Professional network infrastructure with high-speed Wi-Fi deployment and management",
       features: ["Network Design", "Wi-Fi Coverage", "Security Protocols"],
     },
     {
       icon: Monitor,
       title: "Remote Monitoring Systems",
-      description: "24/7 remote surveillance with real-time alerts and cloud-based monitoring platforms",
+      description:
+        "24/7 remote surveillance with real-time alerts and cloud-based monitoring platforms",
       features: ["Live Streaming", "Mobile Access", "Cloud Storage"],
     },
     {
       icon: Activity,
       title: "Command Center Operations",
-      description: "Centralized security operations center for comprehensive facility monitoring and response",
-      features: ["Multi-site Monitoring", "Incident Management", "Analytics Dashboard"],
+      description:
+        "Centralized security operations center for comprehensive facility monitoring and response",
+      features: [
+        "Multi-site Monitoring",
+        "Incident Management",
+        "Analytics Dashboard",
+      ],
     },
   ];
 
@@ -125,32 +144,38 @@ const CCTVSecurity = () => {
     {
       icon: Award,
       title: "Certified Professionals",
-      description: "Experienced security technicians with industry certifications and proven expertise",
+      description:
+        "Experienced security technicians with industry certifications and proven expertise",
     },
     {
       icon: Clock,
       title: "24/7 Support",
-      description: "Round-the-clock monitoring and emergency response for critical security systems",
+      description:
+        "Round-the-clock monitoring and emergency response for critical security systems",
     },
     {
       icon: ShieldCheck,
       title: "Advanced Technology",
-      description: "Latest surveillance and automation technology with AI-powered analytics",
+      description:
+        "Latest surveillance and automation technology with AI-powered analytics",
     },
     {
       icon: Zap,
       title: "Rapid Installation",
-      description: "Quick and professional installation with minimal disruption to operations",
+      description:
+        "Quick and professional installation with minimal disruption to operations",
     },
     {
       icon: Globe,
       title: "Remote Access",
-      description: "Secure remote monitoring from anywhere with mobile and web applications",
+      description:
+        "Secure remote monitoring from anywhere with mobile and web applications",
     },
     {
       icon: CheckCircle,
       title: "Quality Assurance",
-      description: "Rigorous testing and quality checks ensuring optimal system performance",
+      description:
+        "Rigorous testing and quality checks ensuring optimal system performance",
     },
   ];
 
@@ -220,17 +245,16 @@ const CCTVSecurity = () => {
       </style>
 
       {/* Hero Section */}
-      <div className="relative h-120 w-full mt-20">
+      <div className="relative h-[560px] w-full">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1920&q=80)",
+            backgroundImage: "url('/cctv_hero.jpeg')",
           }}
         ></div>
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="relative max-w-7xl mx-auto px-6 h-full flex items-center">
+        <div className="relative max-w-7xl mx-auto px-6 pt-48 pb-32 lg:pt-56 lg:pb-40 md:pt-44 md:pb-24">
           <div className="max-w-3xl">
             <div
               className={`flex items-center gap-3 mb-4 ${
@@ -256,8 +280,9 @@ const CCTVSecurity = () => {
                 isLoaded ? "animate-fade delay-400" : "opacity-0"
               }`}
             >
-              Comprehensive security and automation solutions with advanced surveillance 
-              technology, access control systems, and intelligent building automation.
+              Comprehensive security and automation solutions with advanced
+              surveillance technology, access control systems, and intelligent
+              building automation.
             </p>
           </div>
         </div>
@@ -290,8 +315,8 @@ const CCTVSecurity = () => {
                   : "opacity-0"
               }`}
             >
-              State-of-the-art CCTV systems, access control, and integrated security 
-              infrastructure for complete protection
+              State-of-the-art CCTV systems, access control, and integrated
+              security infrastructure for complete protection
             </p>
           </div>
 
@@ -346,8 +371,8 @@ const CCTVSecurity = () => {
                   : "opacity-0"
               }`}
             >
-              Intelligent building automation with IT networking, remote monitoring, 
-              and centralized command center operations
+              Intelligent building automation with IT networking, remote
+              monitoring, and centralized command center operations
             </p>
           </div>
 
@@ -356,9 +381,7 @@ const CCTVSecurity = () => {
               <div
                 key={index}
                 className={`bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-amber-500 ${
-                  visibleSections["automation"]
-                    ? "animate-scale"
-                    : "opacity-0"
+                  visibleSections["automation"] ? "animate-scale" : "opacity-0"
                 }`}
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
@@ -398,7 +421,9 @@ const CCTVSecurity = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div
               className={
-                visibleSections["technology"] ? "animate-slide-left" : "opacity-0"
+                visibleSections["technology"]
+                  ? "animate-slide-left"
+                  : "opacity-0"
               }
             >
               <div className="flex items-center gap-3 mb-4">
@@ -411,8 +436,9 @@ const CCTVSecurity = () => {
                 Cutting-Edge Security Technology
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Our security systems leverage the latest technology including AI-powered 
-                analytics, cloud storage, and mobile integration for comprehensive protection.
+                Our security systems leverage the latest technology including
+                AI-powered analytics, cloud storage, and mobile integration for
+                comprehensive protection.
               </p>
 
               <div className="space-y-4">
@@ -425,7 +451,8 @@ const CCTVSecurity = () => {
                       HD & 4K Surveillance
                     </h3>
                     <p className="text-gray-600 text-sm">
-                      Crystal-clear video quality with high-resolution cameras for detailed monitoring
+                      Crystal-clear video quality with high-resolution cameras
+                      for detailed monitoring
                     </p>
                   </div>
                 </div>
@@ -439,7 +466,8 @@ const CCTVSecurity = () => {
                       Cloud & Local Storage
                     </h3>
                     <p className="text-gray-600 text-sm">
-                      Flexible storage options with cloud backup and on-premise recording
+                      Flexible storage options with cloud backup and on-premise
+                      recording
                     </p>
                   </div>
                 </div>
@@ -453,7 +481,8 @@ const CCTVSecurity = () => {
                       AI Motion Detection
                     </h3>
                     <p className="text-gray-600 text-sm">
-                      Intelligent alerts with facial recognition and behavioral analysis
+                      Intelligent alerts with facial recognition and behavioral
+                      analysis
                     </p>
                   </div>
                 </div>
@@ -467,7 +496,8 @@ const CCTVSecurity = () => {
                       Biometric Integration
                     </h3>
                     <p className="text-gray-600 text-sm">
-                      Fingerprint and facial recognition for secure access control
+                      Fingerprint and facial recognition for secure access
+                      control
                     </p>
                   </div>
                 </div>
@@ -482,7 +512,7 @@ const CCTVSecurity = () => {
               }`}
             >
               <img
-                src="https://images.unsplash.com/photo-1558002038-1055907df827?w=800&q=80"
+                src="/cctv-1.jpeg"
                 alt="Security Technology"
                 className="w-full h-full object-cover shadow-2xl"
               />
@@ -518,8 +548,8 @@ const CCTVSecurity = () => {
                   : "opacity-0"
               }`}
             >
-              Comprehensive security solutions across commercial, industrial, residential, 
-              and retail sectors
+              Comprehensive security solutions across commercial, industrial,
+              residential, and retail sectors
             </p>
           </div>
 
@@ -528,9 +558,7 @@ const CCTVSecurity = () => {
               <div
                 key={index}
                 className={`bg-gray-800 p-6 hover:bg-gray-750 transition-all duration-300 border-l-4 border-amber-500 ${
-                  visibleSections["areas"]
-                    ? "animate-slide-up"
-                    : "opacity-0"
+                  visibleSections["areas"] ? "animate-slide-up" : "opacity-0"
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -538,12 +566,8 @@ const CCTVSecurity = () => {
                   <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mb-4">
                     <area.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="font-bold text-white mb-2">
-                    {area.title}
-                  </h3>
-                  <p className="text-gray-400 text-sm">
-                    {area.description}
-                  </p>
+                  <h3 className="font-bold text-white mb-2">{area.title}</h3>
+                  <p className="text-gray-400 text-sm">{area.description}</p>
                 </div>
               </div>
             ))}
@@ -560,7 +584,9 @@ const CCTVSecurity = () => {
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-4">
               <ShieldCheck className="w-8 h-8 text-amber-500" />
-              <span className="text-amber-500 font-semibold">WHY CHOOSE US</span>
+              <span className="text-amber-500 font-semibold">
+                WHY CHOOSE US
+              </span>
             </div>
             <h2
               className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
@@ -574,8 +600,8 @@ const CCTVSecurity = () => {
                 visibleSections["why"] ? "animate-fade delay-200" : "opacity-0"
               }`}
             >
-              Experience comprehensive security management with certified professionals, 
-              advanced technology, and guaranteed protection
+              Experience comprehensive security management with certified
+              professionals, advanced technology, and guaranteed protection
             </p>
           </div>
 
@@ -611,7 +637,8 @@ const CCTVSecurity = () => {
               Our Implementation Process
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              A systematic approach ensuring seamless installation and optimal security coverage
+              A systematic approach ensuring seamless installation and optimal
+              security coverage
             </p>
           </div>
 
@@ -632,7 +659,8 @@ const CCTVSecurity = () => {
               </div>
               <h3 className="font-bold text-gray-900 mb-2">System Design</h3>
               <p className="text-gray-600 text-sm">
-                Customized security solution with optimal camera placement and coverage
+                Customized security solution with optimal camera placement and
+                coverage
               </p>
             </div>
 
@@ -642,7 +670,8 @@ const CCTVSecurity = () => {
               </div>
               <h3 className="font-bold text-gray-900 mb-2">Installation</h3>
               <p className="text-gray-600 text-sm">
-                Professional installation by certified technicians with minimal disruption
+                Professional installation by certified technicians with minimal
+                disruption
               </p>
             </div>
 
@@ -650,7 +679,9 @@ const CCTVSecurity = () => {
               <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-white">4</span>
               </div>
-              <h3 className="font-bold text-gray-900 mb-2">Training & Support</h3>
+              <h3 className="font-bold text-gray-900 mb-2">
+                Training & Support
+              </h3>
               <p className="text-gray-600 text-sm">
                 User training and ongoing support with AMC services
               </p>
@@ -664,8 +695,7 @@ const CCTVSecurity = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1920&q=80)",
+            backgroundImage: "url('/cctv-footer.jpeg')",
           }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>
@@ -675,16 +705,23 @@ const CCTVSecurity = () => {
             Secure Your Premises Today
           </h2>
           <p className="text-gray-300 text-lg mb-8">
-            Get advanced security solutions with smart surveillance, access control, 
-            and 24/7 monitoring for complete peace of mind.
+            Get advanced security solutions with smart surveillance, access
+            control, and 24/7 monitoring for complete peace of mind.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg">
+            <Link
+              to="/contact"
+              className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg flex items-center justify-center"
+            >
               REQUEST CONSULTATION
-            </button>
-            <button className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg">
-              CALL NOW: 1800-XXX-XXXX
-            </button>
+            </Link>
+
+            <a
+              href="tel:9945230206"
+              className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg flex items-center justify-center"
+            >
+              CALL NOW: 9945230206
+            </a>
           </div>
         </div>
       </div>

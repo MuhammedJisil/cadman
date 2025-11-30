@@ -21,6 +21,7 @@ import {
   Wind,
   Target,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const PestControl = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -60,32 +61,38 @@ const PestControl = () => {
     {
       icon: Bug,
       title: "General Pest Control (GPC)",
-      description: "Comprehensive treatment for all common household pests with long-lasting protection",
+      description:
+        "Comprehensive treatment for all common household pests with long-lasting protection",
     },
     {
       icon: Bug,
       title: "Cockroach Management",
-      description: "Advanced gel-based and spray treatments to eliminate cockroach infestations",
+      description:
+        "Advanced gel-based and spray treatments to eliminate cockroach infestations",
     },
     {
       icon: Target,
       title: "Ant Treatment",
-      description: "Targeted solutions to eliminate ant colonies and prevent re-infestation",
+      description:
+        "Targeted solutions to eliminate ant colonies and prevent re-infestation",
     },
     {
       icon: Home,
       title: "Bed Bug Treatment",
-      description: "Heat and chemical treatments to completely eradicate bed bugs from all stages",
+      description:
+        "Heat and chemical treatments to completely eradicate bed bugs from all stages",
     },
     {
       icon: AlertTriangle,
       title: "Rodent Control",
-      description: "Humane trapping and exclusion methods to eliminate rats and mice",
+      description:
+        "Humane trapping and exclusion methods to eliminate rats and mice",
     },
     {
       icon: Home,
       title: "Wood Borer Treatment",
-      description: "Specialized wood protection to prevent structural damage from borers",
+      description:
+        "Specialized wood protection to prevent structural damage from borers",
     },
   ];
 
@@ -93,25 +100,37 @@ const PestControl = () => {
     {
       icon: Shield,
       title: "Termite Control",
-      description: "Complete termite protection for pre and post construction phases",
-      features: ["Pre-Construction Treatment", "Post-Construction Barrier", "Annual Monitoring"],
+      description:
+        "Complete termite protection for pre and post construction phases",
+      features: [
+        "Pre-Construction Treatment",
+        "Post-Construction Barrier",
+        "Annual Monitoring",
+      ],
     },
     {
       icon: Droplets,
       title: "Mosquito Control",
-      description: "Fogging and larviciding services to eliminate mosquito breeding",
-      features: ["Outdoor Fogging", "Larvicide Application", "Breeding Site Treatment"],
+      description:
+        "Fogging and larviciding services to eliminate mosquito breeding",
+      features: [
+        "Outdoor Fogging",
+        "Larvicide Application",
+        "Breeding Site Treatment",
+      ],
     },
     {
       icon: Bug,
       title: "Spider & Lizard Control",
-      description: "Safe removal and prevention of spiders and lizards from premises",
+      description:
+        "Safe removal and prevention of spiders and lizards from premises",
       features: ["Web Removal", "Entry Point Sealing", "Preventive Spraying"],
     },
     {
       icon: AlertTriangle,
       title: "Snake Prevention",
-      description: "Comprehensive snake proofing and removal services for safety",
+      description:
+        "Comprehensive snake proofing and removal services for safety",
       features: ["Area Assessment", "Exclusion Barriers", "Emergency Removal"],
     },
   ];
@@ -120,22 +139,26 @@ const PestControl = () => {
     {
       icon: Factory,
       title: "Industrial Pest Management",
-      description: "Customized pest control for factories, warehouses, and manufacturing units",
+      description:
+        "Customized pest control for factories, warehouses, and manufacturing units",
     },
     {
       icon: Building2,
       title: "Commercial Solutions",
-      description: "Pest management for offices, hotels, restaurants, and retail spaces",
+      description:
+        "Pest management for offices, hotels, restaurants, and retail spaces",
     },
     {
       icon: Trees,
       title: "Garden Pest Control",
-      description: "Eco-friendly solutions to protect gardens and landscaping from pests",
+      description:
+        "Eco-friendly solutions to protect gardens and landscaping from pests",
     },
     {
       icon: Leaf,
       title: "Herbal Pest Control",
-      description: "Natural, odourless treatments using herbal and organic products",
+      description:
+        "Natural, odourless treatments using herbal and organic products",
     },
   ];
 
@@ -143,32 +166,38 @@ const PestControl = () => {
     {
       icon: ShieldCheck,
       title: "Government Approved",
-      description: "All treatments are approved by health authorities and regulatory bodies",
+      description:
+        "All treatments are approved by health authorities and regulatory bodies",
     },
     {
       icon: Leaf,
       title: "Safe & Eco-Friendly",
-      description: "Child and pet-safe treatments with minimal environmental impact",
+      description:
+        "Child and pet-safe treatments with minimal environmental impact",
     },
     {
       icon: Award,
       title: "Certified Professionals",
-      description: "Trained and certified pest control technicians with extensive experience",
+      description:
+        "Trained and certified pest control technicians with extensive experience",
     },
     {
       icon: Clock,
       title: "24/7 Emergency Service",
-      description: "Round-the-clock availability for urgent pest control requirements",
+      description:
+        "Round-the-clock availability for urgent pest control requirements",
     },
     {
       icon: CheckCircle,
       title: "100% Satisfaction Guarantee",
-      description: "Free follow-up services if pests return within warranty period",
+      description:
+        "Free follow-up services if pests return within warranty period",
     },
     {
       icon: Zap,
       title: "Advanced Technology",
-      description: "Latest equipment and scientifically proven pest control methods",
+      description:
+        "Latest equipment and scientifically proven pest control methods",
     },
   ];
 
@@ -176,22 +205,26 @@ const PestControl = () => {
     {
       icon: Leaf,
       title: "Odourless Options",
-      description: "Special formulations that are completely odourless for sensitive environments",
+      description:
+        "Special formulations that are completely odourless for sensitive environments",
     },
     {
       icon: Sprout,
       title: "Herbal Treatments",
-      description: "Natural plant-based solutions for those preferring organic pest control",
+      description:
+        "Natural plant-based solutions for those preferring organic pest control",
     },
     {
       icon: Shield,
       title: "Long-Lasting Protection",
-      description: "Extended warranty periods with preventive maintenance programs",
+      description:
+        "Extended warranty periods with preventive maintenance programs",
     },
     {
       icon: ThumbsUp,
       title: "Non-Toxic Formulas",
-      description: "Safe for children, pets, and elderly with no harmful residues",
+      description:
+        "Safe for children, pets, and elderly with no harmful residues",
     },
   ];
 
@@ -238,17 +271,16 @@ const PestControl = () => {
       </style>
 
       {/* Hero Section */}
-      <div className="relative h-120 w-full mt-20">
+      <div className="relative h-[560px] w-full">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url('/pest_control_hero.jpeg')",
+            backgroundImage: "url('/pest_control_hero.jpeg')",
           }}
         ></div>
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="relative max-w-7xl mx-auto px-6 h-full flex items-center">
+        <div className="relative max-w-7xl mx-auto px-6 pt-48 pb-32 lg:pt-56 lg:pb-40 md:pt-44 md:pb-24">
           <div className="max-w-3xl">
             <div
               className={`flex items-center gap-3 mb-4 ${
@@ -274,8 +306,9 @@ const PestControl = () => {
                 isLoaded ? "animate-fade delay-400" : "opacity-0"
               }`}
             >
-              Complete pest management solutions with eco-friendly treatments, 
-              certified professionals, and guaranteed results for homes and businesses.
+              Complete pest management solutions with eco-friendly treatments,
+              certified professionals, and guaranteed results for homes and
+              businesses.
             </p>
           </div>
         </div>
@@ -308,7 +341,7 @@ const PestControl = () => {
                   : "opacity-0"
               }`}
             >
-              Protect your home and family with safe, effective pest control 
+              Protect your home and family with safe, effective pest control
               treatments designed for residential environments
             </p>
           </div>
@@ -318,7 +351,9 @@ const PestControl = () => {
               <div
                 key={index}
                 className={`bg-gray-50 p-6 hover:shadow-xl transition-all duration-300 border-l-4 border-transparent hover:border-amber-500 group ${
-                  visibleSections["residential"] ? "animate-slide-up" : "opacity-0"
+                  visibleSections["residential"]
+                    ? "animate-slide-up"
+                    : "opacity-0"
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -364,7 +399,7 @@ const PestControl = () => {
                   : "opacity-0"
               }`}
             >
-              Specialized solutions for complex pest problems requiring expert 
+              Specialized solutions for complex pest problems requiring expert
               knowledge and advanced treatment methods
             </p>
           </div>
@@ -374,9 +409,7 @@ const PestControl = () => {
               <div
                 key={index}
                 className={`bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-amber-500 ${
-                  visibleSections["specialized"]
-                    ? "animate-scale"
-                    : "opacity-0"
+                  visibleSections["specialized"] ? "animate-scale" : "opacity-0"
                 }`}
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
@@ -416,7 +449,9 @@ const PestControl = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div
               className={
-                visibleSections["commercial"] ? "animate-slide-left" : "opacity-0"
+                visibleSections["commercial"]
+                  ? "animate-slide-left"
+                  : "opacity-0"
               }
             >
               <div className="flex items-center gap-3 mb-4">
@@ -429,8 +464,9 @@ const PestControl = () => {
                 Business Pest Management Solutions
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Comprehensive pest control programs tailored for commercial and 
-                industrial facilities, ensuring compliance and operational excellence.
+                Comprehensive pest control programs tailored for commercial and
+                industrial facilities, ensuring compliance and operational
+                excellence.
               </p>
 
               <div className="space-y-4">
@@ -499,7 +535,7 @@ const PestControl = () => {
                   : "opacity-0"
               }`}
             >
-              Choose from our range of safe, eco-friendly pest control options 
+              Choose from our range of safe, eco-friendly pest control options
               designed for your peace of mind
             </p>
           </div>
@@ -509,9 +545,7 @@ const PestControl = () => {
               <div
                 key={index}
                 className={`bg-gray-800 p-6 hover:bg-gray-750 transition-all duration-300 border-l-4 border-amber-500 ${
-                  visibleSections["features"]
-                    ? "animate-slide-up"
-                    : "opacity-0"
+                  visibleSections["features"] ? "animate-slide-up" : "opacity-0"
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -541,7 +575,9 @@ const PestControl = () => {
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-4">
               <ShieldCheck className="w-8 h-8 text-amber-500" />
-              <span className="text-amber-500 font-semibold">WHY CHOOSE US</span>
+              <span className="text-amber-500 font-semibold">
+                WHY CHOOSE US
+              </span>
             </div>
             <h2
               className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
@@ -555,7 +591,7 @@ const PestControl = () => {
                 visibleSections["why"] ? "animate-fade delay-200" : "opacity-0"
               }`}
             >
-              Experience professional pest management with guaranteed results, 
+              Experience professional pest management with guaranteed results,
               eco-friendly solutions, and complete customer satisfaction
             </p>
           </div>
@@ -592,7 +628,8 @@ const PestControl = () => {
               Our Treatment Process
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              A systematic approach to ensure complete pest elimination and prevention
+              A systematic approach to ensure complete pest elimination and
+              prevention
             </p>
           </div>
 
@@ -645,8 +682,7 @@ const PestControl = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url('/pest_control_footer.jpg')",
+            backgroundImage: "url('/pest_control_footer.jpg')",
           }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>
@@ -656,16 +692,23 @@ const PestControl = () => {
             Get Pest-Free Environment Today
           </h2>
           <p className="text-gray-300 text-lg mb-8">
-            Schedule a free inspection and consultation with our certified pest 
+            Schedule a free inspection and consultation with our certified pest
             control experts. 100% satisfaction guaranteed!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg">
+            <Link
+              to="/contact"
+              className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg flex items-center justify-center"
+            >
               BOOK FREE INSPECTION
-            </button>
-            <button className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg">
-              CALL NOW: 1800-XXX-XXXX
-            </button>
+            </Link>
+
+            <a
+              href="tel:9945230206"
+              className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg flex items-center justify-center"
+            >
+              CALL NOW: 9945230206
+            </a>
           </div>
         </div>
       </div>

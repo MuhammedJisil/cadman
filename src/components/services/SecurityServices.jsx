@@ -23,6 +23,7 @@ import {
   Siren,
   Target,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const SecurityServices = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -62,22 +63,26 @@ const SecurityServices = () => {
     {
       icon: Users,
       title: "Security Guards",
-      description: "Male & Female security personnel trained to highest standards",
+      description:
+        "Male & Female security personnel trained to highest standards",
     },
     {
       icon: ShieldCheck,
       title: "Security Supervisors",
-      description: "Experienced supervisors for operational oversight and coordination",
+      description:
+        "Experienced supervisors for operational oversight and coordination",
     },
     {
       icon: Award,
       title: "Senior Security Officers",
-      description: "Elite officers with advanced training and leadership capabilities",
+      description:
+        "Elite officers with advanced training and leadership capabilities",
     },
     {
       icon: UserSquare2,
       title: "PSO / Bodyguards",
-      description: "Personal security officers for executive and VIP protection",
+      description:
+        "Personal security officers for executive and VIP protection",
     },
     {
       icon: Shield,
@@ -92,12 +97,14 @@ const SecurityServices = () => {
     {
       icon: Award,
       title: "Ex-Servicemen Force",
-      description: "Disciplined veterans bringing military-grade security expertise",
+      description:
+        "Disciplined veterans bringing military-grade security expertise",
     },
     {
       icon: Users,
       title: "Lady Security Force",
-      description: "Specialized female security for malls, corporates, and hospitals",
+      description:
+        "Specialized female security for malls, corporates, and hospitals",
     },
     {
       icon: Car,
@@ -110,7 +117,8 @@ const SecurityServices = () => {
     {
       icon: Zap,
       title: "Rapid Response Team (RRT)",
-      description: "Immediate emergency response for critical security situations",
+      description:
+        "Immediate emergency response for critical security situations",
       features: ["24/7 Readiness", "Quick Deployment", "Crisis Management"],
     },
     {
@@ -128,7 +136,8 @@ const SecurityServices = () => {
     {
       icon: Target,
       title: "Event Security & VIP Protection",
-      description: "Comprehensive security solutions for events and dignitaries",
+      description:
+        "Comprehensive security solutions for events and dignitaries",
       features: ["Crowd Management", "Access Control", "Executive Protection"],
     },
   ];
@@ -165,7 +174,8 @@ const SecurityServices = () => {
     {
       icon: Search,
       title: "Theft / Fraud Investigation",
-      description: "Professional investigation of internal theft and fraud cases",
+      description:
+        "Professional investigation of internal theft and fraud cases",
     },
     {
       icon: UserCheck,
@@ -188,7 +198,8 @@ const SecurityServices = () => {
     {
       icon: FileSearch,
       title: "Security Audit & Risk Assessment",
-      description: "Comprehensive evaluation of security vulnerabilities and risks",
+      description:
+        "Comprehensive evaluation of security vulnerabilities and risks",
     },
     {
       icon: CheckCircle,
@@ -198,7 +209,8 @@ const SecurityServices = () => {
     {
       icon: Bell,
       title: "Incident Reporting",
-      description: "Real-time incident tracking and emergency response protocols",
+      description:
+        "Real-time incident tracking and emergency response protocols",
     },
     {
       icon: Radio,
@@ -216,22 +228,26 @@ const SecurityServices = () => {
     {
       icon: Award,
       title: "ISO Certified Excellence",
-      description: "Multiple ISO certifications ensuring global quality standards",
+      description:
+        "Multiple ISO certifications ensuring global quality standards",
     },
     {
       icon: Users,
       title: "10,000+ Trained Personnel",
-      description: "Largest trained security workforce with continuous skill development",
+      description:
+        "Largest trained security workforce with continuous skill development",
     },
     {
       icon: Clock,
       title: "24/7 Operations",
-      description: "Round-the-clock command center and emergency response capability",
+      description:
+        "Round-the-clock command center and emergency response capability",
     },
     {
       icon: Shield,
       title: "Ex-Military Leadership",
-      description: "Operations led by former BSF officers with decades of experience",
+      description:
+        "Operations led by former BSF officers with decades of experience",
     },
     {
       icon: Activity,
@@ -241,7 +257,8 @@ const SecurityServices = () => {
     {
       icon: CheckCircle,
       title: "100% Compliance",
-      description: "Full statutory compliance with zero tolerance for violations",
+      description:
+        "Full statutory compliance with zero tolerance for violations",
     },
   ];
 
@@ -288,17 +305,16 @@ const SecurityServices = () => {
       </style>
 
       {/* Hero Section */}
-      <div className="relative h-120 w-full mt-20">
+      <div className="relative h-[560px] w-full">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url('/security_hero.jpg')",
+            backgroundImage: "url('/security_hero.jpg')",
           }}
         ></div>
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="relative max-w-7xl mx-auto px-6 h-full flex items-center">
+        <div className="relative max-w-7xl mx-auto px-6 pt-48 pb-32 lg:pt-56 lg:pb-40 md:pt-44 md:pb-24">
           <div className="max-w-3xl">
             <div
               className={`flex items-center gap-3 mb-4 ${
@@ -324,8 +340,9 @@ const SecurityServices = () => {
                 isLoaded ? "animate-fade delay-400" : "opacity-0"
               }`}
             >
-              Industry-leading security solutions backed by ISO certifications, 
-              ex-military expertise, and 10,000+ trained professionals operating 24/7.
+              Industry-leading security solutions backed by ISO certifications,
+              ex-military expertise, and 10,000+ trained professionals operating
+              24/7.
             </p>
           </div>
         </div>
@@ -358,8 +375,8 @@ const SecurityServices = () => {
                   : "opacity-0"
               }`}
             >
-              Highly trained security personnel for every requirement – from basic 
-              guarding to specialized protection services
+              Highly trained security personnel for every requirement – from
+              basic guarding to specialized protection services
             </p>
           </div>
 
@@ -414,7 +431,7 @@ const SecurityServices = () => {
                   : "opacity-0"
               }`}
             >
-              Advanced tactical teams and specialized security solutions for 
+              Advanced tactical teams and specialized security solutions for
               high-risk scenarios and critical protection needs
             </p>
           </div>
@@ -424,9 +441,7 @@ const SecurityServices = () => {
               <div
                 key={index}
                 className={`bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-amber-500 ${
-                  visibleSections["specialized"]
-                    ? "animate-scale"
-                    : "opacity-0"
+                  visibleSections["specialized"] ? "animate-scale" : "opacity-0"
                 }`}
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
@@ -479,8 +494,9 @@ const SecurityServices = () => {
                 Complete Access & Visitor Management
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Advanced access control systems ensuring authorized entry while 
-                maintaining seamless operations and comprehensive visitor tracking.
+                Advanced access control systems ensuring authorized entry while
+                maintaining seamless operations and comprehensive visitor
+                tracking.
               </p>
 
               <div className="space-y-4">
@@ -549,7 +565,7 @@ const SecurityServices = () => {
                   : "opacity-0"
               }`}
             >
-              Professional investigation services backed by ex-BSF intelligence 
+              Professional investigation services backed by ex-BSF intelligence
               expertise and advanced surveillance capabilities
             </p>
           </div>
@@ -609,7 +625,7 @@ const SecurityServices = () => {
                   : "opacity-0"
               }`}
             >
-              Comprehensive security management with centralized command center 
+              Comprehensive security management with centralized command center
               operations and complete compliance protocols
             </p>
           </div>
@@ -643,16 +659,17 @@ const SecurityServices = () => {
                 Centralized Command Center & Control Room
               </h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Our state-of-the-art centralized command center provides 24/7 
-                monitoring, coordination, and rapid response capabilities. Equipped 
-                with advanced surveillance systems, real-time incident tracking, and 
-                emergency communication protocols, our control room ensures seamless 
-                security operations across all deployment sites.
+                Our state-of-the-art centralized command center provides 24/7
+                monitoring, coordination, and rapid response capabilities.
+                Equipped with advanced surveillance systems, real-time incident
+                tracking, and emergency communication protocols, our control
+                room ensures seamless security operations across all deployment
+                sites.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                Integrated crisis management support enables immediate response to 
-                any security situation, with direct communication channels to local 
-                authorities and emergency services.
+                Integrated crisis management support enables immediate response
+                to any security situation, with direct communication channels to
+                local authorities and emergency services.
               </p>
             </div>
           </div>
@@ -668,7 +685,9 @@ const SecurityServices = () => {
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-4">
               <Shield className="w-8 h-8 text-amber-500" />
-              <span className="text-amber-500 font-semibold">WHY CHOOSE US</span>
+              <span className="text-amber-500 font-semibold">
+                WHY CHOOSE US
+              </span>
             </div>
             <h2
               className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
@@ -682,7 +701,7 @@ const SecurityServices = () => {
                 visibleSections["why"] ? "animate-fade delay-200" : "opacity-0"
               }`}
             >
-              Experience the difference that professional excellence, military 
+              Experience the difference that professional excellence, military
               expertise, and complete compliance can make
             </p>
           </div>
@@ -716,8 +735,7 @@ const SecurityServices = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url('/security_footer.jpg')",
+            backgroundImage: "url('/security_footer.jpg')",
           }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>
@@ -727,16 +745,23 @@ const SecurityServices = () => {
             Protect What Matters Most
           </h2>
           <p className="text-gray-300 text-lg mb-8">
-            Get a customized security solution backed by ISO certifications, 
+            Get a customized security solution backed by ISO certifications,
             ex-military expertise, and 24/7 operational support.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg">
+            <Link
+              to="/contact"
+              className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg flex items-center justify-center"
+            >
               REQUEST A SECURITY AUDIT
-            </button>
-            <button className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg">
-              CALL NOW: 1800-XXX-XXXX
-            </button>
+            </Link>
+
+            <a
+              href="tel:9945230206"
+              className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg flex items-center justify-center"
+            >
+              CALL NOW: 9945230206
+            </a>
           </div>
         </div>
       </div>
