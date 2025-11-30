@@ -29,6 +29,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "../../components/SEO";
 
 const ServiceGuarantee = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -270,6 +271,11 @@ const ServiceGuarantee = () => {
   ];
 
   return (
+     <>
+      <SEO
+        title="Cadman Service Guarantee – Commitment to Quality & Reliability"
+        description="Cadman provides a strong service guarantee for security, facility management, and manpower solutions, ensuring consistent quality, reliability, and customer satisfaction for businesses and residential clients."
+      />
     <div className="relative w-full overflow-hidden bg-gray-50">
       <style>
         {`
@@ -1015,6 +1021,7 @@ const ServiceGuarantee = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

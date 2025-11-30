@@ -40,6 +40,7 @@ import {
   Heart,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "../../components/SEO";
 
 const Training = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -421,9 +422,14 @@ const Training = () => {
   ];
 
   return (
-    <div className="relative w-full overflow-hidden bg-gray-50">
-      <style>
-        {`
+    <>
+      <SEO
+        title="Cadman Training – Professional Security & Skill Development Programs"
+        description="Cadman offers structured training programs for security personnel, housekeeping staff, and industrial workforce, ensuring professionalism, safety, and high-quality service delivery."
+      />
+      <div className="relative w-full overflow-hidden bg-gray-50">
+        <style>
+          {`
           @keyframes slideInFromRight {
             from { transform: translateX(100%); opacity: 0; }
             to { transform: translateX(0); opacity: 1; }
@@ -460,1196 +466,1234 @@ const Training = () => {
           .delay-600 { animation-delay: 0.6s; }
           .delay-800 { animation-delay: 0.8s; }
         `}
-      </style>
+        </style>
 
-      {/* Hero Section */}
-      <div className="relative h-[560px] w-full">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/sg-2.jpeg')",
-          }}
-        ></div>
-        <div className="absolute inset-0 bg-black/60"></div>
+        {/* Hero Section */}
+        <div className="relative h-[560px] w-full">
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: "url('/sg-2.jpeg')",
+            }}
+          ></div>
+          <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="relative max-w-7xl mx-auto px-6 pt-48 pb-32 lg:pt-56 lg:pb-40 md:pt-44 md:pb-24">
-          <div className="max-w-3xl">
-            <div
-              className={`flex items-center gap-3 mb-4 ${
-                isLoaded ? "animate-slide-left" : "opacity-0"
-              }`}
-            >
-              <div className="h-0.5 w-16 bg-amber-500"></div>
-              <span className="text-amber-500 italic text-lg">
-                Training Builds Quality, Quality Builds Trust
-              </span>
-            </div>
-
-            <h1
-              className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 ${
-                isLoaded ? "animate-slide-right delay-200" : "opacity-0"
-              }`}
-            >
-              Comprehensive Training & Skill Development
-            </h1>
-
-            <p
-              className={`text-gray-300 text-lg md:text-xl leading-relaxed ${
-                isLoaded ? "animate-fade delay-400" : "opacity-0"
-              }`}
-            >
-              PASARA Guidelines-based training system for Security, Facility
-              Management, Housekeeping, MEP & Fire Safety teams with a
-              structured 52-Week Annual Calendar.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Training Philosophy */}
-      <div
-        ref={(el) => (sectionRefs.current["philosophy"] = el)}
-        className="py-20 bg-white"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div
-              className={
-                visibleSections["philosophy"]
-                  ? "animate-slide-left"
-                  : "opacity-0"
-              }
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <BookOpen className="w-8 h-8 text-amber-500" />
-                <span className="text-amber-500 font-semibold">
-                  OUR PHILOSOPHY
+          <div className="relative max-w-7xl mx-auto px-6 pt-48 pb-32 lg:pt-56 lg:pb-40 md:pt-44 md:pb-24">
+            <div className="max-w-3xl">
+              <div
+                className={`flex items-center gap-3 mb-4 ${
+                  isLoaded ? "animate-slide-left" : "opacity-0"
+                }`}
+              >
+                <div className="h-0.5 w-16 bg-amber-500"></div>
+                <span className="text-amber-500 italic text-lg">
+                  Training Builds Quality, Quality Builds Trust
                 </span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Training Builds Quality, Quality Builds Trust
-              </h2>
-              <p className="text-gray-600 mb-6 leading-relaxed">
-                At Cadman Security Services Pvt. Ltd., we believe exceptional
-                service begins with exceptional training. Our comprehensive
-                program ensures every team member delivers excellent results
-                from Day 1.
-              </p>
-              <p className="text-gray-600 mb-8 leading-relaxed">
-                We follow PASARA Guidelines-based training structure, combined
-                with client-specific SOP, KPI, and SLA requirements to ensure
-                our manpower exceeds expectations consistently.
-              </p>
 
-              <div className="grid grid-cols-2 gap-6">
-                <div className="text-center p-4 bg-amber-50">
-                  <div className="text-3xl font-bold text-amber-600 mb-2">
-                    52
-                  </div>
-                  <div className="text-gray-600 text-sm">
-                    Week Training Calendar
-                  </div>
-                </div>
-                <div className="text-center p-4 bg-amber-50">
-                  <div className="text-3xl font-bold text-amber-600 mb-2">
-                    100%
-                  </div>
-                  <div className="text-gray-600 text-sm">PASARA Compliant</div>
-                </div>
-                <div className="text-center p-4 bg-amber-50">
-                  <div className="text-3xl font-bold text-amber-600 mb-2">
-                    9
-                  </div>
-                  <div className="text-gray-600 text-sm">Training Modules</div>
-                </div>
-                <div className="text-center p-4 bg-amber-50">
-                  <div className="text-3xl font-bold text-amber-600 mb-2">
-                    360°
-                  </div>
-                  <div className="text-gray-600 text-sm">Skill Development</div>
-                </div>
-              </div>
-            </div>
+              <h1
+                className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 ${
+                  isLoaded ? "animate-slide-right delay-200" : "opacity-0"
+                }`}
+              >
+                Comprehensive Training & Skill Development
+              </h1>
 
-            <div
-              className={`${
-                visibleSections["philosophy"]
-                  ? "animate-slide-right delay-200"
-                  : "opacity-0"
-              }`}
-            >
-              <img
-                src="/howwework-3.jpeg"
-                alt="Training Session"
-                className="w-full h-full object-cover shadow-2xl"
-              />
+              <p
+                className={`text-gray-300 text-lg md:text-xl leading-relaxed ${
+                  isLoaded ? "animate-fade delay-400" : "opacity-0"
+                }`}
+              >
+                PASARA Guidelines-based training system for Security, Facility
+                Management, Housekeeping, MEP & Fire Safety teams with a
+                structured 52-Week Annual Calendar.
+              </p>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Training Framework */}
-      <div
-        ref={(el) => (sectionRefs.current["framework"] = el)}
-        className="py-20 bg-gray-50"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <Target className="w-8 h-8 text-amber-500" />
-              <span className="text-amber-500 font-semibold">
-                TRAINING FRAMEWORK
-              </span>
-            </div>
-            <h2
-              className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
-                visibleSections["framework"] ? "animate-fade" : "opacity-0"
-              }`}
-            >
-              9 Comprehensive Training Modules
-            </h2>
-            <p
-              className={`text-gray-600 max-w-2xl mx-auto ${
-                visibleSections["framework"]
-                  ? "animate-fade delay-200"
-                  : "opacity-0"
-              }`}
-            >
-              Our structured training model ensures complete skill development
-              from induction to leadership with continuous improvement programs
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {trainingFramework.map((module, index) => (
+        {/* Training Philosophy */}
+        <div
+          ref={(el) => (sectionRefs.current["philosophy"] = el)}
+          className="py-20 bg-white"
+        >
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
               <div
-                key={index}
-                className={`bg-white p-6 hover:shadow-xl transition-all duration-300 border-l-4 border-transparent hover:border-amber-500 group ${
-                  visibleSections["framework"]
-                    ? "animate-slide-up"
+                className={
+                  visibleSections["philosophy"]
+                    ? "animate-slide-left"
+                    : "opacity-0"
+                }
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <BookOpen className="w-8 h-8 text-amber-500" />
+                  <span className="text-amber-500 font-semibold">
+                    OUR PHILOSOPHY
+                  </span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Training Builds Quality, Quality Builds Trust
+                </h2>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  At Cadman Security Services Pvt. Ltd., we believe exceptional
+                  service begins with exceptional training. Our comprehensive
+                  program ensures every team member delivers excellent results
+                  from Day 1.
+                </p>
+                <p className="text-gray-600 mb-8 leading-relaxed">
+                  We follow PASARA Guidelines-based training structure, combined
+                  with client-specific SOP, KPI, and SLA requirements to ensure
+                  our manpower exceeds expectations consistently.
+                </p>
+
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center p-4 bg-amber-50">
+                    <div className="text-3xl font-bold text-amber-600 mb-2">
+                      52
+                    </div>
+                    <div className="text-gray-600 text-sm">
+                      Week Training Calendar
+                    </div>
+                  </div>
+                  <div className="text-center p-4 bg-amber-50">
+                    <div className="text-3xl font-bold text-amber-600 mb-2">
+                      100%
+                    </div>
+                    <div className="text-gray-600 text-sm">
+                      PASARA Compliant
+                    </div>
+                  </div>
+                  <div className="text-center p-4 bg-amber-50">
+                    <div className="text-3xl font-bold text-amber-600 mb-2">
+                      9
+                    </div>
+                    <div className="text-gray-600 text-sm">
+                      Training Modules
+                    </div>
+                  </div>
+                  <div className="text-center p-4 bg-amber-50">
+                    <div className="text-3xl font-bold text-amber-600 mb-2">
+                      360°
+                    </div>
+                    <div className="text-gray-600 text-sm">
+                      Skill Development
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                className={`${
+                  visibleSections["philosophy"]
+                    ? "animate-slide-right delay-200"
                     : "opacity-0"
                 }`}
-                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="bg-amber-500 w-14 h-14 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <module.icon className="w-7 h-7 text-white" />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-amber-600 transition">
-                  {module.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {module.description}
-                </p>
+                <img
+                  src="/howwework-3.jpeg"
+                  alt="Training Session"
+                  className="w-full h-full object-cover shadow-2xl"
+                />
               </div>
-            ))}
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* 52 Week Calendar - Core Security */}
-      <div
-        ref={(el) => (sectionRefs.current["calendar"] = el)}
-        className="py-20 bg-white"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <Calendar className="w-8 h-8 text-amber-500" />
-              <span className="text-amber-500 font-semibold">
-                52-WEEK TRAINING CALENDAR
-              </span>
+        {/* Training Framework */}
+        <div
+          ref={(el) => (sectionRefs.current["framework"] = el)}
+          className="py-20 bg-gray-50"
+        >
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Target className="w-8 h-8 text-amber-500" />
+                <span className="text-amber-500 font-semibold">
+                  TRAINING FRAMEWORK
+                </span>
+              </div>
+              <h2
+                className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
+                  visibleSections["framework"] ? "animate-fade" : "opacity-0"
+                }`}
+              >
+                9 Comprehensive Training Modules
+              </h2>
+              <p
+                className={`text-gray-600 max-w-2xl mx-auto ${
+                  visibleSections["framework"]
+                    ? "animate-fade delay-200"
+                    : "opacity-0"
+                }`}
+              >
+                Our structured training model ensures complete skill development
+                from induction to leadership with continuous improvement
+                programs
+              </p>
             </div>
-            <h2
-              className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
-                visibleSections["calendar"] ? "animate-fade" : "opacity-0"
-              }`}
-            >
-              Structured Annual Training Program
-            </h2>
-            <p
-              className={`text-gray-600 max-w-2xl mx-auto ${
-                visibleSections["calendar"]
-                  ? "animate-fade delay-200"
-                  : "opacity-0"
-              }`}
-            >
-              Each week covers specific modules ensuring 360° development across
-              Security, Facility, MEP, and consolidated cross-department
-              training
-            </p>
-          </div>
 
-          {/* Weeks 1-10: Core Security */}
-          <div className="mb-16">
-            <div className="flex items-center gap-3 mb-8">
-              <Shield className="w-8 h-8 text-amber-500" />
-              <h3 className="text-2xl font-bold text-gray-900">
-                Weeks 1-10: Core Security Skills (PASARA Mandatory Modules)
-              </h3>
-            </div>
-            <div className="grid md:grid-cols-2 gap-4">
-              {coreSecurityWeeks.map((item, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {trainingFramework.map((module, index) => (
                 <div
                   key={index}
-                  className={`bg-gray-50 p-4 border-l-4 border-amber-500 hover:shadow-lg transition ${
-                    visibleSections["calendar"]
+                  className={`bg-white p-6 hover:shadow-xl transition-all duration-300 border-l-4 border-transparent hover:border-amber-500 group ${
+                    visibleSections["framework"]
                       ? "animate-slide-up"
                       : "opacity-0"
                   }`}
-                  style={{ animationDelay: `${index * 0.05}s` }}
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="flex items-center gap-4">
-                    <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold">{item.week}</span>
-                    </div>
-                    <p className="text-gray-700 text-sm">{item.topic}</p>
+                  <div className="bg-amber-500 w-14 h-14 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <module.icon className="w-7 h-7 text-white" />
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Weeks 11-20: Advanced Security */}
-          <div className="mb-16">
-            <div className="flex items-center gap-3 mb-8">
-              <ShieldCheck className="w-8 h-8 text-amber-500" />
-              <h3 className="text-2xl font-bold text-gray-900">
-                Weeks 11-20: Advanced Security Modules
-              </h3>
-            </div>
-            <div className="grid md:grid-cols-2 gap-4">
-              {advancedSecurityWeeks.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-50 p-4 border-l-4 border-amber-500 hover:shadow-lg transition"
-                >
-                  <div className="flex items-center gap-4">
-                    <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold">{item.week}</span>
-                    </div>
-                    <p className="text-gray-700 text-sm">{item.topic}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Weeks 21-30: Facility */}
-          <div className="mb-16">
-            <div className="flex items-center gap-3 mb-8">
-              <Home className="w-8 h-8 text-amber-500" />
-              <h3 className="text-2xl font-bold text-gray-900">
-                Weeks 21-30: Facility & Housekeeping Modules
-              </h3>
-            </div>
-            <div className="grid md:grid-cols-2 gap-4">
-              {facilityWeeks.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-50 p-4 border-l-4 border-amber-500 hover:shadow-lg transition"
-                >
-                  <div className="flex items-center gap-4">
-                    <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold">{item.week}</span>
-                    </div>
-                    <p className="text-gray-700 text-sm">{item.topic}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Weeks 31-40: MEP */}
-          <div className="mb-16">
-            <div className="flex items-center gap-3 mb-8">
-              <Zap className="w-8 h-8 text-amber-500" />
-              <h3 className="text-2xl font-bold text-gray-900">
-                Weeks 31-40: MEP & Technical Training
-              </h3>
-            </div>
-            <div className="grid md:grid-cols-2 gap-4">
-              {mepWeeks.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-50 p-4 border-l-4 border-amber-500 hover:shadow-lg transition"
-                >
-                  <div className="flex items-center gap-4">
-                    <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold">{item.week}</span>
-                    </div>
-                    <p className="text-gray-700 text-sm">{item.topic}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Weeks 41-52: Consolidated */}
-          <div>
-            <div className="flex items-center gap-3 mb-8">
-              <Users2 className="w-8 h-8 text-amber-500" />
-              <h3 className="text-2xl font-bold text-gray-900">
-                Weeks 41-52: Consolidated Cross-Department Training
-              </h3>
-            </div>
-            <div className="grid md:grid-cols-2 gap-4">
-              {consolidatedWeeks.map((item, index) => (
-                <div
-                  key={index}
-                  className="bg-gray-50 p-4 border-l-4 border-amber-500 hover:shadow-lg transition"
-                >
-                  <div className="flex items-center gap-4">
-                    <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <span className="text-white font-bold">{item.week}</span>
-                    </div>
-                    <p className="text-gray-700 text-sm">{item.topic}</p>
-                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-amber-600 transition">
+                    {module.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {module.description}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Security Training Modules */}
-      <div
-        ref={(el) => (sectionRefs.current["security"] = el)}
-        className="py-20 bg-gray-50"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <Shield className="w-8 h-8 text-amber-500" />
-              <span className="text-amber-500 font-semibold">
-                SECURITY TRAINING
-              </span>
-            </div>
-            <h2
-              className={`text-3xl md:text-4xl font-bold text-gray-900mb-4 ${
-                visibleSections["security"] ? "animate-fade" : "opacity-0"
-              }`}
-            >
-              Complete Security Training Modules
-            </h2>
-            <p
-              className={`text-gray-600 max-w-2xl mx-auto ${
-                visibleSections["security"]
-                  ? "animate-fade delay-200"
-                  : "opacity-0"
-              }`}
-            >
-              From basic security protocols to specialized Ex-BSF level
-              training, covering all aspects of professional security operations
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Basic Modules */}
-            <div
-              className={`bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-amber-500 ${
-                visibleSections["security"] ? "animate-scale" : "opacity-0"
-              }`}
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center">
-                  <Shield className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900">
-                  Basic Security
-                </h3>
-              </div>
-              <ul className="space-y-3">
-                {securityModules.basic.map((module, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start gap-2 text-gray-600 text-sm"
-                  >
-                    <CheckCircle className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
-                    <span>{module}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Advanced Modules */}
-            <div
-              className={`bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-amber-500 ${
-                visibleSections["security"]
-                  ? "animate-scale delay-200"
-                  : "opacity-0"
-              }`}
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center">
-                  <ShieldCheck className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900">
-                  Advanced Security
-                </h3>
-              </div>
-              <ul className="space-y-3">
-                {securityModules.advanced.map((module, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start gap-2 text-gray-600 text-sm"
-                  >
-                    <CheckCircle className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
-                    <span>{module}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Specialized Modules */}
-            <div
-              className={`bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-amber-500 ${
-                visibleSections["security"]
-                  ? "animate-scale delay-400"
-                  : "opacity-0"
-              }`}
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center">
-                  <Award className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900">
-                  Ex-BSF Specialized
-                </h3>
-              </div>
-              <ul className="space-y-3">
-                {securityModules.specialized.map((module, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start gap-2 text-gray-600 text-sm"
-                  >
-                    <CheckCircle className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
-                    <span>{module}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Facility Management Training */}
-      <div
-        ref={(el) => (sectionRefs.current["facility"] = el)}
-        className="py-20 bg-white"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div
-              className={`${
-                visibleSections["facility"] ? "animate-slide-left" : "opacity-0"
-              }`}
-            >
-              <img
-                src="/pest_control_hero.jpeg"
-                alt="Facility Training"
-                className="w-full h-full object-cover shadow-2xl"
-              />
-            </div>
-
-            <div
-              className={
-                visibleSections["facility"]
-                  ? "animate-slide-right delay-200"
-                  : "opacity-0"
-              }
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <Home className="w-8 h-8 text-amber-500" />
+        {/* 52 Week Calendar - Core Security */}
+        <div
+          ref={(el) => (sectionRefs.current["calendar"] = el)}
+          className="py-20 bg-white"
+        >
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Calendar className="w-8 h-8 text-amber-500" />
                 <span className="text-amber-500 font-semibold">
-                  FACILITY MANAGEMENT
+                  52-WEEK TRAINING CALENDAR
                 </span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Comprehensive Facility Training
+              <h2
+                className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
+                  visibleSections["calendar"] ? "animate-fade" : "opacity-0"
+                }`}
+              >
+                Structured Annual Training Program
               </h2>
-              <p className="text-gray-600 mb-8 leading-relaxed">
-                Complete training programs covering housekeeping operations,
-                soft services, customer interaction, and service excellence
-                standards.
+              <p
+                className={`text-gray-600 max-w-2xl mx-auto ${
+                  visibleSections["calendar"]
+                    ? "animate-fade delay-200"
+                    : "opacity-0"
+                }`}
+              >
+                Each week covers specific modules ensuring 360° development
+                across Security, Facility, MEP, and consolidated
+                cross-department training
               </p>
+            </div>
 
-              <div className="space-y-6">
-                <div>
-                  <h3 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
-                    Soft Services Training
-                  </h3>
-                  <div className="grid grid-cols-2 gap-3">
-                    {facilityModules.softServices.map((module, index) => (
-                      <div key={index} className="flex items-start gap-2">
-                        <CheckCircle className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-600 text-sm">{module}</span>
+            {/* Weeks 1-10: Core Security */}
+            <div className="mb-16">
+              <div className="flex items-center gap-3 mb-8">
+                <Shield className="w-8 h-8 text-amber-500" />
+                <h3 className="text-2xl font-bold text-gray-900">
+                  Weeks 1-10: Core Security Skills (PASARA Mandatory Modules)
+                </h3>
+              </div>
+              <div className="grid md:grid-cols-2 gap-4">
+                {coreSecurityWeeks.map((item, index) => (
+                  <div
+                    key={index}
+                    className={`bg-gray-50 p-4 border-l-4 border-amber-500 hover:shadow-lg transition ${
+                      visibleSections["calendar"]
+                        ? "animate-slide-up"
+                        : "opacity-0"
+                    }`}
+                    style={{ animationDelay: `${index * 0.05}s` }}
+                  >
+                    <div className="flex items-center gap-4">
+                      <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <span className="text-white font-bold">
+                          {item.week}
+                        </span>
                       </div>
-                    ))}
+                      <p className="text-gray-700 text-sm">{item.topic}</p>
+                    </div>
                   </div>
-                </div>
+                ))}
+              </div>
+            </div>
 
-                <div>
-                  <h3 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
-                    <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
-                    Customer Interaction Skills
+            {/* Weeks 11-20: Advanced Security */}
+            <div className="mb-16">
+              <div className="flex items-center gap-3 mb-8">
+                <ShieldCheck className="w-8 h-8 text-amber-500" />
+                <h3 className="text-2xl font-bold text-gray-900">
+                  Weeks 11-20: Advanced Security Modules
+                </h3>
+              </div>
+              <div className="grid md:grid-cols-2 gap-4">
+                {advancedSecurityWeeks.map((item, index) => (
+                  <div
+                    key={index}
+                    className="bg-gray-50 p-4 border-l-4 border-amber-500 hover:shadow-lg transition"
+                  >
+                    <div className="flex items-center gap-4">
+                      <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <span className="text-white font-bold">
+                          {item.week}
+                        </span>
+                      </div>
+                      <p className="text-gray-700 text-sm">{item.topic}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Weeks 21-30: Facility */}
+            <div className="mb-16">
+              <div className="flex items-center gap-3 mb-8">
+                <Home className="w-8 h-8 text-amber-500" />
+                <h3 className="text-2xl font-bold text-gray-900">
+                  Weeks 21-30: Facility & Housekeeping Modules
+                </h3>
+              </div>
+              <div className="grid md:grid-cols-2 gap-4">
+                {facilityWeeks.map((item, index) => (
+                  <div
+                    key={index}
+                    className="bg-gray-50 p-4 border-l-4 border-amber-500 hover:shadow-lg transition"
+                  >
+                    <div className="flex items-center gap-4">
+                      <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <span className="text-white font-bold">
+                          {item.week}
+                        </span>
+                      </div>
+                      <p className="text-gray-700 text-sm">{item.topic}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Weeks 31-40: MEP */}
+            <div className="mb-16">
+              <div className="flex items-center gap-3 mb-8">
+                <Zap className="w-8 h-8 text-amber-500" />
+                <h3 className="text-2xl font-bold text-gray-900">
+                  Weeks 31-40: MEP & Technical Training
+                </h3>
+              </div>
+              <div className="grid md:grid-cols-2 gap-4">
+                {mepWeeks.map((item, index) => (
+                  <div
+                    key={index}
+                    className="bg-gray-50 p-4 border-l-4 border-amber-500 hover:shadow-lg transition"
+                  >
+                    <div className="flex items-center gap-4">
+                      <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <span className="text-white font-bold">
+                          {item.week}
+                        </span>
+                      </div>
+                      <p className="text-gray-700 text-sm">{item.topic}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Weeks 41-52: Consolidated */}
+            <div>
+              <div className="flex items-center gap-3 mb-8">
+                <Users2 className="w-8 h-8 text-amber-500" />
+                <h3 className="text-2xl font-bold text-gray-900">
+                  Weeks 41-52: Consolidated Cross-Department Training
+                </h3>
+              </div>
+              <div className="grid md:grid-cols-2 gap-4">
+                {consolidatedWeeks.map((item, index) => (
+                  <div
+                    key={index}
+                    className="bg-gray-50 p-4 border-l-4 border-amber-500 hover:shadow-lg transition"
+                  >
+                    <div className="flex items-center gap-4">
+                      <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <span className="text-white font-bold">
+                          {item.week}
+                        </span>
+                      </div>
+                      <p className="text-gray-700 text-sm">{item.topic}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Security Training Modules */}
+        <div
+          ref={(el) => (sectionRefs.current["security"] = el)}
+          className="py-20 bg-gray-50"
+        >
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Shield className="w-8 h-8 text-amber-500" />
+                <span className="text-amber-500 font-semibold">
+                  SECURITY TRAINING
+                </span>
+              </div>
+              <h2
+                className={`text-3xl md:text-4xl font-bold text-gray-900mb-4 ${
+                  visibleSections["security"] ? "animate-fade" : "opacity-0"
+                }`}
+              >
+                Complete Security Training Modules
+              </h2>
+              <p
+                className={`text-gray-600 max-w-2xl mx-auto ${
+                  visibleSections["security"]
+                    ? "animate-fade delay-200"
+                    : "opacity-0"
+                }`}
+              >
+                From basic security protocols to specialized Ex-BSF level
+                training, covering all aspects of professional security
+                operations
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Basic Modules */}
+              <div
+                className={`bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-amber-500 ${
+                  visibleSections["security"] ? "animate-scale" : "opacity-0"
+                }`}
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center">
+                    <Shield className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">
+                    Basic Security
                   </h3>
-                  <div className="grid grid-cols-2 gap-3">
-                    {facilityModules.customerInteraction.map(
-                      (module, index) => (
+                </div>
+                <ul className="space-y-3">
+                  {securityModules.basic.map((module, index) => (
+                    <li
+                      key={index}
+                      className="flex items-start gap-2 text-gray-600 text-sm"
+                    >
+                      <CheckCircle className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
+                      <span>{module}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Advanced Modules */}
+              <div
+                className={`bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-amber-500 ${
+                  visibleSections["security"]
+                    ? "animate-scale delay-200"
+                    : "opacity-0"
+                }`}
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center">
+                    <ShieldCheck className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">
+                    Advanced Security
+                  </h3>
+                </div>
+                <ul className="space-y-3">
+                  {securityModules.advanced.map((module, index) => (
+                    <li
+                      key={index}
+                      className="flex items-start gap-2 text-gray-600 text-sm"
+                    >
+                      <CheckCircle className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
+                      <span>{module}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Specialized Modules */}
+              <div
+                className={`bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-amber-500 ${
+                  visibleSections["security"]
+                    ? "animate-scale delay-400"
+                    : "opacity-0"
+                }`}
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center">
+                    <Award className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900">
+                    Ex-BSF Specialized
+                  </h3>
+                </div>
+                <ul className="space-y-3">
+                  {securityModules.specialized.map((module, index) => (
+                    <li
+                      key={index}
+                      className="flex items-start gap-2 text-gray-600 text-sm"
+                    >
+                      <CheckCircle className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
+                      <span>{module}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Facility Management Training */}
+        <div
+          ref={(el) => (sectionRefs.current["facility"] = el)}
+          className="py-20 bg-white"
+        >
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div
+                className={`${
+                  visibleSections["facility"]
+                    ? "animate-slide-left"
+                    : "opacity-0"
+                }`}
+              >
+                <img
+                  src="/pest_control_hero.jpeg"
+                  alt="Facility Training"
+                  className="w-full h-full object-cover shadow-2xl"
+                />
+              </div>
+
+              <div
+                className={
+                  visibleSections["facility"]
+                    ? "animate-slide-right delay-200"
+                    : "opacity-0"
+                }
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <Home className="w-8 h-8 text-amber-500" />
+                  <span className="text-amber-500 font-semibold">
+                    FACILITY MANAGEMENT
+                  </span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Comprehensive Facility Training
+                </h2>
+                <p className="text-gray-600 mb-8 leading-relaxed">
+                  Complete training programs covering housekeeping operations,
+                  soft services, customer interaction, and service excellence
+                  standards.
+                </p>
+
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
+                      <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
+                      Soft Services Training
+                    </h3>
+                    <div className="grid grid-cols-2 gap-3">
+                      {facilityModules.softServices.map((module, index) => (
                         <div key={index} className="flex items-start gap-2">
                           <CheckCircle className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
                           <span className="text-gray-600 text-sm">
                             {module}
                           </span>
                         </div>
-                      )
-                    )}
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <h3 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
+                      <div className="w-2 h-2 bg-amber-500 rounded-full"></div>
+                      Customer Interaction Skills
+                    </h3>
+                    <div className="grid grid-cols-2 gap-3">
+                      {facilityModules.customerInteraction.map(
+                        (module, index) => (
+                          <div key={index} className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
+                            <span className="text-gray-600 text-sm">
+                              {module}
+                            </span>
+                          </div>
+                        )
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* MEP Training */}
-      <div
-        ref={(el) => (sectionRefs.current["mep"] = el)}
-        className="py-20 bg-gray-50"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <Zap className="w-8 h-8 text-amber-500" />
-              <span className="text-amber-500 font-semibold">MEP TRAINING</span>
-            </div>
-            <h2
-              className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
-                visibleSections["mep"] ? "animate-fade" : "opacity-0"
-              }`}
-            >
-              Mechanical, Electrical & Plumbing Training
-            </h2>
-            <p
-              className={`text-gray-600 max-w-2xl mx-auto ${
-                visibleSections["mep"] ? "animate-fade delay-200" : "opacity-0"
-              }`}
-            >
-              Technical training programs covering electrical systems,
-              mechanical operations, plumbing, and fire safety protocols
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Electrical */}
-            <div
-              className={`bg-white p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-amber-500 ${
-                visibleSections["mep"] ? "animate-slide-up" : "opacity-0"
-              }`}
-            >
-              <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Zap className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-4">
-                Electrical
-              </h3>
-              <ul className="space-y-2">
-                {mepModules.electrical.map((module, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start gap-2 text-gray-600 text-sm"
-                  >
-                    <div className="w-1.5 h-1.5 bg-amber-500 rounded-full flex-shrink-0 mt-1.5"></div>
-                    <span>{module}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Mechanical */}
-            <div
-              className={`bg-white p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-amber-500 ${
-                visibleSections["mep"]
-                  ? "animate-slide-up delay-200"
-                  : "opacity-0"
-              }`}
-            >
-              <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Settings className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-4">
-                Mechanical
-              </h3>
-              <ul className="space-y-2">
-                {mepModules.mechanical.map((module, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start gap-2 text-gray-600 text-sm"
-                  >
-                    <div className="w-1.5 h-1.5 bg-amber-500 rounded-full flex-shrink-0 mt-1.5"></div>
-                    <span>{module}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Plumbing */}
-            <div
-              className={`bg-white p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-amber-500 ${
-                visibleSections["mep"]
-                  ? "animate-slide-up delay-400"
-                  : "opacity-0"
-              }`}
-            >
-              <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Droplets className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-4">Plumbing</h3>
-              <ul className="space-y-2">
-                {mepModules.plumbing.map((module, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start gap-2 text-gray-600 text-sm"
-                  >
-                    <div className="w-1.5 h-1.5 bg-amber-500 rounded-full flex-shrink-0 mt-1.5"></div>
-                    <span>{module}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Fire & Safety */}
-            <div
-              className={`bg-white p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-amber-500 ${
-                visibleSections["mep"]
-                  ? "animate-slide-up delay-600"
-                  : "opacity-0"
-              }`}
-            >
-              <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Flame className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-lg font-bold text-gray-900 mb-4">
-                Fire & Safety
-              </h3>
-              <ul className="space-y-2">
-                {mepModules.fireSafety.map((module, index) => (
-                  <li
-                    key={index}
-                    className="flex items-start gap-2 text-gray-600 text-sm"
-                  >
-                    <div className="w-1.5 h-1.5 bg-amber-500 rounded-full flex-shrink-0 mt-1.5"></div>
-                    <span>{module}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Expert Trainers */}
-      <div
-        ref={(el) => (sectionRefs.current["trainers"] = el)}
-        className="py-20 bg-white"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <Users className="w-8 h-8 text-amber-500" />
-              <span className="text-amber-500 font-semibold">
-                EXPERT TRAINERS
-              </span>
-            </div>
-            <h2
-              className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
-                visibleSections["trainers"] ? "animate-fade" : "opacity-0"
-              }`}
-            >
-              Designed & Upgraded By Experts
-            </h2>
-            <p
-              className={`text-gray-600 max-w-2xl mx-auto ${
-                visibleSections["trainers"]
-                  ? "animate-fade delay-200"
-                  : "opacity-0"
-              }`}
-            >
-              Our training system is designed and continuously upgraded by
-              highly experienced professionals from diverse backgrounds
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-5 gap-6">
-            {trainers.map((trainer, index) => (
-              <div
-                key={index}
-                className={`bg-gray-50 p-6 text-center hover:shadow-xl transition-all duration-300 group ${
-                  visibleSections["trainers"] ? "animate-scale" : "opacity-0"
-                }`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  <trainer.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2 group-hover:text-amber-600 transition">
-                  {trainer.title}
-                </h3>
-                <p className="text-gray-600 text-sm">{trainer.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Training Infrastructure */}
-      <div
-        ref={(el) => (sectionRefs.current["infrastructure"] = el)}
-        className="py-20 bg-gray-900"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div
-              className={
-                visibleSections["infrastructure"]
-                  ? "animate-slide-left"
-                  : "opacity-0"
-              }
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <Building2 className="w-8 h-8 text-amber-500" />
+        {/* MEP Training */}
+        <div
+          ref={(el) => (sectionRefs.current["mep"] = el)}
+          className="py-20 bg-gray-50"
+        >
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Zap className="w-8 h-8 text-amber-500" />
                 <span className="text-amber-500 font-semibold">
-                  TRAINING INFRASTRUCTURE
+                  MEP TRAINING
                 </span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                World-Class Training Facilities
+              <h2
+                className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
+                  visibleSections["mep"] ? "animate-fade" : "opacity-0"
+                }`}
+              >
+                Mechanical, Electrical & Plumbing Training
               </h2>
-              <p className="text-gray-300 mb-8 leading-relaxed">
-                State-of-the-art training infrastructure with dedicated rooms,
-                practical demonstration areas, modern equipment, and digital
-                learning resources.
-              </p>
-
-              <div className="space-y-4">
-                {trainingInfrastructure.map((facility, index) => (
-                  <div
-                    key={index}
-                    className="flex items-start gap-4 p-4 bg-gray-800 hover:bg-gray-750 transition"
-                  >
-                    <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <facility.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-white mb-1">
-                        {facility.title}
-                      </h3>
-                      <p className="text-gray-400 text-sm">
-                        {facility.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div
-              className={`${
-                visibleSections["infrastructure"]
-                  ? "animate-slide-right delay-200"
-                  : "opacity-0"
-              }`}
-            >
-              <img
-                src="/training.jpeg"
-                alt="Training Infrastructure"
-                className="w-full h-full object-cover shadow-2xl"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Certifications */}
-      <div
-        ref={(el) => (sectionRefs.current["certifications"] = el)}
-        className="py-20 bg-gray-50"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <Award className="w-8 h-8 text-amber-500" />
-              <span className="text-amber-500 font-semibold">
-                CERTIFICATIONS PROVIDED
-              </span>
-            </div>
-            <h2
-              className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
-                visibleSections["certifications"] ? "animate-fade" : "opacity-0"
-              }`}
-            >
-              Industry-Recognized Certifications
-            </h2>
-            <p
-              className={`text-gray-600 max-w-2xl mx-auto ${
-                visibleSections["certifications"]
-                  ? "animate-fade delay-200"
-                  : "opacity-0"
-              }`}
-            >
-              At the end of training cycles, we provide comprehensive
-              certifications validating skills and competencies
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {certifications.map((cert, index) => (
-              <div
-                key={index}
-                className={`bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-amber-500 ${
-                  visibleSections["certifications"]
-                    ? "animate-scale"
+              <p
+                className={`text-gray-600 max-w-2xl mx-auto ${
+                  visibleSections["mep"]
+                    ? "animate-fade delay-200"
                     : "opacity-0"
                 }`}
-                style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <div className="bg-amber-500 w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-6">
-                  <cert.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
-                  {cert.title}
-                </h3>
-                <p className="text-gray-600 text-center leading-relaxed">
-                  {cert.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Training Documentation */}
-      <div
-        ref={(el) => (sectionRefs.current["documentation"] = el)}
-        className="py-20 bg-white"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div
-              className={`${
-                visibleSections["documentation"]
-                  ? "animate-slide-left"
-                  : "opacity-0"
-              }`}
-            >
-              <img
-                src="/recruitment-1.jpeg"
-                alt="Training Documentation"
-                className="w-full h-full object-cover shadow-2xl"
-              />
+                Technical training programs covering electrical systems,
+                mechanical operations, plumbing, and fire safety protocols
+              </p>
             </div>
 
-            <div
-              className={
-                visibleSections["documentation"]
-                  ? "animate-slide-right delay-200"
-                  : "opacity-0"
-              }
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <FileCheck className="w-8 h-8 text-amber-500" />
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {/* Electrical */}
+              <div
+                className={`bg-white p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-amber-500 ${
+                  visibleSections["mep"] ? "animate-slide-up" : "opacity-0"
+                }`}
+              >
+                <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-4">
+                  Electrical
+                </h3>
+                <ul className="space-y-2">
+                  {mepModules.electrical.map((module, index) => (
+                    <li
+                      key={index}
+                      className="flex items-start gap-2 text-gray-600 text-sm"
+                    >
+                      <div className="w-1.5 h-1.5 bg-amber-500 rounded-full flex-shrink-0 mt-1.5"></div>
+                      <span>{module}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Mechanical */}
+              <div
+                className={`bg-white p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-amber-500 ${
+                  visibleSections["mep"]
+                    ? "animate-slide-up delay-200"
+                    : "opacity-0"
+                }`}
+              >
+                <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                  <Settings className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-4">
+                  Mechanical
+                </h3>
+                <ul className="space-y-2">
+                  {mepModules.mechanical.map((module, index) => (
+                    <li
+                      key={index}
+                      className="flex items-start gap-2 text-gray-600 text-sm"
+                    >
+                      <div className="w-1.5 h-1.5 bg-amber-500 rounded-full flex-shrink-0 mt-1.5"></div>
+                      <span>{module}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Plumbing */}
+              <div
+                className={`bg-white p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-amber-500 ${
+                  visibleSections["mep"]
+                    ? "animate-slide-up delay-400"
+                    : "opacity-0"
+                }`}
+              >
+                <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                  <Droplets className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-4">
+                  Plumbing
+                </h3>
+                <ul className="space-y-2">
+                  {mepModules.plumbing.map((module, index) => (
+                    <li
+                      key={index}
+                      className="flex items-start gap-2 text-gray-600 text-sm"
+                    >
+                      <div className="w-1.5 h-1.5 bg-amber-500 rounded-full flex-shrink-0 mt-1.5"></div>
+                      <span>{module}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Fire & Safety */}
+              <div
+                className={`bg-white p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-amber-500 ${
+                  visibleSections["mep"]
+                    ? "animate-slide-up delay-600"
+                    : "opacity-0"
+                }`}
+              >
+                <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
+                  <Flame className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-lg font-bold text-gray-900 mb-4">
+                  Fire & Safety
+                </h3>
+                <ul className="space-y-2">
+                  {mepModules.fireSafety.map((module, index) => (
+                    <li
+                      key={index}
+                      className="flex items-start gap-2 text-gray-600 text-sm"
+                    >
+                      <div className="w-1.5 h-1.5 bg-amber-500 rounded-full flex-shrink-0 mt-1.5"></div>
+                      <span>{module}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Expert Trainers */}
+        <div
+          ref={(el) => (sectionRefs.current["trainers"] = el)}
+          className="py-20 bg-white"
+        >
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Users className="w-8 h-8 text-amber-500" />
                 <span className="text-amber-500 font-semibold">
-                  TRAINING DOCUMENTATION
+                  EXPERT TRAINERS
                 </span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Complete Training Records
+              <h2
+                className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
+                  visibleSections["trainers"] ? "animate-fade" : "opacity-0"
+                }`}
+              >
+                Designed & Upgraded By Experts
               </h2>
-              <p className="text-gray-600 mb-8 leading-relaxed">
-                We maintain comprehensive documentation of all training
-                activities, ensuring transparency and compliance for client
-                audits.
+              <p
+                className={`text-gray-600 max-w-2xl mx-auto ${
+                  visibleSections["trainers"]
+                    ? "animate-fade delay-200"
+                    : "opacity-0"
+                }`}
+              >
+                Our training system is designed and continuously upgraded by
+                highly experienced professionals from diverse backgrounds
               </p>
+            </div>
 
-              <div className="space-y-4">
-                <div className="flex items-center gap-4 p-4 bg-gray-50">
-                  <div className="bg-amber-500 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <ClipboardCheck className="w-5 h-5 text-white" />
+            <div className="grid md:grid-cols-5 gap-6">
+              {trainers.map((trainer, index) => (
+                <div
+                  key={index}
+                  className={`bg-gray-50 p-6 text-center hover:shadow-xl transition-all duration-300 group ${
+                    visibleSections["trainers"] ? "animate-scale" : "opacity-0"
+                  }`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                    <trainer.icon className="w-8 h-8 text-white" />
                   </div>
-                  <span className="text-gray-700 font-medium">
-                    Training attendance registers
-                  </span>
+                  <h3 className="font-bold text-gray-900 mb-2 group-hover:text-amber-600 transition">
+                    {trainer.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm">{trainer.description}</p>
                 </div>
-                <div className="flex items-center gap-4 p-4 bg-gray-50">
-                  <div className="bg-amber-500 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <FileCheck className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="text-gray-700 font-medium">
-                    Monthly training reports
-                  </span>
-                </div>
-                <div className="flex items-center gap-4 p-4 bg-gray-50">
-                  <div className="bg-amber-500 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <UserCheck className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="text-gray-700 font-medium">
-                    Trainer sign-off records
-                  </span>
-                </div>
-                <div className="flex items-center gap-4 p-4 bg-gray-50">
-                  <div className="bg-amber-500 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Camera className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="text-gray-700 font-medium">
-                    Photographs/videos of training sessions
-                  </span>
-                </div>
-                <div className="flex items-center gap-4 p-4 bg-gray-50">
-                  <div className="bg-amber-500 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Activity className="w-5 h-5 text-white" />
-                  </div>
-                  <span className="text-gray-700 font-medium">
-                    Annual training audit reports
-                  </span>
-                </div>
-              </div>
-
-              <p className="text-gray-600 mt-6 italic">
-                All documentation is available for audits by clients
-              </p>
+              ))}
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Why Choose Us */}
-      <div
-        ref={(el) => (sectionRefs.current["why"] = el)}
-        className="py-20 bg-gray-50"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <Star className="w-8 h-8 text-amber-500" />
-              <span className="text-amber-500 font-semibold">
-                WHY CHOOSE US
-              </span>
-            </div>
-            <h2
-              className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
-                visibleSections["why"] ? "animate-fade" : "opacity-0"
-              }`}
-            >
-              Your Trusted Training Partner
-            </h2>
-            <p
-              className={`text-gray-600 max-w-2xl mx-auto ${
-                visibleSections["why"] ? "animate-fade delay-200" : "opacity-0"
-              }`}
-            >
-              Industry-leading training programs ensuring professionally
-              trained, operationally competent, and 100% compliant personnel
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {whyChooseUs.map((item, index) => (
+        {/* Training Infrastructure */}
+        <div
+          ref={(el) => (sectionRefs.current["infrastructure"] = el)}
+          className="py-20 bg-gray-900"
+        >
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
               <div
-                key={index}
-                className={`bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group ${
-                  visibleSections["why"] ? "animate-slide-up" : "opacity-0"
-                }`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className={
+                  visibleSections["infrastructure"]
+                    ? "animate-slide-left"
+                    : "opacity-0"
+                }
               >
-                <div className="bg-amber-500 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <item.icon className="w-8 h-8 text-white" />
+                <div className="flex items-center gap-3 mb-4">
+                  <Building2 className="w-8 h-8 text-amber-500" />
+                  <span className="text-amber-500 font-semibold">
+                    TRAINING INFRASTRUCTURE
+                  </span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-amber-600 transition">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {item.description}
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                  World-Class Training Facilities
+                </h2>
+                <p className="text-gray-300 mb-8 leading-relaxed">
+                  State-of-the-art training infrastructure with dedicated rooms,
+                  practical demonstration areas, modern equipment, and digital
+                  learning resources.
+                </p>
+
+                <div className="space-y-4">
+                  {trainingInfrastructure.map((facility, index) => (
+                    <div
+                      key={index}
+                      className="flex items-start gap-4 p-4 bg-gray-800 hover:bg-gray-750 transition"
+                    >
+                      <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <facility.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-white mb-1">
+                          {facility.title}
+                        </h3>
+                        <p className="text-gray-400 text-sm">
+                          {facility.description}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div
+                className={`${
+                  visibleSections["infrastructure"]
+                    ? "animate-slide-right delay-200"
+                    : "opacity-0"
+                }`}
+              >
+                <img
+                  src="/training.jpeg"
+                  alt="Training Infrastructure"
+                  className="w-full h-full object-cover shadow-2xl"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Certifications */}
+        <div
+          ref={(el) => (sectionRefs.current["certifications"] = el)}
+          className="py-20 bg-gray-50"
+        >
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Award className="w-8 h-8 text-amber-500" />
+                <span className="text-amber-500 font-semibold">
+                  CERTIFICATIONS PROVIDED
+                </span>
+              </div>
+              <h2
+                className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
+                  visibleSections["certifications"]
+                    ? "animate-fade"
+                    : "opacity-0"
+                }`}
+              >
+                Industry-Recognized Certifications
+              </h2>
+              <p
+                className={`text-gray-600 max-w-2xl mx-auto ${
+                  visibleSections["certifications"]
+                    ? "animate-fade delay-200"
+                    : "opacity-0"
+                }`}
+              >
+                At the end of training cycles, we provide comprehensive
+                certifications validating skills and competencies
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {certifications.map((cert, index) => (
+                <div
+                  key={index}
+                  className={`bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-amber-500 ${
+                    visibleSections["certifications"]
+                      ? "animate-scale"
+                      : "opacity-0"
+                  }`}
+                  style={{ animationDelay: `${index * 0.15}s` }}
+                >
+                  <div className="bg-amber-500 w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-6">
+                    <cert.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">
+                    {cert.title}
+                  </h3>
+                  <p className="text-gray-600 text-center leading-relaxed">
+                    {cert.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Training Documentation */}
+        <div
+          ref={(el) => (sectionRefs.current["documentation"] = el)}
+          className="py-20 bg-white"
+        >
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div
+                className={`${
+                  visibleSections["documentation"]
+                    ? "animate-slide-left"
+                    : "opacity-0"
+                }`}
+              >
+                <img
+                  src="/recruitment-1.jpeg"
+                  alt="Training Documentation"
+                  className="w-full h-full object-cover shadow-2xl"
+                />
+              </div>
+
+              <div
+                className={
+                  visibleSections["documentation"]
+                    ? "animate-slide-right delay-200"
+                    : "opacity-0"
+                }
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <FileCheck className="w-8 h-8 text-amber-500" />
+                  <span className="text-amber-500 font-semibold">
+                    TRAINING DOCUMENTATION
+                  </span>
+                </div>
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Complete Training Records
+                </h2>
+                <p className="text-gray-600 mb-8 leading-relaxed">
+                  We maintain comprehensive documentation of all training
+                  activities, ensuring transparency and compliance for client
+                  audits.
+                </p>
+
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4 p-4 bg-gray-50">
+                    <div className="bg-amber-500 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <ClipboardCheck className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="text-gray-700 font-medium">
+                      Training attendance registers
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-4 p-4 bg-gray-50">
+                    <div className="bg-amber-500 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <FileCheck className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="text-gray-700 font-medium">
+                      Monthly training reports
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-4 p-4 bg-gray-50">
+                    <div className="bg-amber-500 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <UserCheck className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="text-gray-700 font-medium">
+                      Trainer sign-off records
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-4 p-4 bg-gray-50">
+                    <div className="bg-amber-500 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Camera className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="text-gray-700 font-medium">
+                      Photographs/videos of training sessions
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-4 p-4 bg-gray-50">
+                    <div className="bg-amber-500 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Activity className="w-5 h-5 text-white" />
+                    </div>
+                    <span className="text-gray-700 font-medium">
+                      Annual training audit reports
+                    </span>
+                  </div>
+                </div>
+
+                <p className="text-gray-600 mt-6 italic">
+                  All documentation is available for audits by clients
                 </p>
               </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Service Areas */}
-      <div
-        ref={(el) => (sectionRefs.current["areas"] = el)}
-        className="py-20 bg-white"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <Users2 className="w-8 h-8 text-amber-500" />
-              <span className="text-amber-500 font-semibold">
-                TRAINING FOR ALL TEAMS
-              </span>
-            </div>
-            <h2
-              className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
-                visibleSections["areas"] ? "animate-fade" : "opacity-0"
-              }`}
-            >
-              Comprehensive Training Across All Departments
-            </h2>
-            <p
-              className={`text-gray-600 max-w-2xl mx-auto ${
-                visibleSections["areas"]
-                  ? "animate-fade delay-200"
-                  : "opacity-0"
-              }`}
-            >
-              Specialized training programs for Security, Facility Management,
-              MEP, and Fire & Safety personnel
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {serviceAreas.map((area, index) => (
-              <div
-                key={index}
-                className={`bg-gray-50 p-8 text-center hover:shadow-xl transition-all duration-300 border-l-4 border-amber-500 ${
-                  visibleSections["areas"] ? "animate-slide-up" : "opacity-0"
-                }`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <area.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-2 text-lg">
-                  {area.title}
-                </h3>
-                <p className="text-gray-600 text-sm">{area.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Training Outcomes */}
-      <div className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Training Outcomes: Excellence Guaranteed
-            </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Every deployed personnel is professionally trained and ready to
-              deliver exceptional results from Day 1
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white p-6 border-l-4 border-amber-500">
-              <div className="flex items-center gap-3 mb-3">
-                <CheckCircle className="w-6 h-6 text-amber-500" />
-                <h3 className="font-bold text-gray-900">
-                  Professionally Trained
-                </h3>
-              </div>
-              <p className="text-gray-600 text-sm">
-                Complete mastery of job responsibilities and industry best
-                practices
-              </p>
-            </div>
-            <div className="bg-white p-6 border-l-4 border-amber-500">
-              <div className="flex items-center gap-3 mb-3">
-                <CheckCircle className="w-6 h-6 text-amber-500" />
-                <h3 className="font-bold text-gray-900">
-                  Operationally Competent
-                </h3>
-              </div>
-              <p className="text-gray-600 text-sm">
-                Skilled in all operational procedures and technical requirements
-              </p>
-            </div>
-
-            <div className="bg-white p-6 border-l-4 border-amber-500">
-              <div className="flex items-center gap-3 mb-3">
-                <CheckCircle className="w-6 h-6 text-amber-500" />
-                <h3 className="font-bold text-gray-900">
-                  Disciplined & Customer-Friendly
-                </h3>
-              </div>
-              <p className="text-gray-600 text-sm">
-                Professional conduct with excellent customer service orientation
-              </p>
-            </div>
-
-            <div className="bg-white p-6 border-l-4 border-amber-500">
-              <div className="flex items-center gap-3 mb-3">
-                <CheckCircle className="w-6 h-6 text-amber-500" />
-                <h3 className="font-bold text-gray-900">Technically Strong</h3>
-              </div>
-              <p className="text-gray-600 text-sm">
-                Comprehensive technical knowledge and hands-on expertise
-              </p>
-            </div>
-
-            <div className="bg-white p-6 border-l-4 border-amber-500">
-              <div className="flex items-center gap-3 mb-3">
-                <CheckCircle className="w-6 h-6 text-amber-500" />
-                <h3 className="font-bold text-gray-900">Emergency Ready</h3>
-              </div>
-              <p className="text-gray-600 text-sm">
-                Prepared to handle all emergency situations with confidence
-              </p>
-            </div>
-
-            <div className="bg-white p-6 border-l-4 border-amber-500">
-              <div className="flex items-center gap-3 mb-3">
-                <CheckCircle className="w-6 h-6 text-amber-500" />
-                <h3 className="font-bold text-gray-900">100% Compliant</h3>
-              </div>
-              <p className="text-gray-600 text-sm">
-                Fully aligned with client SOP, KPI & SLA requirements
-              </p>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* CTA Section */}
-      <div className="relative py-20">
+        {/* Why Choose Us */}
         <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/recruitment-hero.jpeg')",
-          }}
-        ></div>
-        <div className="absolute inset-0 bg-black/70"></div>
+          ref={(el) => (sectionRefs.current["why"] = el)}
+          className="py-20 bg-gray-50"
+        >
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Star className="w-8 h-8 text-amber-500" />
+                <span className="text-amber-500 font-semibold">
+                  WHY CHOOSE US
+                </span>
+              </div>
+              <h2
+                className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
+                  visibleSections["why"] ? "animate-fade" : "opacity-0"
+                }`}
+              >
+                Your Trusted Training Partner
+              </h2>
+              <p
+                className={`text-gray-600 max-w-2xl mx-auto ${
+                  visibleSections["why"]
+                    ? "animate-fade delay-200"
+                    : "opacity-0"
+                }`}
+              >
+                Industry-leading training programs ensuring professionally
+                trained, operationally competent, and 100% compliant personnel
+              </p>
+            </div>
 
-        <div className="relative max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Build Excellence Through Professional Training
-          </h2>
-          <p className="text-gray-300 text-lg mb-8">
-            Get access to our comprehensive 52-week training program with PASARA
-            compliance, expert trainers, and industry-recognized certifications.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg flex items-center justify-center"
-            >
-              REQUEST TRAINING DETAILS
-            </Link>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {whyChooseUs.map((item, index) => (
+                <div
+                  key={index}
+                  className={`bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group ${
+                    visibleSections["why"] ? "animate-slide-up" : "opacity-0"
+                  }`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="bg-amber-500 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <item.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-amber-600 transition">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
 
-            <a
-              href="tel:9945230206"
-              className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg flex items-center justify-center"
-            >
-              CALL NOW: 9945230206
-            </a>
+        {/* Service Areas */}
+        <div
+          ref={(el) => (sectionRefs.current["areas"] = el)}
+          className="py-20 bg-white"
+        >
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Users2 className="w-8 h-8 text-amber-500" />
+                <span className="text-amber-500 font-semibold">
+                  TRAINING FOR ALL TEAMS
+                </span>
+              </div>
+              <h2
+                className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
+                  visibleSections["areas"] ? "animate-fade" : "opacity-0"
+                }`}
+              >
+                Comprehensive Training Across All Departments
+              </h2>
+              <p
+                className={`text-gray-600 max-w-2xl mx-auto ${
+                  visibleSections["areas"]
+                    ? "animate-fade delay-200"
+                    : "opacity-0"
+                }`}
+              >
+                Specialized training programs for Security, Facility Management,
+                MEP, and Fire & Safety personnel
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {serviceAreas.map((area, index) => (
+                <div
+                  key={index}
+                  className={`bg-gray-50 p-8 text-center hover:shadow-xl transition-all duration-300 border-l-4 border-amber-500 ${
+                    visibleSections["areas"] ? "animate-slide-up" : "opacity-0"
+                  }`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <area.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="font-bold text-gray-900 mb-2 text-lg">
+                    {area.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm">{area.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Training Outcomes */}
+        <div className="py-20 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Training Outcomes: Excellence Guaranteed
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Every deployed personnel is professionally trained and ready to
+                deliver exceptional results from Day 1
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-white p-6 border-l-4 border-amber-500">
+                <div className="flex items-center gap-3 mb-3">
+                  <CheckCircle className="w-6 h-6 text-amber-500" />
+                  <h3 className="font-bold text-gray-900">
+                    Professionally Trained
+                  </h3>
+                </div>
+                <p className="text-gray-600 text-sm">
+                  Complete mastery of job responsibilities and industry best
+                  practices
+                </p>
+              </div>
+              <div className="bg-white p-6 border-l-4 border-amber-500">
+                <div className="flex items-center gap-3 mb-3">
+                  <CheckCircle className="w-6 h-6 text-amber-500" />
+                  <h3 className="font-bold text-gray-900">
+                    Operationally Competent
+                  </h3>
+                </div>
+                <p className="text-gray-600 text-sm">
+                  Skilled in all operational procedures and technical
+                  requirements
+                </p>
+              </div>
+
+              <div className="bg-white p-6 border-l-4 border-amber-500">
+                <div className="flex items-center gap-3 mb-3">
+                  <CheckCircle className="w-6 h-6 text-amber-500" />
+                  <h3 className="font-bold text-gray-900">
+                    Disciplined & Customer-Friendly
+                  </h3>
+                </div>
+                <p className="text-gray-600 text-sm">
+                  Professional conduct with excellent customer service
+                  orientation
+                </p>
+              </div>
+
+              <div className="bg-white p-6 border-l-4 border-amber-500">
+                <div className="flex items-center gap-3 mb-3">
+                  <CheckCircle className="w-6 h-6 text-amber-500" />
+                  <h3 className="font-bold text-gray-900">
+                    Technically Strong
+                  </h3>
+                </div>
+                <p className="text-gray-600 text-sm">
+                  Comprehensive technical knowledge and hands-on expertise
+                </p>
+              </div>
+
+              <div className="bg-white p-6 border-l-4 border-amber-500">
+                <div className="flex items-center gap-3 mb-3">
+                  <CheckCircle className="w-6 h-6 text-amber-500" />
+                  <h3 className="font-bold text-gray-900">Emergency Ready</h3>
+                </div>
+                <p className="text-gray-600 text-sm">
+                  Prepared to handle all emergency situations with confidence
+                </p>
+              </div>
+
+              <div className="bg-white p-6 border-l-4 border-amber-500">
+                <div className="flex items-center gap-3 mb-3">
+                  <CheckCircle className="w-6 h-6 text-amber-500" />
+                  <h3 className="font-bold text-gray-900">100% Compliant</h3>
+                </div>
+                <p className="text-gray-600 text-sm">
+                  Fully aligned with client SOP, KPI & SLA requirements
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="relative py-20">
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: "url('/recruitment-hero.jpeg')",
+            }}
+          ></div>
+          <div className="absolute inset-0 bg-black/70"></div>
+
+          <div className="relative max-w-4xl mx-auto px-6 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Build Excellence Through Professional Training
+            </h2>
+            <p className="text-gray-300 text-lg mb-8">
+              Get access to our comprehensive 52-week training program with
+              PASARA compliance, expert trainers, and industry-recognized
+              certifications.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg flex items-center justify-center"
+              >
+                REQUEST TRAINING DETAILS
+              </Link>
+
+              <a
+                href="tel:9945230206"
+                className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg flex items-center justify-center"
+              >
+                CALL NOW: 9945230206
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 export default Training;

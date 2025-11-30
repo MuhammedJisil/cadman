@@ -26,6 +26,7 @@ import {
   Thermometer,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "../../components/SEO";
 
 const MEPServices = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -239,9 +240,15 @@ const MEPServices = () => {
   ];
 
   return (
-    <div className="relative w-full overflow-hidden bg-gray-50">
-      <style>
-        {`
+    <>
+      <SEO
+        title="Cadman MEP Services – Mechanical, Electrical & Plumbing Solutions"
+        description="Cadman provides expert MEP services including mechanical, electrical, and plumbing solutions for commercial and residential projects, ensuring efficient and safe operations."
+      />
+
+      <div className="relative w-full overflow-hidden bg-gray-50">
+        <style>
+          {`
           @keyframes slideInFromRight {
             from { transform: translateX(100%); opacity: 0; }
             to { transform: translateX(0); opacity: 1; }
@@ -278,447 +285,457 @@ const MEPServices = () => {
           .delay-600 { animation-delay: 0.6s; }
           .delay-800 { animation-delay: 0.8s; }
         `}
-      </style>
+        </style>
 
-      {/* Hero Section */}
-      <div className="relative h-[560px] w-full">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/mep.jpg')",
-          }}
-        ></div>
-        <div className="absolute inset-0 bg-black/60"></div>
+        {/* Hero Section */}
+        <div className="relative h-[560px] w-full">
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: "url('/mep.jpg')",
+            }}
+          ></div>
+          <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="relative max-w-7xl mx-auto px-6 pt-48 pb-32 lg:pt-56 lg:pb-40 md:pt-44 md:pb-24">
-          <div className="max-w-3xl">
-            <div
-              className={`flex items-center gap-3 mb-4 ${
-                isLoaded ? "animate-slide-left" : "opacity-0"
-              }`}
-            >
-              <div className="h-0.5 w-16 bg-amber-500"></div>
-              <span className="text-amber-500 italic text-lg">
-                Complete Technical Operations & Maintenance
-              </span>
-            </div>
-
-            <h1
-              className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 ${
-                isLoaded ? "animate-slide-right delay-200" : "opacity-0"
-              }`}
-            >
-              MEP Services
-            </h1>
-
-            <p
-              className={`text-gray-300 text-lg md:text-xl leading-relaxed ${
-                isLoaded ? "animate-fade delay-400" : "opacity-0"
-              }`}
-            >
-              Comprehensive Mechanical, Electrical & Plumbing solutions with
-              certified technicians, preventive maintenance, and 24/7 emergency
-              support.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Electrical Services */}
-      <div
-        ref={(el) => (sectionRefs.current["electrical"] = el)}
-        className="py-20 bg-white"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <Zap className="w-8 h-8 text-amber-500" />
-              <span className="text-amber-500 font-semibold">
-                ELECTRICAL SERVICES
-              </span>
-            </div>
-            <h2
-              className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
-                visibleSections["electrical"] ? "animate-fade" : "opacity-0"
-              }`}
-            >
-              Professional Electrical Operations
-            </h2>
-            <p
-              className={`text-gray-600 max-w-2xl mx-auto ${
-                visibleSections["electrical"]
-                  ? "animate-fade delay-200"
-                  : "opacity-0"
-              }`}
-            >
-              Expert electrical services with licensed technicians for all your
-              power distribution and energy management needs
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {electricalServices.map((service, index) => (
+          <div className="relative max-w-7xl mx-auto px-6 pt-48 pb-32 lg:pt-56 lg:pb-40 md:pt-44 md:pb-24">
+            <div className="max-w-3xl">
               <div
-                key={index}
-                className={`bg-gray-50 p-6 hover:shadow-xl transition-all duration-300 border-l-4 border-transparent hover:border-amber-500 group ${
-                  visibleSections["electrical"]
-                    ? "animate-slide-up"
-                    : "opacity-0"
+                className={`flex items-center gap-3 mb-4 ${
+                  isLoaded ? "animate-slide-left" : "opacity-0"
                 }`}
-                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="bg-amber-500 w-14 h-14 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  <service.icon className="w-7 h-7 text-white" />
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-amber-600 transition">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Mechanical Services */}
-      <div
-        ref={(el) => (sectionRefs.current["mechanical"] = el)}
-        className="py-20 bg-gray-50"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <Settings className="w-8 h-8 text-amber-500" />
-              <span className="text-amber-500 font-semibold">
-                MECHANICAL SERVICES
-              </span>
-            </div>
-            <h2
-              className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
-                visibleSections["mechanical"] ? "animate-fade" : "opacity-0"
-              }`}
-            >
-              Advanced Mechanical Systems Management
-            </h2>
-            <p
-              className={`text-gray-600 max-w-2xl mx-auto ${
-                visibleSections["mechanical"]
-                  ? "animate-fade delay-200"
-                  : "opacity-0"
-              }`}
-            >
-              Complete mechanical equipment maintenance including HVAC,
-              chillers, pumps, and critical building systems
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {mechanicalServices.map((service, index) => (
-              <div
-                key={index}
-                className={`bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-amber-500 ${
-                  visibleSections["mechanical"] ? "animate-scale" : "opacity-0"
-                }`}
-                style={{ animationDelay: `${index * 0.15}s` }}
-              >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="bg-amber-500 w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <service.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-600 mb-4">{service.description}</p>
-                  </div>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {service.features.map((feature, fIndex) => (
-                    <span
-                      key={fIndex}
-                      className="px-3 py-1 bg-amber-50 text-amber-700 text-sm font-medium"
-                    >
-                      {feature}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Plumbing Services */}
-      <div
-        ref={(el) => (sectionRefs.current["plumbing"] = el)}
-        className="py-20 bg-white"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div
-              className={
-                visibleSections["plumbing"] ? "animate-slide-left" : "opacity-0"
-              }
-            >
-              <div className="flex items-center gap-3 mb-4">
-                <Droplets className="w-8 h-8 text-amber-500" />
-                <span className="text-amber-500 font-semibold">
-                  PLUMBING SERVICES
+                <div className="h-0.5 w-16 bg-amber-500"></div>
+                <span className="text-amber-500 italic text-lg">
+                  Complete Technical Operations & Maintenance
                 </span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                Complete Plumbing & Water Management
-              </h2>
-              <p className="text-gray-600 mb-8 leading-relaxed">
-                Comprehensive plumbing solutions including water treatment
-                plants, pump operations, and drainage systems for optimal water
-                management.
-              </p>
 
-              <div className="space-y-4">
-                {plumbingServices.map((service, index) => (
-                  <div
-                    key={index}
-                    className="flex items-start gap-4 p-4 bg-gray-50 hover:bg-amber-50 transition"
-                  >
-                    <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <service.icon className="w-6 h-6 text-white" />
+              <h1
+                className={`text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 ${
+                  isLoaded ? "animate-slide-right delay-200" : "opacity-0"
+                }`}
+              >
+                MEP Services
+              </h1>
+
+              <p
+                className={`text-gray-300 text-lg md:text-xl leading-relaxed ${
+                  isLoaded ? "animate-fade delay-400" : "opacity-0"
+                }`}
+              >
+                Comprehensive Mechanical, Electrical & Plumbing solutions with
+                certified technicians, preventive maintenance, and 24/7
+                emergency support.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Electrical Services */}
+        <div
+          ref={(el) => (sectionRefs.current["electrical"] = el)}
+          className="py-20 bg-white"
+        >
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Zap className="w-8 h-8 text-amber-500" />
+                <span className="text-amber-500 font-semibold">
+                  ELECTRICAL SERVICES
+                </span>
+              </div>
+              <h2
+                className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
+                  visibleSections["electrical"] ? "animate-fade" : "opacity-0"
+                }`}
+              >
+                Professional Electrical Operations
+              </h2>
+              <p
+                className={`text-gray-600 max-w-2xl mx-auto ${
+                  visibleSections["electrical"]
+                    ? "animate-fade delay-200"
+                    : "opacity-0"
+                }`}
+              >
+                Expert electrical services with licensed technicians for all
+                your power distribution and energy management needs
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {electricalServices.map((service, index) => (
+                <div
+                  key={index}
+                  className={`bg-gray-50 p-6 hover:shadow-xl transition-all duration-300 border-l-4 border-transparent hover:border-amber-500 group ${
+                    visibleSections["electrical"]
+                      ? "animate-slide-up"
+                      : "opacity-0"
+                  }`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="bg-amber-500 w-14 h-14 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <service.icon className="w-7 h-7 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-amber-600 transition">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Mechanical Services */}
+        <div
+          ref={(el) => (sectionRefs.current["mechanical"] = el)}
+          className="py-20 bg-gray-50"
+        >
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Settings className="w-8 h-8 text-amber-500" />
+                <span className="text-amber-500 font-semibold">
+                  MECHANICAL SERVICES
+                </span>
+              </div>
+              <h2
+                className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
+                  visibleSections["mechanical"] ? "animate-fade" : "opacity-0"
+                }`}
+              >
+                Advanced Mechanical Systems Management
+              </h2>
+              <p
+                className={`text-gray-600 max-w-2xl mx-auto ${
+                  visibleSections["mechanical"]
+                    ? "animate-fade delay-200"
+                    : "opacity-0"
+                }`}
+              >
+                Complete mechanical equipment maintenance including HVAC,
+                chillers, pumps, and critical building systems
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {mechanicalServices.map((service, index) => (
+                <div
+                  key={index}
+                  className={`bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 border-amber-500 ${
+                    visibleSections["mechanical"]
+                      ? "animate-scale"
+                      : "opacity-0"
+                  }`}
+                  style={{ animationDelay: `${index * 0.15}s` }}
+                >
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="bg-amber-500 w-16 h-16 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <service.icon className="w-8 h-8 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-bold text-gray-900 mb-1">
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">
                         {service.title}
                       </h3>
-                      <p className="text-gray-600 text-sm">
+                      <p className="text-gray-600 mb-4">
                         {service.description}
                       </p>
                     </div>
                   </div>
-                ))}
-              </div>
-            </div>
-
-            <div
-              className={`${
-                visibleSections["plumbing"]
-                  ? "animate-slide-right delay-200"
-                  : "opacity-0"
-              }`}
-            >
-              <img
-                src="/mep-1.jpg"
-                alt="Plumbing Services"
-                className="w-full h-full object-cover shadow-2xl"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Operation Areas */}
-      <div
-        ref={(el) => (sectionRefs.current["areas"] = el)}
-        className="py-20 bg-gray-900"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <Building2 className="w-8 h-8 text-amber-500" />
-              <span className="text-amber-500 font-semibold">
-                SERVICE AREAS
-              </span>
-            </div>
-            <h2
-              className={`text-3xl md:text-4xl font-bold text-white mb-4 ${
-                visibleSections["areas"] ? "animate-fade" : "opacity-0"
-              }`}
-            >
-              We Serve Multiple Sectors
-            </h2>
-            <p
-              className={`text-gray-300 max-w-2xl mx-auto ${
-                visibleSections["areas"]
-                  ? "animate-fade delay-200"
-                  : "opacity-0"
-              }`}
-            >
-              Comprehensive MEP solutions across commercial, industrial,
-              residential, and hospitality sectors
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {operationAreas.map((area, index) => (
-              <div
-                key={index}
-                className={`bg-gray-800 p-6 hover:bg-gray-750 transition-all duration-300 border-l-4 border-amber-500 ${
-                  visibleSections["areas"] ? "animate-slide-up" : "opacity-0"
-                }`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex flex-col items-center text-center">
-                  <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mb-4">
-                    <area.icon className="w-8 h-8 text-white" />
+                  <div className="flex flex-wrap gap-2">
+                    {service.features.map((feature, fIndex) => (
+                      <span
+                        key={fIndex}
+                        className="px-3 py-1 bg-amber-50 text-amber-700 text-sm font-medium"
+                      >
+                        {feature}
+                      </span>
+                    ))}
                   </div>
-                  <h3 className="font-bold text-white mb-2">{area.title}</h3>
-                  <p className="text-gray-400 text-sm">{area.description}</p>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Why Choose Us */}
-      <div
-        ref={(el) => (sectionRefs.current["why"] = el)}
-        className="py-20 bg-gray-50"
-      >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <ShieldCheck className="w-8 h-8 text-amber-500" />
-              <span className="text-amber-500 font-semibold">
-                WHY CHOOSE US
-              </span>
-            </div>
-            <h2
-              className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
-                visibleSections["why"] ? "animate-fade" : "opacity-0"
-              }`}
-            >
-              Your Trusted MEP Service Partner
-            </h2>
-            <p
-              className={`text-gray-600 max-w-2xl mx-auto ${
-                visibleSections["why"] ? "animate-fade delay-200" : "opacity-0"
-              }`}
-            >
-              Experience professional MEP management with certified technicians,
-              preventive maintenance, and guaranteed operational excellence
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {whyChooseUs.map((item, index) => (
+        {/* Plumbing Services */}
+        <div
+          ref={(el) => (sectionRefs.current["plumbing"] = el)}
+          className="py-20 bg-white"
+        >
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
               <div
-                key={index}
-                className={`bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group ${
-                  visibleSections["why"] ? "animate-slide-up" : "opacity-0"
-                }`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className={
+                  visibleSections["plumbing"]
+                    ? "animate-slide-left"
+                    : "opacity-0"
+                }
               >
-                <div className="bg-amber-500 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                  <item.icon className="w-8 h-8 text-white" />
+                <div className="flex items-center gap-3 mb-4">
+                  <Droplets className="w-8 h-8 text-amber-500" />
+                  <span className="text-amber-500 font-semibold">
+                    PLUMBING SERVICES
+                  </span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-amber-600 transition">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {item.description}
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                  Complete Plumbing & Water Management
+                </h2>
+                <p className="text-gray-600 mb-8 leading-relaxed">
+                  Comprehensive plumbing solutions including water treatment
+                  plants, pump operations, and drainage systems for optimal
+                  water management.
+                </p>
+
+                <div className="space-y-4">
+                  {plumbingServices.map((service, index) => (
+                    <div
+                      key={index}
+                      className="flex items-start gap-4 p-4 bg-gray-50 hover:bg-amber-50 transition"
+                    >
+                      <div className="bg-amber-500 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <service.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-gray-900 mb-1">
+                          {service.title}
+                        </h3>
+                        <p className="text-gray-600 text-sm">
+                          {service.description}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div
+                className={`${
+                  visibleSections["plumbing"]
+                    ? "animate-slide-right delay-200"
+                    : "opacity-0"
+                }`}
+              >
+                <img
+                  src="/mep-1.jpg"
+                  alt="Plumbing Services"
+                  className="w-full h-full object-cover shadow-2xl"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Operation Areas */}
+        <div
+          ref={(el) => (sectionRefs.current["areas"] = el)}
+          className="py-20 bg-gray-900"
+        >
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Building2 className="w-8 h-8 text-amber-500" />
+                <span className="text-amber-500 font-semibold">
+                  SERVICE AREAS
+                </span>
+              </div>
+              <h2
+                className={`text-3xl md:text-4xl font-bold text-white mb-4 ${
+                  visibleSections["areas"] ? "animate-fade" : "opacity-0"
+                }`}
+              >
+                We Serve Multiple Sectors
+              </h2>
+              <p
+                className={`text-gray-300 max-w-2xl mx-auto ${
+                  visibleSections["areas"]
+                    ? "animate-fade delay-200"
+                    : "opacity-0"
+                }`}
+              >
+                Comprehensive MEP solutions across commercial, industrial,
+                residential, and hospitality sectors
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {operationAreas.map((area, index) => (
+                <div
+                  key={index}
+                  className={`bg-gray-800 p-6 hover:bg-gray-750 transition-all duration-300 border-l-4 border-amber-500 ${
+                    visibleSections["areas"] ? "animate-slide-up" : "opacity-0"
+                  }`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="flex flex-col items-center text-center">
+                    <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                      <area.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <h3 className="font-bold text-white mb-2">{area.title}</h3>
+                    <p className="text-gray-400 text-sm">{area.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Why Choose Us */}
+        <div
+          ref={(el) => (sectionRefs.current["why"] = el)}
+          className="py-20 bg-gray-50"
+        >
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <ShieldCheck className="w-8 h-8 text-amber-500" />
+                <span className="text-amber-500 font-semibold">
+                  WHY CHOOSE US
+                </span>
+              </div>
+              <h2
+                className={`text-3xl md:text-4xl font-bold text-gray-900 mb-4 ${
+                  visibleSections["why"] ? "animate-fade" : "opacity-0"
+                }`}
+              >
+                Your Trusted MEP Service Partner
+              </h2>
+              <p
+                className={`text-gray-600 max-w-2xl mx-auto ${
+                  visibleSections["why"]
+                    ? "animate-fade delay-200"
+                    : "opacity-0"
+                }`}
+              >
+                Experience professional MEP management with certified
+                technicians, preventive maintenance, and guaranteed operational
+                excellence
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {whyChooseUs.map((item, index) => (
+                <div
+                  key={index}
+                  className={`bg-white p-8 shadow-lg hover:shadow-2xl transition-all duration-300 group ${
+                    visibleSections["why"] ? "animate-slide-up" : "opacity-0"
+                  }`}
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="bg-amber-500 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                    <item.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-amber-600 transition">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Service Process */}
+        <div className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our Service Approach
+              </h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                A systematic methodology ensuring optimal performance and
+                minimal downtime
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-white">1</span>
+                </div>
+                <h3 className="font-bold text-gray-900 mb-2">Assessment</h3>
+                <p className="text-gray-600 text-sm">
+                  Comprehensive evaluation of existing MEP systems and
+                  requirements
                 </p>
               </div>
-            ))}
+
+              <div className="text-center">
+                <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-white">2</span>
+                </div>
+                <h3 className="font-bold text-gray-900 mb-2">Planning</h3>
+                <p className="text-gray-600 text-sm">
+                  Customized maintenance schedule and operational procedures
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-white">3</span>
+                </div>
+                <h3 className="font-bold text-gray-900 mb-2">Execution</h3>
+                <p className="text-gray-600 text-sm">
+                  Professional service delivery by certified technical teams
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-white">4</span>
+                </div>
+                <h3 className="font-bold text-gray-900 mb-2">Monitoring</h3>
+                <p className="text-gray-600 text-sm">
+                  Continuous performance tracking and preventive maintenance
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Service Process */}
-      <div className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Our Service Approach
+        {/* CTA Section */}
+        <div className="relative py-20">
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: "url('/mep-footer.jpeg')",
+            }}
+          ></div>
+          <div className="absolute inset-0 bg-black/70"></div>
+
+          <div className="relative max-w-4xl mx-auto px-6 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Optimize Your MEP Operations Today
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              A systematic methodology ensuring optimal performance and minimal
-              downtime
+            <p className="text-gray-300 text-lg mb-8">
+              Get expert MEP solutions with certified technicians, preventive
+              maintenance programs, and 24/7 emergency support for uninterrupted
+              operations.
             </p>
-          </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg flex items-center justify-center"
+              >
+                REQUEST CONSULTATION
+              </Link>
 
-          <div className="grid md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">1</span>
-              </div>
-              <h3 className="font-bold text-gray-900 mb-2">Assessment</h3>
-              <p className="text-gray-600 text-sm">
-                Comprehensive evaluation of existing MEP systems and
-                requirements
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">2</span>
-              </div>
-              <h3 className="font-bold text-gray-900 mb-2">Planning</h3>
-              <p className="text-gray-600 text-sm">
-                Customized maintenance schedule and operational procedures
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">3</span>
-              </div>
-              <h3 className="font-bold text-gray-900 mb-2">Execution</h3>
-              <p className="text-gray-600 text-sm">
-                Professional service delivery by certified technical teams
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-amber-500 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-white">4</span>
-              </div>
-              <h3 className="font-bold text-gray-900 mb-2">Monitoring</h3>
-              <p className="text-gray-600 text-sm">
-                Continuous performance tracking and preventive maintenance
-              </p>
+              <a
+                href="tel:9945230206"
+                className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg flex items-center justify-center"
+              >
+                CALL NOW: 9945230206
+              </a>
             </div>
           </div>
         </div>
       </div>
-
-      {/* CTA Section */}
-      <div className="relative py-20">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/mep-footer.jpeg')",
-          }}
-        ></div>
-        <div className="absolute inset-0 bg-black/70"></div>
-
-        <div className="relative max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Optimize Your MEP Operations Today
-          </h2>
-          <p className="text-gray-300 text-lg mb-8">
-            Get expert MEP solutions with certified technicians, preventive
-            maintenance programs, and 24/7 emergency support for uninterrupted
-            operations.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg flex items-center justify-center"
-            >
-              REQUEST CONSULTATION
-            </Link>
-
-            <a
-              href="tel:9945230206"
-              className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg flex items-center justify-center"
-            >
-              CALL NOW: 9945230206
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 
