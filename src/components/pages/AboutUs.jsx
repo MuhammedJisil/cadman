@@ -11,6 +11,7 @@ import {
   Building2,
   Briefcase,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -178,17 +179,16 @@ const AboutUs = () => {
       </style>
 
       {/* Hero Section */}
-      <div className="relative h-120 w-full mt-20">
+      <div className="relative h-[560px] w-full">
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1920&q=80)",
+            backgroundImage: "url('/recruitment-hero.jpeg')",
           }}
         ></div>
-        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="relative max-w-7xl mx-auto px-6 h-full flex items-center">
+        <div className="relative max-w-7xl mx-auto px-6 pt-48 pb-32 lg:pt-56 lg:pb-40 md:pt-44 md:pb-24">
           <div className="max-w-3xl">
             <div
               className={`flex items-center gap-3 mb-4 ${
@@ -285,7 +285,7 @@ const AboutUs = () => {
               }`}
             >
               <img
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80"
+                src="/sg-hero.jpeg"
                 alt="Company Building"
                 className="w-full h-full object-cover shadow-2xl"
               />
@@ -518,8 +518,7 @@ const AboutUs = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1920&q=80)",
+            backgroundImage: "url('/ee-footer.jpeg')",
           }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>
@@ -532,13 +531,13 @@ const AboutUs = () => {
             Experience the difference that visionary leadership, trained
             personnel, and complete compliance can make.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg">
+          <div className="flex flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg"
+            >
               CONTACT US TODAY
-            </button>
-            <button className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg">
-              EXPLORE SERVICES
-            </button>
+            </Link>
           </div>
         </div>
       </div>
