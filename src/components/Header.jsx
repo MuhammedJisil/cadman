@@ -86,7 +86,7 @@ const Header = () => {
               </div>
               <div className="text-white">
                 <div className="text-xs opacity-90">On-Call Service 24/7</div>
-                <div className="font-semibold">(+62) 888-800-212</div>
+                <div className="font-semibold">+91-9945230206</div>
               </div>
             </div>
             <div className="flex items-center gap-2">
@@ -95,7 +95,7 @@ const Header = () => {
               </div>
               <div className="text-white">
                 <div className="text-xs opacity-90">Email Address</div>
-                <div className="font-semibold">SUPPORT@YOURMAIL.TLD</div>
+                <div className="font-semibold">info@cadmansecurity.com</div>
               </div>
             </div>
           </div>
