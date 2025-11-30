@@ -12,19 +12,17 @@ import {
   CheckCircle,
   ArrowRight,
 } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
 
 const Home = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isLoaded, setIsLoaded] = useState(false);
   const [visibleSections, setVisibleSections] = useState({});
   const sectionRefs = useRef({});
+  const navigate = useNavigate();
 
-  const backgroundImages = [
-    "/security.jpg",
-    "/security_hero_1.jpg",
-    "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=1920&q=80",
-    "https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=1920&q=80",
-  ];
+  const handleServiceClick = (path) => {
+    navigate(path);
+  };
 
   const services = [
     {
@@ -32,8 +30,7 @@ const Home = () => {
       title: "Security Services",
       description:
         "Comprehensive protection with trained guards, armed security, rapid response teams, and 24/7 surveillance.",
-      image:
-        "security_card.jpg",
+      image: "security_card.jpg",
       path: "/services/security",
     },
     {
@@ -41,8 +38,7 @@ const Home = () => {
       title: "Facility Management",
       description:
         "Complete soft and technical facility services including housekeeping, MEP operations, and integrated property management.",
-      image:
-        "/fm_footer.jpg",
+      image: "/fm_footer.jpg",
       path: "/services/facility-management",
     },
     {
@@ -50,8 +46,7 @@ const Home = () => {
       title: "Pest Control",
       description:
         "Government-approved pest management solutions for cockroaches, termites, rodents, and all types of pests.",
-      image:
-        "pest_control.jpg",
+      image: "pest_control.jpg",
       path: "/services/pest-control",
     },
     {
@@ -59,8 +54,7 @@ const Home = () => {
       title: "CCTV & Surveillance",
       description:
         "Smart surveillance systems with IP cameras, access control, and remote monitoring solutions.",
-      image:
-        "/cctv.png",
+      image: "/cctv_hero.jpeg",
       path: "/services/cctv-security",
     },
     {
@@ -68,8 +62,7 @@ const Home = () => {
       title: "MEP Services",
       description:
         "Expert mechanical, electrical, and plumbing operations with licensed technicians and preventive maintenance.",
-      image:
-        "https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=800&q=80",
+      image: "/mep.jpg",
       path: "/services/mep",
     },
     {
@@ -77,13 +70,10 @@ const Home = () => {
       title: "Fire & Safety",
       description:
         "Complete fire protection with trained fire guards, system maintenance, safety audits, and emergency response.",
-      image:
-        "https://images.unsplash.com/photo-1617791160505-6f00504e3519?w=800&q=80",
+      image: "/fireandsafety.jpg",
       path: "/services/fire-safety",
     },
   ];
-
-  
 
   const certifications = [
     "ISO 9001:2008 – Quality Management",
@@ -93,15 +83,6 @@ const Home = () => {
     "ISO 45001 – Health & Safety",
     "ISO 20121 – Event Sustainability",
   ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex(
-        (prevIndex) => (prevIndex + 1) % backgroundImages.length
-      );
-    }, 5000);
-    return () => clearInterval(interval);
-  }, []);
 
   useEffect(() => {
     setIsLoaded(true);
@@ -131,11 +112,6 @@ const Home = () => {
 
     return () => observers.forEach((observer) => observer.disconnect());
   }, []);
-
-  const handleServiceClick = (path) => {
-    // In a real app with React Router: navigate(path)
-    console.log("Navigate to:", path);
-  };
 
   return (
     <div className="relative w-full overflow-hidden bg-gray-50">
@@ -180,24 +156,18 @@ const Home = () => {
       </style>
 
       {/* Hero Section */}
-      <div className="relative min-h-screen w-full">
-        {backgroundImages.map((image, index) => (
-          <div
-            key={index}
-            className="absolute inset-0 bg-cover bg-center transition-opacity duration-1000"
-            style={{
-              backgroundImage: `url(${image})`,
-              opacity: currentImageIndex === index ? 1 : 0,
-            }}
-          ></div>
-        ))}
-
+      <div
+        className="relative min-h-screen w-full bg-cover bg-center"
+        style={{
+          backgroundImage: "url('/security.jpg')",
+        }}
+      >
         <div className="absolute inset-0 bg-black/60"></div>
 
-        <div className="relative max-w-7xl mx-auto px-6 pt-48 pb-32 lg:pt-56 lg:pb-40 md:pt-44 md:pb-24">
+        <div className="relative max-w-7xl mx-auto px-6 pt-56 pb-32 lg:pt-64 lg:pb-40 md:pt-52 md:pb-24">
           <div className="max-w-2xl">
             <div
-              className={`flex items-center gap-3 mb-6 ${
+              className={`flex items-center justify-center lg:justify-start gap-3 mb-6 ${
                 isLoaded ? "animate-slide-left" : "opacity-0"
               }`}
             >
@@ -238,30 +208,29 @@ const Home = () => {
             </p>
 
             <div
-              className={`flex flex-col sm:flex-row gap-4 ${
+              className={`flex flex-row  gap-4 ${
                 isLoaded ? "animate-fade delay-600" : "opacity-0"
               }`}
             >
-              <button
-                onClick={() => handleServiceClick("/contact")}
+              <Link
+                to="/contact"
                 className="px-8 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg"
               >
                 GET STARTED
-              </button>
-              <button
-                onClick={() => handleServiceClick("/about")}
+              </Link>
+
+              <Link
+                to="/about"
                 className="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition"
               >
-                READ MORE
-              </button>
+                ABOUT US
+              </Link>
             </div>
           </div>
         </div>
 
         <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-gradient-to-l from-black/40 to-transparent hidden lg:block pointer-events-none"></div>
       </div>
-
-
 
       {/* About Section */}
       <div
@@ -430,7 +399,7 @@ const Home = () => {
               }`}
             >
               <img
-                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80"
+                src="/recruitment-1.jpeg"
                 alt="ISO Certifications"
                 className="w-full h-96 object-cover shadow-2xl"
               />
@@ -506,38 +475,32 @@ const Home = () => {
               {
                 state: "Karnataka",
                 cities: "Bangalore, Mysore, Mangalore",
-                image:
-                  "https://images.unsplash.com/photo-1596176530529-78163a4f7af2?w=600&q=80",
+                image: "/karnataka.jpeg",
               },
               {
                 state: "Tamil Nadu",
                 cities: "Chennai, Coimbatore, Madurai",
-                image:
-                  "https://images.unsplash.com/photo-1582510003544-4d00b7f74220?w=600&q=80",
+                image: "/tamilnadu.jpeg",
               },
               {
                 state: "Kerala",
                 cities: "Kochi, Trivandrum, Kozhikode",
-                image:
-                  "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600&q=80",
+                image: "/kerala.jpeg",
               },
               {
                 state: "Telangana",
                 cities: "Hyderabad, Warangal",
-                image:
-                  "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?w=600&q=80",
+                image: "/telangana.jpeg",
               },
               {
                 state: "Andhra Pradesh",
                 cities: "Vijayawada, Visakhapatnam",
-                image:
-                  "https://images.unsplash.com/photo-1609137144813-7d9921338f24?w=600&q=80",
+                image: "/andrapradesh.jpeg",
               },
               {
                 state: "Maharashtra",
                 cities: "Mumbai, Pune, Nagpur",
-                image:
-                  "https://images.unsplash.com/photo-1566552881560-0be862a7c445?w=600&q=80",
+                image: "/maharashtra.jpeg",
               },
             ].map((location, index) => (
               <div
@@ -619,7 +582,7 @@ const Home = () => {
               }`}
             >
               <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80"
+                src="/howwework-3.jpeg"
                 alt="Training Program"
                 className="w-full h-96 object-cover shadow-2xl"
               />
@@ -633,8 +596,7 @@ const Home = () => {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1920&q=80)",
+            backgroundImage: "url('/security_footer.jpg')",
           }}
         ></div>
         <div className="absolute inset-0 bg-black/70"></div>
@@ -648,18 +610,19 @@ const Home = () => {
             management solution tailored to your needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              onClick={() => handleServiceClick("/contact")}
+            <Link
+              to="/contact"
               className="px-10 py-4 bg-amber-500 text-white font-semibold hover:bg-amber-600 transition shadow-lg text-lg"
             >
               GET A QUOTE
-            </button>
-            <button
-              onClick={() => handleServiceClick("/services")}
+            </Link>
+
+            <a
+              href="tel:9945230206"
               className="px-10 py-4 bg-transparent border-2 border-white text-white font-semibold hover:bg-white hover:text-gray-900 transition text-lg"
             >
-              VIEW ALL SERVICES
-            </button>
+              CALL NOW: 9945230206
+            </a>
           </div>
         </div>
       </div>
