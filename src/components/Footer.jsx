@@ -28,7 +28,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <div className="flex items-center gap-3 mb-6">
+            <Link
+              to="/"
+              className="flex items-center gap-3 mb-6 cursor-pointer"
+            >
               <img
                 src="/logo.png"
                 alt="Cadman Security Service"
@@ -40,7 +43,7 @@ const Footer = () => {
                   SECURITY SERVICE
                 </div>
               </div>
-            </div>
+            </Link>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Providing professional security and facility management solutions
               with excellence and integrity since our establishment.
@@ -104,15 +107,7 @@ const Footer = () => {
                   Training
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/operations"
-                  className="text-gray-400 hover:text-amber-500 transition flex items-center gap-2 text-sm"
-                >
-                  <ChevronRight size={16} className="text-amber-500" />
-                  Operations
-                </Link>
-              </li>
+
               <li>
                 <Link
                   to="/contact"
@@ -199,7 +194,8 @@ const Footer = () => {
                     Address
                   </div>
                   <p className="text-gray-400 text-sm">
-                    123 Security Boulevard, Business District, City 12345
+                    106, 1st Floor, 40 Feet Road Manjunathnagar, West of Chord
+                    Road Bangalore -560010
                   </p>
                 </div>
               </div>
@@ -211,7 +207,7 @@ const Footer = () => {
                   <div className="text-xs text-gray-500 uppercase mb-1">
                     Phone
                   </div>
-                  <p className="text-gray-400 text-sm">(+62) 888-800-212</p>
+                  <p className="text-gray-400 text-sm">+91-9945230206</p>
                   <p className="text-gray-400 text-sm">24/7 On-Call Service</p>
                 </div>
               </div>
@@ -223,7 +219,9 @@ const Footer = () => {
                   <div className="text-xs text-gray-500 uppercase mb-1">
                     Email
                   </div>
-                  <p className="text-gray-400 text-sm">support@yourmail.tld</p>
+                  <p className="text-gray-400 text-sm">
+                    info@cadmansecurity.com
+                  </p>
                 </div>
               </div>
             </div>

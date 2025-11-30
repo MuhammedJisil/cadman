@@ -62,7 +62,7 @@ const Header = () => {
       <div className="bg-gradient-to-r from-blue-900 to-blue-800 pb-12 hidden lg:block">
         <div className="max-w-7xl mx-auto px-6 pt-4 flex justify-between items-center">
           {/* Logo and Company Name */}
-          <div className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3 cursor-pointer">
             <img
               src="/logo.png"
               alt="Cadman Security Service"
@@ -76,7 +76,7 @@ const Header = () => {
                 SECURITY SERVICE
               </div>
             </div>
-          </div>
+          </Link>
 
           {/* Contact Information */}
           <div className="flex items-center gap-8">
@@ -105,24 +105,25 @@ const Header = () => {
       {/* Mobile Header */}
       <div className="lg:hidden">
         {/* Blue Section with Logo */}
-        <div className="bg-gradient-to-r from-blue-900 to-blue-800 pt-3 pb-6">
-          <div className="flex items-center justify-center gap-3">
-            <img
-              src="/logo.png"
-              alt="Cadman Security Service"
-              className="h-10 w-auto"
-            />
-            <div>
-              <div className="text-white text-lg font-bold tracking-tight">
-                CADMAN
-              </div>
-              <div className="text-amber-500 text-xs tracking-widest">
-                SECURITY SERVICE
+        <Link to="/" className="block">
+          <div className="bg-gradient-to-r from-blue-900 to-blue-800 pt-3 pb-6 cursor-pointer">
+            <div className="flex items-center justify-center gap-3">
+              <img
+                src="/logo.png"
+                alt="Cadman Security Service"
+                className="h-10 w-auto"
+              />
+              <div>
+                <div className="text-white text-lg font-bold tracking-tight">
+                  CADMAN
+                </div>
+                <div className="text-amber-500 text-xs tracking-widest">
+                  SECURITY SERVICE
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
+        </Link>
         {/* Navy Blue Navigation Bar with Hamburger and Social Icons */}
         <div className="-mt-4 px-4">
           <div className="bg-gray-900 flex items-center justify-between px-4 py-2.5 shadow-lg">
