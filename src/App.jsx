@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import PrivacyPolicy from "./components/PrivacyPolicy";
 
 // main navigations
 import Home from "./components/pages/Home";
@@ -41,6 +42,8 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/training" element={<Training />} />
           <Route path="/contact" element={<ContactUs />} />
+
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
           {/* Service Routes */}
           <Route path="/services/security" element={<SecurityServices />} />

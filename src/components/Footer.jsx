@@ -117,6 +117,15 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/privacy-policy"
+                  className="text-gray-400 hover:text-amber-500 transition flex items-center gap-2 text-sm"
+                >
+                  <ChevronRight size={16} className="text-amber-500" />
+                  Privacy Policy
+                </Link>
+              </li>
             </ul>
           </div>
 
