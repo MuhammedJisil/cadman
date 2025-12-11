@@ -490,34 +490,23 @@ const ContactUs = () => {
 
             <div className="flex justify-center gap-6">
               <a
-                href="#"
+                href="https://www.facebook.com/share/16gxYaeBhu/"
                 className="bg-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:bg-amber-500 hover:text-white transition-all duration-300 group"
               >
                 <Facebook className="w-7 h-7 text-gray-700 group-hover:text-white transition" />
               </a>
+
               <a
-                href="#"
-                className="bg-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:bg-amber-500 hover:text-white transition-all duration-300 group"
-              >
-                <Twitter className="w-7 h-7 text-gray-700 group-hover:text-white transition" />
-              </a>
-              <a
-                href="#"
+                href="https://www.linkedin.com/company/110268159/admin/dashboard/"
                 className="bg-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:bg-amber-500 hover:text-white transition-all duration-300 group"
               >
                 <Linkedin className="w-7 h-7 text-gray-700 group-hover:text-white transition" />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/cadmansecurityservices/"
                 className="bg-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:bg-amber-500 hover:text-white transition-all duration-300 group"
               >
                 <Instagram className="w-7 h-7 text-gray-700 group-hover:text-white transition" />
-              </a>
-              <a
-                href="#"
-                className="bg-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:bg-amber-500 hover:text-white transition-all duration-300 group"
-              >
-                <Globe className="w-7 h-7 text-gray-700 group-hover:text-white transition" />
               </a>
             </div>
           </div>
