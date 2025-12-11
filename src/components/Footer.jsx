@@ -5,10 +5,9 @@ import {
   Mail,
   MapPin,
   Facebook,
-  Twitter,
-  Youtube,
   Instagram,
   ChevronRight,
+  Linkedin,
 } from "lucide-react";
 
 const Footer = () => {
@@ -50,25 +49,20 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <a
-                href="#"
+                href="https://www.facebook.com/share/16gxYaeBhu/"
                 className="bg-gray-800 p-2 rounded hover:bg-amber-500 transition"
               >
                 <Facebook size={18} />
               </a>
+
               <a
-                href="#"
+                href="https://www.linkedin.com/company/110268159/admin/dashboard/"
                 className="bg-gray-800 p-2 rounded hover:bg-amber-500 transition"
               >
-                <Twitter size={18} />
+                <Linkedin size={18} />
               </a>
               <a
-                href="#"
-                className="bg-gray-800 p-2 rounded hover:bg-amber-500 transition"
-              >
-                <Youtube size={18} />
-              </a>
-              <a
-                href="#"
+                href="https://www.instagram.com/cadmansecurityservices/"
                 className="bg-gray-800 p-2 rounded hover:bg-amber-500 transition"
               >
                 <Instagram size={18} />

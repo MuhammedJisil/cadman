@@ -53,8 +53,6 @@ const AboutUs = () => {
       name: "Mr. N. C. Prakash",
       title: "Founder",
       subtitle: "President – Karnataka Private Security Association",
-      image:
-        "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80",
       highlights: [
         "Visionary entrepreneur with decades of industry experience",
         "President of Karnataka Private Security Association (KPSA)",
@@ -66,8 +64,6 @@ const AboutUs = () => {
       name: "Mr. N. P. Harshith",
       title: "Managing Director",
       subtitle: "Bachelor of Engineering",
-      image:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80",
       highlights: [
         "Young, dynamic leader with technical expertise",
         "Oversees complete security and facility operations",
@@ -79,8 +75,6 @@ const AboutUs = () => {
       name: "Mr. Aiyappa C. P.",
       title: "Chief Executive Officer",
       subtitle: "Former BSF Officer | 20+ Years Service",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&q=80",
       highlights: [
         "Expert in intelligence and investigation operations",
         "Over 20 years of BSF service experience",
@@ -336,57 +330,52 @@ const AboutUs = () => {
               </p>
             </div>
 
-            <div className="space-y-16">
+            <div className="grid md:grid-cols-3 gap-8">
               {leadership.map((leader, index) => (
                 <div
                   key={index}
-                  className={`${
-                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                  } flex flex-col md:flex gap-12 items-center ${
+                  className={`bg-white shadow-lg hover:shadow-2xl transition-all duration-300 ${
                     visibleSections["leadership"]
                       ? "animate-slide-up"
                       : "opacity-0"
                   }`}
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
-                  <div className="md:w-1/3">
-                    <div className="relative">
-                      <img
-                        src={leader.image}
-                        alt={leader.name}
-                        className="w-full h-96 object-cover shadow-2xl"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                      <div className="absolute bottom-6 left-6 right-6">
-                        <h3 className="text-2xl font-bold text-white mb-1">
-                          {leader.name}
-                        </h3>
-                        <p className="text-amber-400 font-semibold">
-                          {leader.title}
-                        </p>
-                        <p className="text-gray-300 text-sm">
-                          {leader.subtitle}
-                        </p>
-                      </div>
+                  {/* Icon Header with Gradient */}
+                  <div className="relative h-48 bg-gradient-to-br from-amber-500 to-amber-600 flex items-center justify-center">
+                    <div className="absolute inset-0 bg-black/10"></div>
+                    <div className="relative bg-white/20 backdrop-blur-sm p-6 rounded-full">
+                      {index === 0 && (
+                        <Award className="w-16 h-16 text-white" />
+                      )}
+                      {index === 1 && (
+                        <TrendingUp className="w-16 h-16 text-white" />
+                      )}
+                      {index === 2 && (
+                        <Shield className="w-16 h-16 text-white" />
+                      )}
                     </div>
                   </div>
 
-                  <div className="md:w-2/3">
-                    <div className="bg-white p-8 shadow-lg border-l-4 border-amber-500">
-                      <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                        {leader.name}
-                      </h3>
-                      <p className="text-amber-600 font-semibold mb-4">
-                        {leader.title}
-                      </p>
-                      <div className="space-y-3">
-                        {leader.highlights.map((highlight, hIndex) => (
-                          <div key={hIndex} className="flex items-start gap-3">
-                            <CheckCircle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-1" />
-                            <p className="text-gray-700">{highlight}</p>
-                          </div>
-                        ))}
-                      </div>
+                  {/* Content */}
+                  <div className="p-8">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                      {leader.name}
+                    </h3>
+                    <p className="text-amber-600 font-semibold mb-1">
+                      {leader.title}
+                    </p>
+                    <p className="text-gray-500 text-sm mb-6 pb-6 border-b border-gray-200">
+                      {leader.subtitle}
+                    </p>
+
+                    <div className="space-y-3">
+                      {leader.highlights.map((highlight, hIndex) => (
+                        <div key={hIndex} className="flex items-start gap-3">
+                          <CheckCircle className="w-5 h-5 text-amber-500 flex-shrink-0 mt-1" />
+                          <p className="text-gray-700 text-sm">{highlight}</p>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>

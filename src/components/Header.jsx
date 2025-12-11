@@ -10,6 +10,7 @@ import {
   Menu,
   X,
   ChevronDown,
+  Linkedin,
 } from "lucide-react";
 
 const Header = () => {
@@ -136,22 +137,24 @@ const Header = () => {
 
             {/* Social Media Icons */}
             <div className="flex gap-4">
-              <Facebook
-                size={18}
+              <a
+                href="https://www.facebook.com/share/16gxYaeBhu/"
                 className="text-white cursor-pointer hover:text-amber-500 transition"
-              />
-              <Twitter
-                size={18}
+              >
+                <Facebook size={20} />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/110268159/admin/dashboard/"
                 className="text-white cursor-pointer hover:text-amber-500 transition"
-              />
-              <Youtube
-                size={18}
+              >
+                <Linkedin size={20} />
+              </a>
+              <a
+                href="https://www.instagram.com/cadmansecurityservices/"
                 className="text-white cursor-pointer hover:text-amber-500 transition"
-              />
-              <Instagram
-                size={18}
-                className="text-white cursor-pointer hover:text-amber-500 transition"
-              />
+              >
+                <Instagram size={20} />
+              </a>
             </div>
           </div>
         </div>
@@ -310,22 +313,24 @@ const Header = () => {
 
             {/* Social Media Links */}
             <div className="flex gap-4 pr-6">
-              <Facebook
-                size={20}
+              <a
+                href="https://www.facebook.com/share/16gxYaeBhu/"
                 className="text-white cursor-pointer hover:text-amber-500 transition"
-              />
-              <Twitter
-                size={20}
+              >
+                <Facebook size={20} />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/110268159/admin/dashboard/"
                 className="text-white cursor-pointer hover:text-amber-500 transition"
-              />
-              <Youtube
-                size={20}
+              >
+                <Linkedin size={20} />
+              </a>
+              <a
+                href="https://www.instagram.com/cadmansecurityservices/"
                 className="text-white cursor-pointer hover:text-amber-500 transition"
-              />
-              <Instagram
-                size={20}
-                className="text-white cursor-pointer hover:text-amber-500 transition"
-              />
+              >
+                <Instagram size={20} />
+              </a>
             </div>
           </div>
         </div>
